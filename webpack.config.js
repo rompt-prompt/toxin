@@ -1,11 +1,26 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const globule = require("globule");
+const fs = require("fs");
+
 
 let mode = 'development'
 if (process.env.NODE_ENV === 'production') {
     mode = 'production'
 }
 console.log('выполняется в ' + mode)
+
+const pugMixins = globule
+    .find(["src/blocks/**/_*.pug", "!src/blocks/_blocks.pug"])
+    .map((path) => path.split('/').slice(-2).join('/'))
+    .reduce((acc, currentItem) => acc + `include ${currentItem}\n`, ``);
+
+console.log('Найдены миксины pug:\n' + pugMixins);
+
+fs.writeFile("src/blocks/_blocks.pug", pugMixins, (err) => {
+    if (err) throw err;
+    console.log("Миксины pug подключены автоматически");
+});
 
 module.exports = {
     mode: mode,
