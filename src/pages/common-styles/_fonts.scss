@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@font-face {
+    font-family: Montserrat;
+    src: 
+        local("Montserrat-Regular"),
+        url("/src/fonts/Montserrat-Regular.woff2") format("woff2"),
+        url("/src/fonts/Montserrat-Regular.ttf") format("truetype");
+        font-style: normal;
+        font-weight: 400;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: 
+        local("Montserrat-Bold"),
+        url("/src/fonts/Montserrat-Bold.woff2") format("woff2"),
+        url("/src/fonts/Montserrat-Bold.ttf") format("truetype");
+        font-style: normal;
+        font-weight: 700;
+}
+
+html {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
