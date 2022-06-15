@@ -18,7 +18,7 @@ module.exports = {
             filename: '[name].[contenthash].css'
         }),
         new HtmlWebpackPlugin({
-            template: "./src/index.pug"
+            template: "./src/pages/ui-kit/ui-kit.pug"
         })
     ],
     module: {
@@ -58,7 +58,7 @@ module.exports = {
                 exclude: /node_modules/,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/images/[contenthash][ext][query]',
+                    filename: 'images/[contenthash][ext][query]',
                 }
             },
             {
@@ -66,7 +66,7 @@ module.exports = {
                 exclude: /node_modules/,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/fonts/[contenthash][ext][query]',
+                    filename: 'fonts/[contenthash][ext][query]',
                 }
             },
             {
