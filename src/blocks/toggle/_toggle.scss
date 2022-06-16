@@ -1,0 +1,52 @@
+.toggle {
+    position: relative;
+    display: block;
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    &__label {
+        line-height: 2rem;        
+        margin: 0 0 0 5rem;
+    }
+
+    &__custom {
+        
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            box-sizing: border-box;    
+            width: 4rem;
+            height: 2rem;
+            border: 0.1rem solid $dark25;
+            border-radius: 1rem;
+            transition: all 0.15s ease-in;
+
+            .toggle input[type="checkbox"]:checked + & {
+                border: 0.1rem solid $purple;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0.4rem;
+            top: 0.4rem;
+            box-sizing: border-box;
+            width: 1.2rem;
+            height: 1.2rem;
+            background: $dark25;
+            border-radius: 50%;
+            transition: all 0.15s ease-in;
+
+            .toggle input[type="checkbox"]:checked + & {
+                background: $lg-purple;
+                transform: translateX(2rem);
+
+            }
+        }
+    }
+}
