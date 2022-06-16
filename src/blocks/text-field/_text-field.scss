@@ -1,0 +1,19 @@
+.text-field {
+    display: block;
+    box-sizing: border-box;
+    height: 4.4rem;
+    border: 0.1rem solid $dark25;
+    border-radius: 0.4rem;
+    padding-left: 1.5rem;
+    padding-right: 0.5rem;
+    margin-top: 0.5rem;
+
+        &:focus, &:hover {
+            border-color: $dark50;
+            outline: none;
+        }
+
+        &::placeholder {
+            color: $dark25;
+        }
+}

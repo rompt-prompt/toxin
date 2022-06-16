@@ -1,0 +1,3 @@
+mixin text-field(label, type='text', id, placeholder, size)
+    label.title-3(for=`${id}`)= label
+        input.text-field.text(type=`${type}` name=`${id}` id=`${id}` placeholder=`${placeholder}` class=`${size}`)
