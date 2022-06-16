@@ -1,0 +1,86 @@
+.btn {
+    height: 4.4rem;
+    border-radius: 2.2rem;
+    text-align: center;
+    font-family: inherit;
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+
+    &__arrow::after {
+        content:'arrow_forward'; // TODO try to take out in placeholder
+        text-transform: none;
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.4rem;
+        color: rgba(255, 255, 255, 1);
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4rem;
+    }
+
+    &_theme_purple {
+        background: $lg-purple;
+        color: rgba(255, 255, 255, 1);
+  
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &_theme_ligth{
+        color: $purple;
+        background-clip: padding-box;
+        border: 0.2rem solid transparent;
+        transform-style: preserve-3d;
+        
+        &:hover::before {
+            opacity: 0.5;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: -0.2rem;
+            border-radius: inherit;
+            background-image: $lg-purple;
+            transform: translateZ(-0.1rem);
+        }
+    }
+
+    &_theme_round-green {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        background: $lg-green;
+    }
+
+    &_theme_icon-link{ //TODO chage height
+        border-radius: 0;
+        color: $purple;
+    
+        &:hover {
+            color: $dark50;
+        }
+    }
+
+    &_theme_round-gray {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: 0.1rem solid $dark50;
+        font-weight: 400;
+        font-size: 1.8rem;
+        color: $dark50;
+
+        &:active {
+            transform: scale(0.95)
+        }
+    }
+}

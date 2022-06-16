@@ -14,10 +14,10 @@
         right: 0;
         width: 4.4rem;
         background-color: transparent;
-        border: none;
 
         &::after {
             content:'arrow_forward';
+            text-transform: none;
             font-family: 'Material Icons';
             font-style: normal;
             font-weight: 400;
