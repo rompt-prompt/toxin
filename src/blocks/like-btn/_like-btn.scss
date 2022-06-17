@@ -1,0 +1,42 @@
+.like-btn {
+    width: 4rem;
+    height: 2rem;
+    border: 0.1rem solid $dark25;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    padding-left: 1.9rem;
+    padding-right: 0.7rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+    color: $dark25;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        left: 0.4rem;
+        top: 0;
+        bottom: 0;
+        content: "favorite";
+        font-family: 'Material Icons';
+        text-transform: none;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 2rem;
+        color: $dark25;
+    }
+
+    &_purple {
+        border-color: $purple;
+        color: $purple;
+
+        &::before {
+            content: "favorite";
+            background: $lg-purple;
+            color: transparent;
+            background-clip: text;
+        }
+    }
+}
+// .like-btn_gray
