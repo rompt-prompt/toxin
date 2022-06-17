@@ -1,0 +1,42 @@
+.rating {
+    width: fit-content;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    &__star {
+
+        &::before {
+            content: "star_border";
+            font-family: 'Material Icons'; //TODO material
+            text-transform: none;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 2.4rem;
+            background: $lg-purple;
+            background-clip: text;
+            color: transparent;
+
+            .rating input[type="radio"]:checked ~ &,
+            .rating input[type="radio"]:checked ~ .rating__star ~ & {
+                content: "star";
+            }
+
+            .rating:hover input[type="radio"] ~ &,
+            .rating:hover input[type="radio"] ~ .rating__star ~ & {
+                content: "star_border";
+            } 
+        }
+
+        .rating input[type="radio"] ~ &:hover::before,
+        .rating input[type="radio"] ~ &:hover ~ .rating__star::before {
+            content: "star" !important;
+            background: gold;
+            background-clip: text;
+        } 
+    }
+}

@@ -1,0 +1,8 @@
+mixin rating(rate)
+    .rating
+        each star in [5, 4, 3, 2, 1]
+            if star == rate
+                input(type="radio", name="rating", id=`${star}` checked)
+            else
+                input(type="radio", name="rating", id=`${star}`)
+            label.rating__star(for=`${star}`)
