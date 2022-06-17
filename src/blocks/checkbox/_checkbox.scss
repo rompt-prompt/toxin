@@ -1,0 +1,63 @@
+.checkbox {
+    position: relative;
+    
+    input[type="checkbox"] {
+        display: none;
+    }
+    
+    &__label {
+        color: $dark50;
+        line-height: 2rem;
+        padding-left: 3rem;
+
+        &_rich {
+            font-weight: 700;
+            color: $dark75;
+        }
+    }
+
+    &__content {
+        display: block;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        color: $dark50;
+        padding-left: 3rem;
+    }
+
+    &__custom {
+
+        &::before {
+            content: "";
+            box-sizing: border-box;
+            width: 2rem;
+            height: 2rem;
+            border: 0.1rem solid $dark25;
+            border-radius: 0.4rem;
+            position: absolute;
+            left: 0;
+
+            .checkbox > input[type="checkbox"]:checked ~ & {
+                border: 0.1rem solid $purple;
+            }
+
+        }
+
+        &::after {
+            content: "";
+            box-sizing: border-box;
+            height: 0.6rem;
+            width: 0.8rem;
+            border-left: 0.2rem solid;
+            border-bottom: 0.2rem solid;
+            border-image: $lg-purple 1;
+            transform: rotate(-45deg);
+            position: absolute;
+            left: 0.6rem;
+            top: 0.55rem;
+            
+            .checkbox > input[type="checkbox"]:not(:checked) ~ & {
+                display: none;
+            }
+        }
+    }
+}

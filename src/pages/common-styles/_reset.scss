@@ -3,13 +3,15 @@ body {
     background-color: #fff;
 }
 
-button {
+p, button {
     margin: 0;
     padding: 0;
-    border: none;
-    font-family: inherit;
 }
 
-input {
+button {
+    border: none;
+}
+
+input, button {
     font-family: inherit;
 }
