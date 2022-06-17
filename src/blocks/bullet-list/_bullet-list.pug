@@ -1,0 +1,13 @@
+- 
+    var roomRules = [
+        "Нельзя с питомцами", 
+        "Без вечеринок и мероприятий", 
+        "Время прибытия — после 13:00, а выезд до 12:00",
+        ]
+
+mixin bullet-list(title, items = roomRules)
+    .bullet-list
+        h3.bullet-list__title= title 
+        ul.bullet-list__container
+            each item in items
+                li.text.container__item= item

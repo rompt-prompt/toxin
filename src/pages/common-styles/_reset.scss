@@ -3,9 +3,13 @@ body {
     background-color: #fff;
 }
 
-p, button {
+p, button, li, ul {
     margin: 0;
     padding: 0;
+}
+
+li {
+    list-style: none;
 }
 
 button {
