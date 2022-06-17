@@ -1,2 +1,2 @@
 mixin like-btn(likes)
-    button.like-btn(class= `${likes}`>3 ? "like-btn_purple" : "")= likes
+    button.like-btn(class= `${likes}`>3 ? "like-btn_purple" : "")= likes < 100 ? likes : "99+"
