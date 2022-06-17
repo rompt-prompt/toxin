@@ -1,0 +1,59 @@
+.room-features {
+
+    &__item {
+        box-sizing: border-box;
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 5.8rem;
+        min-height: 6.8rem;
+        width: 28rem;
+        vertical-align: middle;
+        font-weight: 700;
+        position: relative;
+
+        &:not(:last-of-type) {
+            border-bottom: 0.1rem solid $dark10;
+        }
+    }
+
+    &__description {
+
+    }
+
+    .insert_emoticon {
+        &::before {
+            @include material-pseudo('insert_emoticon', 4.8rem);
+            background-image: $lg-purple;
+            background-clip: text;
+            color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .location_city {
+        &::before {
+            @include material-pseudo('location_city', 4.8rem);
+            background-image: $lg-purple;
+            background-clip: text;
+            color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .whatshot {
+        &::before {
+            @include material-pseudo('whatshot', 4.8rem);
+            background-image: $lg-purple;
+            background-clip: text;
+            color: transparent;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
