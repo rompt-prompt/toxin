@@ -1,0 +1,10 @@
+.social {
+    
+    &__link {
+        font-size: 24px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        color:transparent;
+        background-clip: text;
+        margin: 0 1rem;
+    }
+}

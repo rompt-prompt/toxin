@@ -1,0 +1,20 @@
+-
+    var toxinSocials = [
+        {
+            network: 'twitter',
+            url: 'https://twitter.com/'
+        },
+        {
+            network: 'facebook-square',
+            url: 'https://facebook.com/'
+        },
+        {
+            network: 'instagram',
+            url: 'https://instagram.com/'
+        }
+    ]
+
+mixin social-icons(links = toxinSocials)
+    .social 
+        each link in links 
+            a.social__link(href= link.url, class=`fa-brands fa-${link.network}`)
