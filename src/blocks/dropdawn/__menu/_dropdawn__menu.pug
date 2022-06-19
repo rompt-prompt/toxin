@@ -1,0 +1,13 @@
+mixin menu(id, names, controls= '')
+    .dropdawn__menu(id="ddmenu")
+        each name in names
+            .item
+                span.title-3.item__name= name
+                span.item__setting
+                    +btn('-', 'btn_theme_round-gray')
+                    span.title-3.item__amount 0
+                    +btn('+', 'btn_theme_round-gray')
+        if controls == 'c'
+            .controls
+                +btn('Очистить', 'btn_theme_icon-link')
+                +btn('Применить', 'btn_theme_icon-link')

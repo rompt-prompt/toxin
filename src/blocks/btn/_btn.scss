@@ -3,7 +3,6 @@
     border-radius: 2.2rem;
     text-align: center;
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
 
     &__arrow::after {
         content:'arrow_forward'; // TODO try to take out in placeholder
@@ -60,7 +59,8 @@
         background: $lg-green;
     }
 
-    &_theme_icon-link{ //TODO chage height
+    &_theme_icon-link{
+        height: 1.5rem;
         border-radius: 0;
         color: $purple;
     

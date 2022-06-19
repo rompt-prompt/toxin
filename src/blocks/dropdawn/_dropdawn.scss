@@ -1,0 +1,41 @@
+@import "__menu/_dropdawn__menu.scss";
+
+.dropdawn {
+    &__btn {
+        width: inherit;
+        height: 4.4rem;
+        border: 0.1rem solid $dark25;
+        border-radius: 0.4rem;
+        padding-left: 1.5rem;
+        padding-right: 4.4rem;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        position: relative;
+
+        &:hover {
+            border-color: $dark50;
+        }
+
+        &::after {
+            @include material-pseudo('expand_more', $fz: 2.4rem);
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            line-height: 4.4rem;
+            width: 4.4rem;
+            text-align: center;
+            background-color: inherit;
+        }
+
+        &_opened {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-color:  $dark50;
+        }
+    }
+}
+
+.show-b {display: block;}
