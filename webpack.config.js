@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === 'production') {
 console.log('выполняется в ' + mode)
 
 const pugMixins = globule
-    .find(["src/blocks/**/_*.pug", "!src/blocks/_blocks.pug"])
+    .find(["src/blocks/*/_*.pug", "!src/blocks/_blocks.pug"])
     .map((path) => path.split('/').slice(-2).join('/'))
     .reduce((acc, currentItem) => acc + `include ${currentItem}\n`, ``);
 
