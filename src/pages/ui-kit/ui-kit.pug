@@ -30,7 +30,7 @@ block content
     //- br
     //- +checkbox('Можно курить', 'smoking')
     //- br
-    //- +checkbox-rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor')
+    +checkbox-rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor')
     //- br
     //- +bullet-list('Правила')
     //- +room-features
@@ -39,3 +39,12 @@ block content
         +menu(['Спальни', 'Кровати', 'Ванные комнаты'], '')
     +dropdawn('guests', 'Название', 'w320')
         +menu(['Взрослые', 'Дети', 'Младенцы'], 'c')
+    br
+    br
+    +expandable('expan', 'expandable checkbox list', 'w320')
+       +checkbox('Завтрак', 'breakfast')
+       +checkbox('Письменный стол', 'table', 'c')
+       +checkbox('Стул для кормления', 'feedingChair', 'c')
+       +checkbox('Кроватка', 'bed', 'c')
+       +checkbox('Телевизор', 'tv')
+       +checkbox('Шампунь', 'shampoo')

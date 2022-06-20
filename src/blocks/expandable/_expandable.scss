@@ -1,0 +1,31 @@
+.expandable {
+
+    &__btn {
+        min-height: 4.4rem;
+        padding-right: 4.4rem;
+        text-align: left;
+        display: block;
+        position: relative;
+
+        &::after {
+            @include material-pseudo('expand_more', $fz: 2.4rem);
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            line-height: 4.4rem;
+            width: 4.4rem;
+            text-align: center;
+            background-color: inherit;
+        } 
+    }
+
+    &__content {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+}
