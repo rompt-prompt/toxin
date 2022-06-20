@@ -36,6 +36,13 @@
             border-color:  $dark50;
         }
     }
+
+    &__content {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
 }
 
-.show-b {display: block;}
