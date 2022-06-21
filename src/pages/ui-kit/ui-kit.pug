@@ -30,21 +30,24 @@ block content
     //- br
     //- +checkbox('Можно курить', 'smoking')
     //- br
-    +checkbox-rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor')
+    //- +checkbox-rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor')
     //- br
     //- +bullet-list('Правила')
     //- +room-features
     //- +social-icons
-    +dropdawn('rooms', 'drop-b', 'w320')
-        +menu(['Спальни', 'Кровати', 'Ванные комнаты'], '')
-    +dropdawn('guests', 'Название', 'w320')
-        +menu(['Взрослые', 'Дети', 'Младенцы'], 'c')
-    br
-    br
-    +expandable('expan', 'expandable checkbox list', 'w320')
-       +checkbox('Завтрак', 'breakfast')
-       +checkbox('Письменный стол', 'table', 'c')
-       +checkbox('Стул для кормления', 'feedingChair', 'c')
-       +checkbox('Кроватка', 'bed', 'c')
-       +checkbox('Телевизор', 'tv')
-       +checkbox('Шампунь', 'shampoo')
+    //- +dropdawn('rooms', 'drop-b', 'w320')
+    //-     +menu(['Спальни', 'Кровати', 'Ванные комнаты'], '')
+    //- +dropdawn('guests', 'Название', 'w320')
+    //-     +menu(['Взрослые', 'Дети', 'Младенцы'], 'c')
+    //- br
+    //- br
+    //- +expandable('expan', 'expandable checkbox list', 'w320')
+    //-    +checkbox('Завтрак', 'breakfast')
+    //-    +checkbox('Письменный стол', 'table', 'c')
+    //-    +checkbox('Стул для кормления', 'feedingChair', 'c')
+    //-    +checkbox('Кроватка', 'bed', 'c')
+    //-    +checkbox('Телевизор', 'tv')
+    //-    +checkbox('Шампунь', 'shampoo')
+    +review('Мурад Сарафанов', 'avatar_user_1.jpg', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+        block likes 
+            +like-btn(12)

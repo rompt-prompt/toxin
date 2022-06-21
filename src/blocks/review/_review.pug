@@ -1,0 +1,9 @@
+mixin review(author, avatarSrc, date, content)
+    figure.review
+        figcaption.author 
+            img.author__avatar(src=require(`../../images/${avatarSrc}`), alt=`${author}`)
+            p.text.author__name= author
+            time.text.review__date= date
+        .review__likes
+            block likes
+        blockquote.text.review__content= content
