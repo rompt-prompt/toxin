@@ -1,0 +1,132 @@
+
+/*=============================================================
+					Jq styles
+============================================================*/
+
+.ui-slider {
+	position: relative;
+	text-align: left;
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1.2em;
+	height: 1.2em;
+	cursor: pointer;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+
+/* support: IE8 - See #6727 */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+	filter: inherit;
+}
+
+.ui-slider-horizontal {
+	height: .8em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+	top: -.3em;
+	margin-left: -.6em;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+
+.ui-slider-vertical {
+	width: .8em;
+	height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+	left: -.3em;
+	margin-left: 0;
+	margin-bottom: -.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+	left: 0;
+	width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+	bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+	top: 0;
+}
+
+
+// ==============================================
+
+.range-slider {
+	width: 26.6rem;
+	// height: 4.74rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+
+	&__title {
+	}
+
+	&__legend {
+		font-weight: 400;
+		font-size: 12px;
+		color: $dark50;
+		text-transform: uppercase;
+	}
+
+	&__slider {
+		margin-top: 2rem;
+		width: 100%;
+	}
+}
+
+.ui-slider {
+	box-sizing: border-box;
+	background-color: #ffffff;
+	height: 0.6rem;
+	border: 0.1rem solid $dark25;
+	border-radius: 0.3rem;
+
+	.ui-slider-handle {
+		width: 1.6rem;
+		height: 1.6rem;
+		border: 0.2rem solid #ffffff;
+		background-image: $lg-green;
+		border-radius: 50%;
+	}
+
+	.ui-slider-range {
+		border: none;
+		height: 0.6rem;
+		background: $lg-green;
+	}
+}
+
+.ui-slider-horizontal {
+	.ui-slider-handle {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.ui-slider-range {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
