@@ -74,7 +74,6 @@
 
 .range-slider {
 	width: 26.6rem;
-	// height: 4.74rem;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -109,6 +108,10 @@
 		border: 0.2rem solid #ffffff;
 		background-image: $lg-green;
 		border-radius: 50%;
+
+		&:active, &:focus {
+			outline: none;
+		}
 	}
 
 	.ui-slider-range {
