@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const globule = require("globule");
 const fs = require("fs");
+const webpack = require('webpack')
 
 
 let mode = 'development'
@@ -34,6 +35,11 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: "./src/pages/ui-kit/ui-kit.pug"
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
         })
     ],
     module: {
