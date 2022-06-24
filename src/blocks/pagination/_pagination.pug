@@ -1,0 +1,9 @@
+mixin pagination(lastpage, ...pages)
+    .pagination
+        nav.pagination__pages.text
+            each page in pages 
+                a.pages__page(href="#")= page
+            span.pages__page ...
+            a.pages__page.pages__page_selected(href="#")= lastpage
+            +btn('', 'btn_theme_round-green btn__arrow')
+        .pagination__summury.text 1 – 12 из 100+ вариантов аренды
