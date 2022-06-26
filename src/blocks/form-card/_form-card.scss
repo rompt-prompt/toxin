@@ -1,0 +1,29 @@
+.form-card {
+    box-sizing: border-box;
+    width: 38.2rem;
+    padding: 4rem 3rem 3rem 3rem;
+    background: #FFFFFF;
+    border-radius: 0.4rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 2.5rem 0 rgba(0, 0, 0, 0.2);
+
+    &__title {
+        display: inline-block;
+        margin-bottom: 2rem;
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+    }
+
+    &__btn {
+        margin-top: 2rem;
+    }
+
+    &__footer {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
