@@ -1,0 +1,25 @@
+extends ../_layout.pug
+
+block title 
+    title Cards
+
+block content 
+    +form-card('Регистрация аккаунта', 'login')
+        .form-card__item 
+            +text-field('', 'text', 'name', 'Имя')
+        .form-card__item 
+            +text-field('', 'text', 'surname', 'Фамилия')
+        .form-card__item 
+            +radio('sex', sexSelect)
+        .form-card__item 
+            +text-field('Дата рождения', 'text', 'birthday', 'ДД.ММ.ГГГГ')
+        .form-card__item 
+            +text-field('Данные для входа в сервис', 'email', 'email', 'Email')
+        .form-card__item 
+            +text-field('', 'password', 'password', 'Пароль')
+        .form-card__item 
+            +toggle('Получать спецпредложения', 'mailing')
+        .form-card__btn 
+            +btn('Зарегистрироваться', 'btn_theme_purple btn__arrow w320', 'submit')
+
+

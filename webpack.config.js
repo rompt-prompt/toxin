@@ -33,8 +33,11 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         }),
+        // new HtmlWebpackPlugin({
+        //     template: "./src/pages/ui-kit/ui-kit.pug"
+        // }),
         new HtmlWebpackPlugin({
-            template: "./src/pages/ui-kit/ui-kit.pug"
+            template: "./src/pages/cards/cards.pug"
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
