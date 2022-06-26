@@ -1,4 +1,13 @@
-mixin text-field(label, type='text', id, placeholder, size='w320', cls)
-    label.title-3(for=`${id}`)= label
-        input.text-field.text(type=`${type}` name=`${id}` id=`${id}` placeholder=`${placeholder}` class=`${size + ' ' + cls}`)
-        block
+// TODO добавить патерн на дату
+
+mixin text-field(label, type='text', id, placeholder, cls)
+    .text-field
+        if label
+            label.text-field__title.title-3(for=`${id}`)= label
+        input.text-field__input.text(
+            name=`${id}` 
+            id=`${id}` 
+            placeholder=`${placeholder}` 
+            class=`${cls}`, 
+            type=`${type}`,
+            )
