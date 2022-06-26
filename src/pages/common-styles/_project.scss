@@ -44,6 +44,12 @@ p, .text {
     color: $dark75;
 }
 
+.rub {
+    &::after {
+        content: '₽'
+    }
+}
+
 .w320 {width: 32.0rem;}
 .w266 {width: 26.6rem;}
 .w99 {width: 9.9rem;}

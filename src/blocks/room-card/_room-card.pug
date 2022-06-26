@@ -1,0 +1,24 @@
+//- - var apartments = [
+//-     {   id: 888;
+//-         type: 'люкс'
+//-         price: 9990;
+//-         rating: 5;
+//-         reviews: 145;
+//-         sketchs: [
+
+//-         ]
+//-     }
+//- ]
+
+mixin room-card(id, price, rating, reviews)
+    .room-card
+        img.room-card__slider(src=require("../../images/rooms/888/sketch_888.jpg"), alt="room")
+        .room-card__content
+            .room
+                h2.room__id= id 
+                .room__price
+                    span.rub= price 
+                    span.period  в сутки
+            .testimonials
+                +rating(rating, 'testimonials__rating')
+                span.testimonials__reviews= reviews
