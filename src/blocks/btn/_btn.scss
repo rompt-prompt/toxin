@@ -4,6 +4,10 @@
     text-align: center;
     position: relative;
 
+    &:focus {
+        outline: 0.1rem solid $dark25;
+    }
+
     &__arrow::after {
         content:'arrow_forward'; // TODO try to take out in placeholder
         text-transform: none;
