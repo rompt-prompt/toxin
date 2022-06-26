@@ -5,13 +5,16 @@ $radioSize: 2rem;
     position: relative;
 
     input[type="radio"] {
-        display: none;
+        position: relative ;
+        z-index: -1;
+
     }
     &__label {
         margin: 0 2rem 0 3rem;
         line-height: 2rem;
         color: $dark50;
 
+        .radio input[type="radio"]:focus + &,
         .radio input[type="radio"]:checked + & {
             color: $dark75;
         }
@@ -30,6 +33,10 @@ $radioSize: 2rem;
             border: 0.1rem solid $dark25;
             border-radius: 50%;
             background: #FFFFFF;
+
+            .radio input[type="radio"]:focus + & {
+                border: 0.1rem solid $dark50;
+            } 
 
             .radio input[type="radio"]:checked + & {
                 border: 0.1rem solid $purple;

@@ -1,4 +1,4 @@
-mixin toggle(label, name='toggel')
+mixin toggle(label, name='toggel', chk)
     .toggle 
-        input(type="checkbox" name=`${name}` id=`${name}` checked)
+        input(type="checkbox" name=`${name}` id=`${name}`, checked= `${chk}` == 'c' ? true : false)
         label.toggle__label.text.toggle__custom(for=`${name}`)= label
