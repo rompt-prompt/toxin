@@ -1,0 +1,28 @@
+-
+    var footerlinks = [
+        {
+            name: 'О нас',
+            link: '#',
+            expand: '',
+        },
+        {
+            name: 'Услуги',
+            link: '#',
+            expand: 'y',
+        },
+        {
+            name: 'Вакансии',
+            link: '#',
+            expand: '',
+        },
+        {
+            name: 'Новости',
+            link: '#',
+            expand: '',
+        },
+    ]
+
+mixin link-group(links = footerlinks, cls)
+    .link-group
+        each link in links
+            a.text.link-group__link(href=link.link, class=`${cls}`)= link.name

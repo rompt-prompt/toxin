@@ -1,0 +1,14 @@
+.link-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    &__link {
+        display: block;
+        line-height: 2.4rem;
+
+        &:not(:first-child) {
+            margin-top: 1.07rem;
+        }
+    }
+}
