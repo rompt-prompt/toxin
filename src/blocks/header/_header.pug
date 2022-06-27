@@ -1,0 +1,13 @@
+mixin header(user='anonim')
+    header
+        .header.page-wrapper
+            a.header__logo(href="#") 
+                img(href="#" src=require('../../images/logo_toxin.png'), alt="logo")
+
+            block nav
+            
+            if user === 'anonim'
+                +btn('Войти', 'header__btn btn_theme_ligth w87')
+                +btn('Зарегистрироваться', 'header__btn btn_theme_purple w196')
+            else 
+                span.header__user.text= user

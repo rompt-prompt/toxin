@@ -1,0 +1,39 @@
+header {
+    padding: 1.8rem 0;
+    background: #FFFFFF;
+    box-shadow: 0 1rem 2rem $dark5;
+
+    .header {
+        min-height: 3.4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__logo{
+            margin-right: auto;
+            
+            img {
+                vertical-align: middle;
+            }
+        }
+
+        &__nav{
+            margin-right: 2rem;
+        }
+
+        &__user{
+            padding-left: 2rem;
+            height: 3rem;
+            line-height: 3rem;
+            border-left: 0.1rem solid $dark10;
+        }
+
+        &__btn {
+            height: 3.4rem;
+
+            &:not(:first-of-type) {
+                margin-left: 2rem;
+            }
+        }
+    }
+}
