@@ -1,0 +1,4 @@
+mixin subscription(size)
+    form.subscription(action="#" method="post") 
+        +text-field('', 'email', 'email', 'Email', size, 'subscription__text-field')
+        button.subscription__btn(type="submit")
