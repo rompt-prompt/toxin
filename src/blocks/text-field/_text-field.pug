@@ -1,13 +1,12 @@
 // TODO добавить патерн на дату
 
 mixin text-field(label, type='text', id, placeholder, cls)
-    .text-field
+    .text-field(class=`${cls}`,)
         if label
             label.text-field__title.title-3(for=`${id}`)= label
         input.text-field__input.text(
-            name=`${id}` 
-            id=`${id}` 
-            placeholder=`${placeholder}` 
-            class=`${cls}`, 
+            name=`${id}`,
+            id=`${id}`, 
+            placeholder=`${placeholder}`,  
             type=`${type}`,
             )
