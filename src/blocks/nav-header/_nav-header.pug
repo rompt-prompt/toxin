@@ -1,0 +1,39 @@
+- 
+    var navHeader = [
+        {
+            name: 'О нас',
+            link: '#',
+            expand: '',
+        },
+        {
+            name: 'Услуги',
+            link: '#',
+            expand: 'y',
+        },
+        {
+            name: 'Вакансии',
+            link: '#',
+            expand: '',
+        },
+        {
+            name: 'Новости',
+            link: '#',
+            expand: '',
+        },
+        {
+            name: 'Соглашение',
+            link: '#',
+            expand: 'y',
+        },
+    ]
+
+mixin nav-header(current, items = navHeader, cls) 
+    nav.nav(class=`${cls}`)
+        each item in items
+            if item.name === current
+                a.text.nav__link.nav__link_current(href="#")= item.name
+            else 
+                if item.expand === 'y'
+                    a.text.nav__link.nav__link_expand(href="#")= item.name
+                else 
+                     a.text.nav__link(href="#")= item.name

@@ -1,0 +1,19 @@
+.nav {
+    vertical-align: middle;
+    &__link {
+        margin-left: 2rem;
+        color: $dark50;
+
+        &_current {
+            font-weight: 700;
+            color: $dark75;
+        }
+
+        &_expand::after {
+            @include material-pseudo('expand_more', 2.4rem, 400);
+            color: $dark50;
+            line-height: 2rem;
+            vertical-align: middle;
+        }
+    }
+}
