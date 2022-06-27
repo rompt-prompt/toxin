@@ -4,7 +4,7 @@ html {
 }
 
 * {
-    outline: 1px dotted red;
+    // outline: 1px dotted red;
 }
 
 body {
@@ -51,7 +51,7 @@ p, .text {
 }
 
 .page-wrapper {
-    width: 116.0rem;
+    max-width: 116.0rem;
     margin: 0 auto;
 }
 

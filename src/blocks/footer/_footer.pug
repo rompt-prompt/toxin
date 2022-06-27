@@ -21,5 +21,6 @@ mixin footer
                     +subscription("w260 footer__subscription")
         .footer__bottom
             .page-wrapper 
+                +homepage('#', 'footer__logo')
                 span.text Copyright © 2018 Toxin отель. Все права защищены.
-                +social-icons(toxinSocials)
+                +social-icons(toxinSocials, 'footer__social')
