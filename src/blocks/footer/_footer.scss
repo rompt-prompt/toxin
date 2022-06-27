@@ -9,25 +9,30 @@
                 justify-content: space-between;
                 align-items: flex-start;
 
-                .footer__col {
-                    &_wide {
-                        flex: 0 1 26rem;
-                    }
-    
-                    &_tight {
-                        flex: 0 1 auto;
-                        padding: 0 0.5rem;
-                    }
-                }
+                .footer {
+                    &__col {
+                        .col__title {
+                            min-height: 4rem;
+                        }
 
-                .col__title {
-                    min-height: 4rem;
-                }
-
-                .footer__logo {
-                    display: block;
-                    margin-bottom: 2.4rem;
-                }
+                        &_wide {
+                            flex: 0 1 26rem;
+                        }
+        
+                        &_tight {
+                            flex: 0 1 auto;
+                            padding: 0 0.5rem;
+                        }
+                    }
+                    
+                    &__logo {
+                        display: block;
+                        margin-bottom: 2.4rem;
+                    }
+                    &__subscription {
+                        margin-top: 2rem;
+                    }
+                }  
             }
         }
 
