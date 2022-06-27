@@ -1,9 +1,7 @@
 mixin header(user='anonim')
     header
         .header.page-wrapper
-            a.header__logo(href="#") 
-                img(href="#" src=require('../../images/logo_toxin.png'), alt="logo")
-
+            +homepage('#', 'header__logo')
             block nav
             
             if user === 'anonim'
