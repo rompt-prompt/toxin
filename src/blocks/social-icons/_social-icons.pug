@@ -14,7 +14,7 @@
         }
     ]
 
-mixin social-icons(links = toxinSocials)
+mixin social-icons(links)
     .social 
         each link in links 
             a.social__link(href= link.url, class=`fa-brands fa-${link.network}`)

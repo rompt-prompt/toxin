@@ -1,0 +1,44 @@
+.footer {
+    background: #FFFFFF;
+
+        &__top {
+            padding: 10rem 0;
+
+            .page-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .footer__col {
+                    &_wide {
+                        flex: 0 1 26rem;
+                    }
+    
+                    &_tight {
+                        flex: 0 1 auto;
+                        padding: 0 0.5rem;
+                    }
+                }
+
+                .col__title {
+                    min-height: 4rem;
+                }
+
+                .footer__logo {
+                    display: block;
+                    margin-bottom: 2.4rem;
+                }
+            }
+        }
+
+        &__bottom {
+            border-top: 0.1rem solid $dark10;
+            padding: 2.3rem 0;
+
+            .page-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+}
