@@ -3,50 +3,51 @@ extends ../_layout.pug
 block title 
     title Cards
 
-    //- block content 
-    //-     +header
-    //-         block nav 
-    //-             +nav-header('О нас', navHeader, 'header__nav')
+    block content 
+        +header
+            block nav 
+                +nav-header('О нас', navHeader, 'header__nav')
 
-    //-     br
-    //-     +header('Юлий Цезарь')
-    //-         block nav 
-    //-             +nav-header('Вакансии', navHeader, 'header__nav')
-    //-     br
-    //-     +footer
+        br
+        +header('Юлий Цезарь')
+            block nav 
+                +nav-header('Вакансии', navHeader, 'header__nav')
+        br
+        +footer
             
-    //- +form-card('Регистрация аккаунта', 'login')
-    //-     .form-card__line 
-    //-         +text-field('', 'text', 'name', 'Имя')
-    //-     .form-card__line 
-    //-         +text-field('', 'text', 'surname', 'Фамилия')
-    //-     .form-card__line 
-    //-         +radio('sex', sexSelect)
-    //-     .form-card__line 
-    //-         +text-field('Дата рождения', 'text', 'birthday', 'ДД.ММ.ГГГГ')
-    //-     .form-card__line 
-    //-         +text-field('Данные для входа в сервис', 'email', 'email', 'Email')
-    //-     .form-card__line 
-    //-         +text-field('', 'password', 'password', 'Пароль')
-    //-     .form-card__line 
-    //-         +toggle('Получать спецпредложения', 'mailing')
-    //-     .form-card__btn 
-    //-         +btn('Зарегистрироваться', 'btn_theme_purple btn__arrow w320', 'submit')
-    //- +form-card('Войти', 'create')
-    //-     .form-card__line 
-    //-         +text-field('', 'email', 'email', 'Email')
-    //-     .form-card__line 
-    //-         +text-field('', 'password', 'password', 'Пароль')
-    //-     .form-card__btn 
-    //-         +btn('Войти', 'btn_theme_purple btn__arrow w320', 'submit')
-    //- +room-card(840, 9900, 4, 65)
-    //- br
-    //- +form-card('Найдём номера под ваши пожелания')
-    //-     .form-card__line
-    //-         +dropdawn('dp', 'Прибытие', 'w150 datepicker')
-    //-         +dropdawn('dp', 'Выезд', 'w150 datepicker')
-    //-     .form-card__line
-    //-         +dropdawn('guests', 'Гости', 'w320')
-    //-             +menu(['Взрослые', 'Дети', 'Младенцы'], 'c')
-    //-     +btn('Подобрать номер', 'form-card__btn btn_theme_purple w320', 'submit')
+    +form-card('Регистрация аккаунта', 'login')
+        .form-card__line 
+            +text-field('', 'text', 'name', 'Имя')
+        .form-card__line 
+            +text-field('', 'text', 'surname', 'Фамилия')
+        .form-card__line 
+            +radio('sex', sexSelect)
+        .form-card__line 
+            +text-field('Дата рождения', 'text', 'birthday', 'ДД.ММ.ГГГГ')
+        .form-card__line 
+            +text-field('Данные для входа в сервис', 'email', 'email', 'Email')
+        .form-card__line 
+            +text-field('', 'password', 'password', 'Пароль')
+        .form-card__line 
+            +toggle('Получать спецпредложения', 'mailing')
+        .form-card__btn 
+            +btn('Зарегистрироваться', 'btn_theme_purple btn__arrow w320', 'submit')
+    +form-card('Войти', 'create')
+        .form-card__line 
+            +text-field('', 'email', 'email', 'Email')
+        .form-card__line 
+            +text-field('', 'password', 'password', 'Пароль')
+        .form-card__btn 
+            +btn('Войти', 'btn_theme_purple btn__arrow w320', 'submit')
+    +room-card(840, 9900, 4, 65)
+    br
+    +form-card('Найдём номера под ваши пожелания')
+        .form-card__line
+            +dropdawn('dp', 'Прибытие', 'w150 datepicker')
+            +dropdawn('dp', 'Выезд', 'w150 datepicker')
+        .form-card__line
+            +dropdawn('guests', 'Гости', 'w320')
+                +menu(['Взрослые', 'Дети', 'Младенцы'], 'c')
+        +btn('Подобрать номер', 'form-card__btn btn_theme_purple w320', 'submit')
     +bookig('888', 'люкс', '9 990')
+    +range-slider('fvkaj')

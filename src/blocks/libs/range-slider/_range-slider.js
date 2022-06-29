@@ -1,4 +1,4 @@
-require('../../../node_modules/jquery-ui/ui/widgets/slider')
+require('../../../../node_modules/jquery-ui/ui/widgets/slider')
 
 $("#range-slider").slider({
 	animate: "slow",
