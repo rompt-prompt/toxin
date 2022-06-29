@@ -3,6 +3,7 @@
     border-radius: 2.2rem;
     text-align: center;
     position: relative;
+    text-transform: uppercase;
 
     &:focus {
         outline: 0.1rem solid $dark25;
@@ -63,7 +64,7 @@
         background: $lg-green;
     }
 
-    &_theme_icon-link{
+    &_theme_icon-link {
         height: 1.5rem;
         border-radius: 0;
         color: $purple;
