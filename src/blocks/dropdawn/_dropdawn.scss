@@ -1,6 +1,11 @@
 @import "__menu/_dropdawn__menu.scss";
 
 .dropdawn {
+    &__title {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
     &__btn {
         width: inherit;
         height: 4.4rem;
@@ -36,9 +41,10 @@
             border-color:  $dark50;
         }
     }
-
     &__content {
         display: none;
+        position: absolute;
+        z-index: 100;
     }
 
     .show {
