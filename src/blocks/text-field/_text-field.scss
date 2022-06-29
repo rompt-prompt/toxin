@@ -1,13 +1,13 @@
 .text-field {
+    width: 100%;
 
     &__title {
         display: block;
-        margin-top: 2rem;
+        margin-top: 1rem;
         margin-bottom: 0.5rem;
     }
 
     &__input {
-    display: block;
     width: 100%;
     box-sizing: border-box;
     height: 4.4rem;

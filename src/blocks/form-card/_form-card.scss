@@ -1,4 +1,4 @@
-.form-card {
+.form-card, .booking {
     box-sizing: border-box;
     width: 38.2rem;
     padding: 4rem 3rem 3rem 3rem;
@@ -12,8 +12,12 @@
         margin-bottom: 2rem;
     }
 
-    &__item {
+    .form-card__line {
+        width: 100%;
         margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
     &__btn {
