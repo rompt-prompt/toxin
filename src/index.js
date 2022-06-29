@@ -1,4 +1,4 @@
-import './pages/_main.scss'
+import './styles/_styles.scss'
 import './blocks/libs/dropdawn/_dropdawn.js'
 import './blocks/libs/expandable/_expandable.js'
 import './blocks/libs/range-slider/_range-slider.js'
