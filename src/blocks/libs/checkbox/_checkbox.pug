@@ -1,10 +1,6 @@
-mixin checkbox(label, id, cls, chk)
-    .checkbox 
-        input(type="checkbox", name=`${id}`, id=`${id}`, class=`${cls}`, checked= `${chk}` == 'c' ? true : false)
-        label.text.checkbox__label.checkbox__custom(for=`${id}`)= label
-
-mixin checkbox-rich(label, content, id, chk)
-    .checkbox 
-        input(type="checkbox", name=`${id}`, id=`${id}`, class=`${cls}`, checked= `${chk}` == 'c' ? true : false)
-        label.text.checkbox__label.checkbox__label_rich.checkbox__custom(for=`${id}`)= label
-            p.text.checkbox__content= content
+mixin checkbox(type='short', label, content, id, cls, chk)
+    .checkbox(class=`${cls}`)
+        input(type="checkbox", name=`${id}`, id=`${id}`, checked= `${chk}` === 'c' ? true : false)
+        label.text.checkbox__label.checkbox__custom(for=`${id}`, class= `${type}` === 'rich' ? "checkbox__label_rich" : "")= label
+            if type === 'rich'
+                p.text.checkbox__content= content
