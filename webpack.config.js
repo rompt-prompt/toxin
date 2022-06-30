@@ -1,7 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const globule = require("globule");
-const fs = require("fs");
 const webpack = require('webpack')
 
 
@@ -11,20 +9,12 @@ if (process.env.NODE_ENV === 'production') {
 }
 console.log('выполняется в ' + mode)
 
-const pugMixins = globule
-    .find(["src/blocks/*/_*.pug", "!src/blocks/_blocks.pug"])
-    .map((path) => path.split('/').slice(-2).join('/'))
-    .reduce((acc, currentItem) => acc + `include ${currentItem}\n`, ``);
-
-console.log('Найдены миксины pug:\n' + pugMixins);
-
-fs.writeFile("src/blocks/_blocks.pug", pugMixins, (err) => {
-    if (err) throw err;
-    console.log("Миксины pug подключены автоматически");
-});
-
 module.exports = {
     mode: mode,
+    entry: {
+        index: './src/pages/index/index.js',
+        colorsNtype: './src/pages/colors-and-type/colors-and-type.js',
+    },
     output: {
         clean: true,
     },
@@ -33,12 +23,21 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         }),
+        new HtmlWebpackPlugin({
+            filename: "index.html",
+            template: "./src/pages/index/index.pug",
+        }),
+        new HtmlWebpackPlugin({
+            filename: "colors-and-type.html",
+            template: "./src/pages/colors-and-type/colors-and-type.pug",
+        }),
+
         // new HtmlWebpackPlugin({
         //     template: "./src/pages/ui-kit/ui-kit.pug"
         // }),
-        new HtmlWebpackPlugin({
-            template: "./src/pages/cards/cards.pug"
-        }),
+        // new HtmlWebpackPlugin({
+        //     template: "./src/pages/cards/cards.pug"
+        // }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
