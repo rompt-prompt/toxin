@@ -6,6 +6,8 @@
 
     &__slider {
         display: block;
+        width: inherit;
+        height: auto;
         border-top-left-radius: inherit;
         border-top-right-radius: inherit;       
     }
@@ -13,55 +15,30 @@
     &__content  {
         box-sizing: border-box;
         height: 10.6rem;
-        padding: 2rem;
+        padding: 2rem 1.7rem 2rem 2rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-
-        .room {
-            padding-bottom: 1rem;
-            border-bottom: 0.1rem solid $dark10;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        
-            &__id {
-
-                &::before {
-                    content: '№ ';
-                    font-size: 1.4rem;
-                }
-            }
-            &__price {
-                font-weight: 700;
-                font-size: 1.4rem;
-                color: $dark50;
-
-                .period {
-                    font-weight: 400;
-                    font-size: 1.2rem;
-                }
-            }
-        }
-        .testimonials {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        
-            &__rating {
-                
-            }
-
-            &__reviews {
-                font-weight: 700;
-                font-size: 1.4rem;
-                color: $dark50;
-
-                &::after {
-                    content: ' Отзывов';
-                    font-weight: 400;
-                }
-            }
-        }
+        justify-content: flex-start;
     }
+
+    &__testimonials{
+        border-top: 0.1rem solid $dark10;
+        padding-top: 0.8rem;
+        margin-top: 0.9rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .testimonials__reviews {
+            padding-right: 0.3rem;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: $dark50;
+
+            &::after {
+                content: ' Отзывов';
+                font-weight: 400;
+            }
+        }
+    } 
 }

@@ -1,0 +1,8 @@
+mixin room-id(id, category, price, cls='')
+    .room(class= `${cls}`)
+        h2.room__id= id 
+            if category
+                span.room__category.title-3= category
+        .room__price
+            span.rub= price 
+            span.period  в сутки

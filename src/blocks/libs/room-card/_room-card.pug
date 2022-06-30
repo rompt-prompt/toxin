@@ -10,15 +10,11 @@
 //-     }
 //- ]
 
-mixin room-card(id, price, rating, reviews, cls)
+mixin room-card(id, category, price, rating, reviews, cls)
     .room-card(class=`${cls}`)
         img.room-card__slider(src=require("../../images/rooms/888/sketch_888.jpg"), alt="room")
         .room-card__content
-            .room
-                h2.room__id= id 
-                .room__price
-                    span.rub= price 
-                    span.period  в сутки
-            .testimonials
+            +room-id(id, category, price, 'room-card__room')
+            .room-card__testimonials
                 +rating(rating, 'testimonials__rating')
                 span.testimonials__reviews= reviews

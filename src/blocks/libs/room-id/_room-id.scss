@@ -1,0 +1,27 @@
+.room {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__id {
+
+        &::before {
+            content: '№ ';
+            font-size: 1.4rem;
+        }
+    }
+    &__category {
+        margin-left: 0.8rem;
+        color: $purple;
+    }
+    &__price {
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: $dark50;
+
+        .period {
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+    }
+}
