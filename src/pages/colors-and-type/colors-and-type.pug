@@ -1,0 +1,43 @@
+extends ../_layout.pug
+
+block title 
+    title Colors and Type
+
+block content 
+
+    -
+        var colors = [
+            {class: 'dark100', name: 'Dark Shade 100%', hex: '#1F2041'},
+            {class: 'dark75', name: 'Dark Shade 75%', hex: '#1F2041'},
+            {class: 'dark50', name: 'Dark Shade 50%', hex: '#1F2041'},
+            {class: 'dark25', name: 'Dark Shade 25%', hex: '#1F2041'},
+            {class: 'dark5', name: 'Dark Shade 5%', hex: '#1F2041'},
+            {class: 'purple', name: 'Purple', hex: '#BC9CFF'},
+            {class: 'green', name: 'Green', hex: '#6FCF97'},
+        ]
+    .header
+        a(href="./index.html") 
+            img(src=require("../../images/logo_toxin_mini.svg"), alt="toxin")
+    main
+        .col    
+            ul.colors
+                each color in colors
+                    li.colors__color.color
+                        span.color__palette(class=`${color.class}`)
+                        h2.color__name= color.name 
+                            span= color.hex
+
+        .col
+            ul.type
+                li.type__item.title-1
+                    span.type__name H1
+                    span.type__example This one is the sub-section or widget title
+                li.type__item.title-2
+                    span.type__name H2
+                    span.type__example Next one is the item title inside widgets
+                li.type__item.title-3
+                    span.type__name H3
+                    span.type__example This is a label or CTA text
+                li.type__item.text
+                    span.type__name Body
+                    span.type__example This is the body text which is used for most of the design, like paragraphs, lists, etc.
