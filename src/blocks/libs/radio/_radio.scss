@@ -1,7 +1,8 @@
 $radioSize: 2rem;
 
 .radio {
-    display: inline-block;
+    display: inline-flex;
+    align-items: flex-start;
     position: relative;
 
     input[type="radio"] {
