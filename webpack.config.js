@@ -13,6 +13,7 @@ module.exports = {
     mode: mode,
     entry: {
         index: './src/pages/index/index.js',
+        sandBox: './src/pages/sandbox/sandbox.js',
         colorsNtype: './src/pages/colors-and-type/colors-and-type.js',
     },
     output: {
@@ -30,6 +31,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: "colors-and-type.html",
             template: "./src/pages/colors-and-type/colors-and-type.pug",
+        }),
+        new HtmlWebpackPlugin({
+            filename: "sandbox.html",
+            template: "./src/pages/sandbox/sandbox.pug",
         }),
 
         // new HtmlWebpackPlugin({

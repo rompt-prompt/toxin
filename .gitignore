@@ -1,3 +1,4 @@
 /node_modules/*
 /dist/*
 /1docs/*
+/src/pages/sandbox/*
