@@ -1,0 +1,15 @@
+.form-search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__title {
+        margin-bottom: 2.4rem;
+    }
+    &__item {
+        margin-bottom: 2rem;
+    }
+    &__btn {
+        margin-top: 1rem;
+    }
+}
