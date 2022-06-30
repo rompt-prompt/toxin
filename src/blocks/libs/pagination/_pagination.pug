@@ -1,5 +1,5 @@
-mixin pagination(lastpage, ...pages)
-    .pagination
+mixin pagination(cls, lastpage, ...pages)
+    .pagination(class=`${cls}`)
         nav.pagination__pages.text
             each page in pages 
                 a.pages__page(href="#")= page

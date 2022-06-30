@@ -1,5 +1,5 @@
-mixin range-slider(title)
-    .range-slider 
+mixin range-slider(title, cls)
+    .range-slider(class=`${cls}`)
         h3.title-3.range-slider__title= title 
         span.range-slider__legend(id='range-legend')
         .range-slider__slider(id='range-slider')

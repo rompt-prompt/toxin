@@ -23,6 +23,6 @@
     ]
 
 mixin link-group(links = footerlinks, cls)
-    .link-group
+    .link-group(class=`${cls}`)
         each link in links
-            a.text.link-group__link(href=link.link, class=`${cls}`)= link.name
+            a.text.link-group__link(href=link.link)= link.name

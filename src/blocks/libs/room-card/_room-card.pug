@@ -10,8 +10,8 @@
 //-     }
 //- ]
 
-mixin room-card(id, price, rating, reviews)
-    .room-card
+mixin room-card(id, price, rating, reviews, cls)
+    .room-card(class=`${cls}`)
         img.room-card__slider(src=require("../../images/rooms/888/sketch_888.jpg"), alt="room")
         .room-card__content
             .room

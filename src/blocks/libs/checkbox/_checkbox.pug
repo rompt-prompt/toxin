@@ -1,10 +1,10 @@
-mixin checkbox(label, id, chk)
+mixin checkbox(label, id, cls, chk)
     .checkbox 
-        input(type="checkbox", name=`${id}`, id=`${id}`, checked= `${chk}` == 'c' ? true : false)
+        input(type="checkbox", name=`${id}`, id=`${id}`, class=`${cls}`, checked= `${chk}` == 'c' ? true : false)
         label.text.checkbox__label.checkbox__custom(for=`${id}`)= label
 
 mixin checkbox-rich(label, content, id, chk)
     .checkbox 
-        input(type="checkbox", name=`${id}`, id=`${id}`, checked= `${chk}` == 'c' ? true : false)
+        input(type="checkbox", name=`${id}`, id=`${id}`, class=`${cls}`, checked= `${chk}` == 'c' ? true : false)
         label.text.checkbox__label.checkbox__label_rich.checkbox__custom(for=`${id}`)= label
             p.text.checkbox__content= content

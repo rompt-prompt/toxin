@@ -1,4 +1,4 @@
-mixin subscription(cls= "w266")
+mixin subscription(cls)
     form.subscription(action="#", method="post", class=`${cls}`) 
         +text-field('', 'email', 'email', 'Email', 'subscription__text-field')
         button.subscription__btn(type="submit")

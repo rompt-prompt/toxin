@@ -1,5 +1,5 @@
-mixin expandable(id, name, width="w266")
-    .expandable(class=`${width}`)
+mixin expandable(id, name, cls)
+    .expandable(class=`${cls}`)
         button.title-3.expandable__btn(id=`${id}` onclick="show()")= name
         .expandable__content(id=`${id}Content`)
             block

@@ -1,5 +1,5 @@
-mixin header(user='anonim')
-    header
+mixin header(user='anonim', cls)
+    header(class=`${cls}`)
         .header.page-wrapper
             +homepage('#', 'header__logo')
             block nav

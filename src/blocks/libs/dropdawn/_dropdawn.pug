@@ -1,6 +1,6 @@
 include __menu/_dropdawn__menu.pug
 
-mixin dropdawn(id, label, cls="w266")
+mixin dropdawn(id, label, cls)
     .dropdawn(class=`${cls}`)
         label.dropdawn__title.title-3= label
         button.text.dropdawn__btn(id=`${id}` onclick="show()") CONTENT 

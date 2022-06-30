@@ -11,8 +11,8 @@
         },
     ]
 
-mixin radio(name='sex', radioContent = sexSelect)    
+mixin radio(name='sex', radioContent = sexSelect, cls)    
     each item in radioContent
-        .radio
+        .radio(class=`${cls}`)
             input(type="radio" name=`${name}` id=item.id)
             label.radio__label.text.radio__custom(for=item.id)= item.label
