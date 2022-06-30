@@ -1,0 +1,19 @@
+@import '../../styles/_styles.scss';
+
+.navigation {
+    width: 76rem;
+    margin: 5rem auto;
+
+    &__section {
+        margin-bottom: 3rem;
+    }
+    &__link {
+        display: block;
+        padding-top: 2rem;
+        padding-left: 2rem;
+
+        &:hover {
+            color: $purple;
+        }
+    }
+}
