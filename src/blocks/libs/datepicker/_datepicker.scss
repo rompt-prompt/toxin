@@ -1,158 +1,153 @@
 @import "/node_modules/air-datepicker/air-datepicker.css";
 
 .datepicker {
-    display: inline-block;
-    position: relative;
+    .air-datepicker {
+        box-sizing: border-box;
+        width: 32.0rem;
+        padding: 1.5rem 2rem 2rem 2rem;
+        background: #FFFFFF;
+        border: 0.1rem solid $dark25;
+        box-shadow: 0px 0.1rem 0.2rem $dark5;
+        border-radius: 0.4rem;
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+        font-style: normal;
     
-    .dropdawn__content {
-
-        .air-datepicker {
-            box-sizing: border-box;
-            width: 32.0rem;
-            padding: 2rem;
-            background: #FFFFFF;
-            border: 0.1rem solid $dark25;
-            box-shadow: 0px 0.1rem 0.2rem $dark5;
-            border-radius: 0.4rem;
-            font-family: Montserrat, Arial, Helvetica, sans-serif;
-            font-style: normal;
-        
-            &--navigation {
+        &--navigation {
+            border: none;
+            padding-bottom: 2.6rem;
+    
+            .air-datepicker-nav {
                 border: none;
-                padding-bottom: 1.3rem;
+                padding: 0;
         
-                .air-datepicker-nav {
-                    border: none;
-                    padding: 0;
-            
-                    &--title {
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 19px;
-                        color: $dark100;
-                    }
-            
-                    &--action {
-                        font-family: 'Material Icons';
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 24px;
-                        color: $purple;
-                    }
+                &--title {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 19px;
+                    color: $dark100;
+                }
+        
+                &--action {
+                    font-family: 'Material Icons';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 24px;
+                    color: $purple;
+                    width: auto;
                 }
             }
-            &--content {
-                padding: 0;
-                margin-bottom: 2rem;
-                box-sizing: border-box;
+        }
+        &--content {
+            padding: 0;
+            margin-bottom: 2rem;
+            box-sizing: border-box;
+    
+            .air-datepicker-body {
+                &--day {
+                    &-names {
+                        margin: 0;
+                        height: 4rem;
+                    }
+                    &-name {
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                        color: $purple;
+                        text-transform: capitalize;
+                    }
+                }
+                &--cells {
+                    &.-days- {
+                        grid-auto-rows: 4rem;
+    
+                        .air-datepicker-cell {
+                            &.-day- {
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 1.2rem;
+                                line-height: 1.5rem;
+                                color: $dark50;
+            
+                                &.-other-month- {
+                                    color: $dark25;
+                                }
+                            }
+                            
+                            &.-range-from-,
+                            &.-in-range-,
+                            &.-range-to- {
+                                background: none;
+                                border: none;
+                            }
+                            &.-range-from-::before, 
+                            &.-in-range-::before,
+                            &.-range-to-::before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                z-index: -1;
+                                background: $lg-purple25;
+                            }
         
-                .air-datepicker-body {
-                    &--day {
-                        &-names {
-                            margin: 0;
-                            height: 4rem;
+                            &.-range-from-::before {
+                                border-top-left-radius: 50%;
+                                border-bottom-left-radius: 50%;
+                            }
+        
+                            &.-range-to-::before {
+                                border-top-right-radius: 50%;
+                                border-bottom-right-radius: 50%;
+                            }
+        
+                            &.-selected- {
+                                border-radius: 50%;
+                                background: $lg-purple;
+                                font-weight: 700;
+                                font-size: 1.2rem;
+                                color: #ffffff;
+                            }
+                            &.-focus- {
+                                border-radius: 50%;
+                                background: $lg-green;
+                                font-weight: 700;
+                                font-size: 1.2rem;
+                                color: #ffffff;
+                                &.-other-month- {
+                                    color: #ffffff;
+                                }
+                            }
                         }
-                        &-name {
-                            font-size: 1.2rem;
+                    }
+                    &.-months-,
+                    &.-years- {
+                        .-current- {
                             font-weight: 700;
                             color: $purple;
-                            text-transform: capitalize;
                         }
-                    }
-                    &--cells {
-                        &.-days- {
-                            grid-auto-rows: 4rem;
-        
-                            .air-datepicker-cell {
-                                &.-day- {
-                                    font-style: normal;
-                                    font-weight: 400;
-                                    font-size: 1.2rem;
-                                    line-height: 1.5rem;
-                                    color: $dark50;
-                
-                                    &.-other-month- {
-                                        color: $dark25;
-                                    }
-                                }
-                                
-                                &.-range-from-,
-                                &.-in-range-,
-                                &.-range-to- {
-                                    background: none;
-                                    border: none;
-                                }
-                                &.-range-from-::before, 
-                                &.-in-range-::before,
-                                &.-range-to-::before {
-                                    content: '';
-                                    position: absolute;
-                                    top: 0;
-                                    bottom: 0;
-                                    left: 0;
-                                    right: 0;
-                                    z-index: -1;
-                                    background: $lg-purple25;
-                                }
-            
-                                &.-range-from-::before {
-                                    border-top-left-radius: 50%;
-                                    border-bottom-left-radius: 50%;
-                                }
-            
-                                &.-range-to-::before {
-                                    border-top-right-radius: 50%;
-                                    border-bottom-right-radius: 50%;
-                                }
-            
-                                &.-selected- {
-                                    border-radius: 50%;
-                                    background: $lg-purple;
-                                    font-weight: 700;
-                                    font-size: 1.2rem;
-                                    color: #ffffff;
-                                }
-                                &.-focus- {
-                                    border-radius: 50%;
-                                    background: $lg-green;
-                                    font-weight: 700;
-                                    font-size: 1.2rem;
-                                    color: #ffffff;
-                                    &.-other-month- {
-                                        color: #ffffff;
-                                    }
-                                }
-                            }
-                        }
-                        &.-months-,
-                        &.-years- {
-                            .-current- {
-                                font-weight: 700;
-                                color: $purple;
-                            }
-                        }
-                    }
-                }
-            }
-            &--buttons {
-                padding: 0;
-                border: none;
-                .air-datepicker-button {
-                    @extend .btn;
-                    @extend .title-3;
-                    @extend .btn_theme_icon-link;
-        
-                    &:first-child {
-                    justify-self: left;
-                    }
-        
-                    &:last-child {
-                        justify-self: right;
                     }
                 }
             }
         }
-    }   
+        &--buttons {
+            padding: 0;
+            border: none;
+            .air-datepicker-button {
+                @extend .btn;
+                @extend .title-3;
+                @extend .btn_theme_icon-link;
+    
+                &:first-child {
+                justify-self: left;
+                }
+    
+                &:last-child {
+                    justify-self: right;
+                }
+            }
+        }
+    }
 }
 
 

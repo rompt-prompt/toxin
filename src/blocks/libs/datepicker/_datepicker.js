@@ -10,7 +10,7 @@ let navTitle = {
     years: 'yyyy1 - yyyy2' 
 }
 
-new AirDatepicker('#dpContent', {
+new AirDatepicker('#datepicker', {
     inline: true,
     range: true,
     multipleDatesSeparator: ' - ',
