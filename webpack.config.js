@@ -15,6 +15,7 @@ module.exports = {
         index: './src/pages/index/index.js',
         sandBox: './src/pages/sandbox/sandbox.js',
         colorsNtype: './src/pages/colors-and-type/colors-and-type.js',
+        cards: './src/pages/cards/cards.js',
     },
     output: {
         clean: true,
@@ -31,6 +32,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: "colors-and-type.html",
             template: "./src/pages/colors-and-type/colors-and-type.pug",
+        }),
+        new HtmlWebpackPlugin({
+            filename: "cards.html",
+            template: "./src/pages/cards/cards.pug",
         }),
         new HtmlWebpackPlugin({
             filename: "sandbox.html",
