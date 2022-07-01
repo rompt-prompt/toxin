@@ -1,0 +1,68 @@
+.form-booking {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__title {
+        flex-basis: 100%;
+        padding-top: 0.3rem;
+        margin-bottom: 1.7rem;
+    }
+    &__room {
+        .room__id {
+            font-size: 2.4rem;
+        }
+    }
+    &__item {
+        margin-bottom: 2rem;
+    }
+    &__calcs {
+        margin-bottom: 0.6rem;
+    }
+    &__btn {
+        margin-top: 2rem;
+    }
+}
+.calcs {
+    width: 100%;
+    
+    &__service {
+        margin-bottom: 1.5rem;
+    }
+    &__total {
+        margin-top: 2.2rem;
+    }
+}
+.service {
+    display: flex;
+    justify-content: space-between;
+
+    &__name {
+        flex-basis: calc(100% - 8rem);
+        line-height: 1.8rem;
+        display: flex;
+        justify-content: space-between;
+
+        .popup-info {
+            flex-shrink: 0;
+        }
+    }
+    &__price {
+        line-height: 1.8rem;
+    }
+}
+.total {
+    border-bottom: 0.1rem dotted $dark25;
+    display: flex;
+    justify-content: space-between;
+    &__name {
+        transform: translateY(0.6rem);
+        background-color: #ffffff;
+        padding-right: 0.4rem
+    }
+    &__price {
+        transform: translateY(0.6rem);
+        background-color: #ffffff;
+        padding-left: 0.4rem
+    }
+}
