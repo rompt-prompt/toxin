@@ -1,0 +1,19 @@
+@import '../../styles/_styles.scss';
+
+body {
+    background-color: rgba(244, 244, 246, 1);
+    .header {
+        padding: 3rem;
+
+        img {
+            width: 4.8rem;
+            height: 4.8rem;
+
+            a:hover & {
+                stroke: $purple;
+                fill: $purple;
+            }
+
+        }
+    }
+}

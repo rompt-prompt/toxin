@@ -4,19 +4,18 @@ block title
     title Cards
 
 block content 
-    //- +header
-    //-     block nav 
-    //-         +nav-header('О нас', navHeader, 'header__nav')
-
-    //- br
-    //- +header('Юлий Цезарь')
-    //-     block nav 
-    //-         +nav-header('Вакансии', navHeader, 'header__nav')
-    //- br
-    //- +footer
-        
-
-    //- +room-card(840, 9900, 4, 65)
-    //- br
-    //- +bookig('888', 'люкс', '9 990')
-    //- +range-slider('fvkaj')
+    .header
+        a(href="./index.html") 
+            img(src=require("../../images/logo_toxin_mini.svg"), alt="toxin")
+        main
+            +card('card__search')
+                +form-search()
+            +card('card__booking')
+                +form-booking(888, 'люкс', '9 990')
+            +datepicker('datepicker')
+            +card('card__registration')
+                +form-user('n')
+            +card('card__login')
+                +form-user('l')
+            +room-card(888, 'люкс', '9 990', 5, 145)
+            +room-card(840, '', '9 990', 4, 65)
