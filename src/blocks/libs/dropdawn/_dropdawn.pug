@@ -1,8 +1,10 @@
-include __menu/_dropdawn__menu.pug
+//- ==================================================================
+    in case to show/hide dropdawn content class dropdawn__content &
+    id+Content must be added at mixin called in block
+    ==================================================================
 
 mixin dropdawn(id, label, cls)
     .dropdawn(class=`${cls}`)
         label.dropdawn__title.title-3= label
         button.text.dropdawn__btn(id=`${id}` onclick="show()") CONTENT 
-        .dropdawn__content(id=`${id}Content`)
-            block
+        block

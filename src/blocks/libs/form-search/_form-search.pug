@@ -1,8 +1,12 @@
+include ../dropdawn/_dropdawn.pug
+include ../filter-options/_filter-options.pug
+include ../btn/_btn.pug
+
 mixin form-search()
     form.form-search(action="#", method="post")
         legend.title-1.form-search__title Найдём номера под ваши пожелания
         +dropdawn('dp', 'Прибытие', 'w150 datepicker form-search__item')
         +dropdawn('dp', 'Выезд', 'w150 datepicker form-search__item')
         +dropdawn('guests', 'Гости', 'w320 form-search__item')
-            +menu(['Взрослые', 'Дети', 'Младенцы'], 'c')
+            +filter-options('guestsContent', ['Взрослые', 'Дети', 'Младенцы'], 'dropdawn__content', 'c')
         +btn('Подобрать номер', 'form-search__btn btn_theme_purple w320', 'submit')

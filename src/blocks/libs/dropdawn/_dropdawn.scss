@@ -1,5 +1,3 @@
-@import "__menu/_dropdawn__menu.scss";
-
 .dropdawn {
     &__title {
         display: block;
@@ -45,7 +43,6 @@
         position: absolute;
         z-index: 100;
     }
-
     .show {
         display: block;
     }

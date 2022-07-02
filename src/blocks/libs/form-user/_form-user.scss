@@ -1,3 +1,8 @@
+@import '../text-field/_text-field.scss';
+@import '../radio/_radio.scss';
+@import '../toggle/_toggle.scss';
+@import '../btn/_btn.scss';
+
 .form-user {
     &__title {
         margin-bottom: 20px;
