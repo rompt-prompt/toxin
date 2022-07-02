@@ -13,8 +13,8 @@ module.exports = {
     mode: mode,
     entry: {
         index: './src/pages/index/index.js',
-        sandBox: './src/pages/sandbox/sandbox.js',
-        colorsNtype: './src/pages/colors-and-type/colors-and-type.js',
+        sandbox: './src/pages/sandbox/sandbox.js',
+        'colors-type': './src/pages/colors-type/colors-type.js',
         cards: './src/pages/cards/cards.js',
     },
     output: {
@@ -28,18 +28,22 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: "index.html",
             template: "./src/pages/index/index.pug",
-        }),
-        new HtmlWebpackPlugin({
-            filename: "colors-and-type.html",
-            template: "./src/pages/colors-and-type/colors-and-type.pug",
-        }),
-        new HtmlWebpackPlugin({
-            filename: "cards.html",
-            template: "./src/pages/cards/cards.pug",
+            chunks: ['index'],
         }),
         new HtmlWebpackPlugin({
             filename: "sandbox.html",
             template: "./src/pages/sandbox/sandbox.pug",
+            chunks: ['sandbox'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: "colors-type.html",
+            template: "./src/pages/colors-type/colors-type.pug",
+            chunks: ['colors-type'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: "cards.html",
+            template: "./src/pages/cards/cards.pug",
+            chunks: ['cards'],
         }),
 
         // new HtmlWebpackPlugin({
