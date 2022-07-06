@@ -1,0 +1,123 @@
+@import '../../styles/_styles.scss';
+@import '../../blocks/libs/text-field/_text-field.scss';
+@import '../../blocks/libs/dropdawn/_dropdawn.scss';
+@import '../../blocks/libs/datepicker/_datepicker.scss';
+@import '../../blocks/libs/subscription/_subscription.scss';
+@import '../../blocks/libs/checkbox/_checkbox.scss';
+@import '../../blocks/libs/radio/_radio.scss';
+@import '../../blocks/libs/toggle/_toggle.scss';
+@import '../../blocks/libs/like-btn/_like-btn.scss';
+@import '../../blocks/libs/rating/_rating.scss';
+@import '../../blocks/libs/range-slider/_range-slider.scss';
+@import '../../blocks/libs/btn/_btn.scss';
+@import '../../blocks/libs/pagination/_pagination.scss';
+@import '../../blocks/libs/filter-options/_filter-options.scss';
+@import '../../blocks/libs/expandable/_expandable.scss';
+@import '../../blocks/libs/bullet-list/_bullet-list.scss';
+@import '../../blocks/libs/room-features/_room-features.scss';
+@import '../../blocks/libs/review/_review.scss';
+
+.elements {
+    display: flex;
+    flex-direction: column;
+
+    &__section {
+        display: flex;
+        justify-content: space-between;
+        .col {
+            flex: 0 0 32rem;
+            &_left {
+                
+            }
+            &_center {
+                margin-left: 12.6rem;
+                margin-right: 7.2rem;
+            }
+            &_right {
+                
+            }
+            & .item__title:not(:first-of-type) {
+                margin-top: 4rem;
+            }
+        }
+        &_1 {
+            height: 63.6rem;
+            margin-bottom: 9.7rem;
+        }
+        &_2 {
+            height: 26.6rem;
+            margin-bottom: 4rem;
+        }
+        &_3 {
+            height: 28.1rem;
+            margin-bottom: 10rem;
+        }
+        &_4 {
+            height: 15.8rem;
+            margin-bottom: 13.1rem;
+
+            .col.col_right {
+                flex: 0 0 71.1rem;
+            }
+        }
+        .elements__item {
+            margin-bottom: 2.1rem;
+            &_inline {
+                display: flex;
+                justify-content: space-between;
+            }
+            &_high {
+                margin-bottom: 4rem;
+            }
+            &_low {
+                margin-bottom: 1.1rem;
+            }
+            .item__title {
+                margin-bottom: 1.6rem;
+            }
+            & .checkbox {
+                width: 22.2rem;
+                margin-bottom: 1.1rem;
+            }
+            & .toggle {
+                margin-bottom: 1.5rem;
+            }
+            & .like-btn:first-of-type {
+                margin-right: 1rem;
+            }
+            &.item__rating {
+                display: flex;
+                flex-wrap: wrap;
+
+                .item__title {
+                    flex: 0 0 100%;
+                }
+
+                .rating:first-of-type {
+                    margin-right: 2rem;
+                }
+
+            }
+            .item__btn {
+                margin-bottom: 2rem;
+                margin-right: 2rem;
+                &.btn_theme_purple.btn__arrow {
+                    margin-bottom: 2.8rem;
+                }
+            }
+            &.item__rich-chk {
+                margin-top: 1.4rem;
+                .checkbox {
+                    width: 26rem;
+                }
+            }
+            & .bullet-list {
+                padding-top: 1.4rem;
+            }
+            & .review {
+                margin-top: 1rem;
+            }
+            
+        }
+    }
+}

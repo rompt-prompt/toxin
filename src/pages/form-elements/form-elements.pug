@@ -1,59 +1,141 @@
-extends ../_layout.pug
+extends ../_layoutpromo.pug
 
 block title 
     title Form Elements
 
 block content 
-    //- h1 hvbavb 
-    //- h2 Привет из ui
-    //- h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis ad, adipisci sequi vel illo deleniti tenetur fugit explicabo, quaerat, nisi ipsa necessitatibus doloribus dolor dolorum fuga! Aliquam, blanditiis odit!
-    //- p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque eius quas dolorem porro quia fugiat unde assumenda dolore aspernatur autem sint veritatis eaque saepe temporibus culpa sapiente totam, libero cumque.
-    //- +text-field('text-field', 'text', 'id', 'Placeholder', 'w320', '')
-    //- +subscription('w320')
-    //- +btn('click me', 'btn_theme_purple w99')
-    //- +btn('Click me', 'btn_theme_ligth w99')
-    //- br
-    //- +btn('click me', 'btn_theme_icon-link')
-    //- br
-    //- +btn('Перейти к оплате', 'btn__arrow btn_theme_purple w320')
-    //- br
-    //- +btn('', 'btn_theme_round-green btn__arrow')
-    //- br
-    //- +btn('-', 'btn_theme_round-gray')
-    //- br
-    //- +btn('+', 'btn_theme_round-gray')
-    //- br
-    //- br
-    //- +radio
-    //- br
-    //- +toggle('Получать спецпредложения', 'mailing')
-    //- br
-    //- +like-btn(12)
-    //- +rating(4)
-    //- br
-    //- +checkbox('Можно курить', 'smoking')
-    //- br
-    //- +checkbox-rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor')
-    //- br
-    //- +bullet-list('Правила')
-    //- +room-features
-    //- +social-icons
-    //- +dropdawn('rooms', 'drop-b', 'w320')
-    //-     +menu(['Спальни', 'Кровати', 'Ванные комнаты'], '')
-    //- +dropdawn('guests', 'Название', 'w320')
-    //-     +menu(['Взрослые', 'Дети', 'Младенцы'], 'c')
-    //- br
-    //- br
-    //- +expandable('expan', 'expandable checkbox list', 'w320')
-    //-    +checkbox('Завтрак', 'breakfast')
-    //-    +checkbox('Письменный стол', 'table', 'c')
-    //-    +checkbox('Стул для кормления', 'feedingChair', 'c')
-    //-    +checkbox('Кроватка', 'bed', 'c')
-    //-    +checkbox('Телевизор', 'tv')
-    //-    +checkbox('Шампунь', 'shampoo')
-    //- +review('Мурад Сарафанов', 'avatar_user_1.jpg', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
-    //-     block likes 
-    //-         +like-btn(12)
-    +range-slider('range slider')
-    br
-    +pagination(15, 1, 2, 3)
+    include ../../blocks/libs/text-field/_text-field.pug
+    include ../../blocks/libs/dropdawn/_dropdawn.pug
+    include ../../blocks/libs/datepicker/_datepicker.pug
+    include ../../blocks/libs/subscription/_subscription.pug
+    include ../../blocks/libs/checkbox/_checkbox.pug
+    include ../../blocks/libs/radio/_radio.pug
+    include ../../blocks/libs/toggle/_toggle.pug
+    include ../../blocks/libs/like-btn/_like-btn.pug
+    include ../../blocks/libs/rating/_rating.pug
+    include ../../blocks/libs/range-slider/_range-slider.pug
+    include ../../blocks/libs/btn/_btn.pug
+    include ../../blocks/libs/pagination/_pagination.pug
+    include ../../blocks/libs/filter-options/_filter-options.pug
+    include ../../blocks/libs/expandable/_expandable.pug
+    include ../../blocks/libs/bullet-list/_bullet-list.pug
+    include ../../blocks/libs/room-features/_room-features.pug
+    include ../../blocks/libs/review/_review.pug
+    
+    main.elements.page-wrapper
+
+        section.elements__section.elements__section_1
+
+            .col.col_left
+                .elements__item
+                    +text-field('text field', 'email', 'email', 'Email', 'w320')
+                .elements__item
+                    +text-field('text field', 'text', 'text', '', 'w320', 'This is pretty awesome')
+                .elements__item
+                    +dropdawn('guests', 'dropdawn', 'w320')
+                .elements__item.elements__item_high
+                    +text-field('masked text field', 'text', 'masked', 'ДД.ММ.ГГГГ', 'w320')
+                .elements__item.elements__item_inline.elements__item_high
+                    +dropdawn('searchDateFrom', 'date dropdawn', 'w150')
+                        +datepicker('searchDatepickerFrom')
+                    +dropdawn('searchDateTo', 'date dropdawn', 'w150', 'r')
+                        +datepicker('searchDatepickerTo')
+                .elements__item.elements__item_high
+                    +dropdawn('filterDate', 'filter date dropdown', 'w266')
+                        +datepicker('datepicker')
+                .elements__item
+                    +subscription('subscription text field', 'w266')
+
+            .col.col_center
+                .elements__item.elements__item_high
+                    h3.item__title Checkbox Buttons
+                    +checkbox('short', 'Можно курить', '', 'smoke', 'cls', '', 'disabled')
+                    +checkbox('short', 'Можно с питомцами', '', 'pats', 'cls', 'c', '')
+                    +checkbox('short', 'Можно пригласить гостей (до 10 человек)', '', 'party', 'cls', 'c', '')
+                .elements__item.elements__item_high
+                    h3.item__title Radio Buttons
+                    +radio('sex', sexSelect, '')  
+                .elements__item.elements__item_high
+                    h3.item__title Toggle
+                    +toggle('Получать спецпредложения', 'mailing1', 'cls', 'c')
+                    +toggle('Получать спецпредложения', 'mailing2', 'cls', '')
+                .elements__item.elements__item_high
+                    h3.item__title Like Button
+                    +like-btn(2, 'cls')
+                    +like-btn(12, 'cls')
+                .elements__item.item__rating
+                    h3.item__title rate Button
+                    +rating('rating1', 4, '', '')
+                    +rating('rating2', 5, '', '')
+
+            .col.col_right
+                .elements__item.elements__item_high
+                    +range-slider('Range Slider', 'cls')
+                .elements__item.elements__item_low
+                    h3.item__title Buttons
+                    +btn('Click me', 'btn_theme_purple w99 item__btn', 'button')
+                    +btn('Click me', 'btn_theme_purple w99 item__btn', 'button')
+                .elements__item.elements__item_low
+                    +btn('Click me', 'btn_theme_ligth w99 item__btn', 'button')
+                    +btn('Click me', 'btn_theme_ligth w99 item__btn', 'button')
+                .elements__item.elements__item_low    
+                    +btn('Click me', 'btn_theme_icon-link item__btn', 'button')
+                    +btn('Click me', 'btn_theme_icon-link item__btn', 'button')
+                .elements__item.elements__item_high 
+                    +btn('Перейти к оплате', 'btn_theme_purple btn__arrow w320', 'button')
+                .elements__item
+                    h3.item__title pagination
+                    +pagination('cls', 15, [1, 2, 3])
+
+        section.elements__section.elements__section_2
+
+            .col.col_left
+                .elements__item 
+                    +dropdawn('facilities1', 'dropdawn', 'w266')
+                .elements__item 
+                    +dropdawn('facilities2', 'dropdawn', 'w266')
+                        +filter-options('roomOptions', ['Спальни','Кровати','Ванные комнаты'], 'cls', '')
+
+            .col.col_center
+                .elements__item 
+                    +dropdawn('guests1', 'dropdawn', 'w320')
+                        +filter-options('guestsOptions1', ['Взрослые','Дети','Младенцы'], 'cls', 'c')
+
+            .col.col_right
+                .elements__item 
+                    +dropdawn('guests2', 'dropdawn', 'w320')
+                        +filter-options('guestsOptions2', ['Взрослые','Дети','Младенцы'], 'cls', 'c')
+
+        section.elements__section.elements__section_3
+
+            .col.col_left
+                .elements__item 
+                    +expandable('exp1', 'expandable checkbox list', 'w266')
+                .elements__item 
+                    +expandable('exp2', 'expandable checkbox list', 'w266')
+                        +checkbox('short', 'Завтрак', '', 'breakfast', 'cls', '', 'disabled')
+                        +checkbox('short', 'Письменный стол', '', 'table', 'cls', 'c', 'disabled')
+                        +checkbox('short', 'Стул для кормления', '', 'chair', 'cls', 'c', 'disabled')
+                        +checkbox('short', 'Кроватка', '', 'bed', 'cls', 'c', 'disabled')
+                        +checkbox('short', 'Телевизор', '', 'tv', 'cls', '', 'disabled')
+                        +checkbox('short', 'Шампунь', '', 'shampoo', 'cls', '', 'disabled')
+
+            .col.col_center
+                .elements__item.item__rich-chk
+                    h3.item__title rich Checkbox Buttons
+                    +checkbox('rich', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'wideCorridor', 'cls', '', 'disable')
+                    +checkbox('rich', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'disabledHelper', 'cls', '', 'disable')
+
+            .col.col_right
+                .elements__item 
+                    +bullet-list('bullet list', roomRules, 'w266')
+
+        section.elements__section.elements__section_4
+
+            .col.col_left
+                .elements__item 
+                    +room-features(roomFeatures, 'cls')
+
+            .col.col_right
+                .elements__item 
+                    +review('Мурад Сарафанов', 'avatar_user_1.jpg', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
