@@ -1,0 +1,22 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        <script src="https://kit.fontawesome.com/95901545b1.js" crossorigin="anonymous"></script>
+        style 
+                |.body {background-color: rgba(244, 244, 246, 1);}
+                |.promo-header {padding: 3rem 3rem 6.2rem 3rem;}
+                |.promo-header__logo {transition: 0.3s;}
+                |.promo-header__logo:hover {transform: scale(1.1);}          
+
+    block title 
+        title Toxin
+        
+    body 
+        .promo-header
+            a.promo-header__link(href="./index.html") 
+                img.promo-header__logo(src=require("../../images/logo_toxin_mini.svg"), alt="toxin")
+
+        block content
