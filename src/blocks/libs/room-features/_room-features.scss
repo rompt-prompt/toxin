@@ -2,7 +2,6 @@
 
     &__item {
         box-sizing: border-box;
-        margin-top: 2rem;
         padding-bottom: 2rem;
         padding-left: 5.8rem;
         min-height: 6.8rem;
@@ -13,6 +12,9 @@
 
         &:not(:last-of-type) {
             border-bottom: 0.1rem solid $dark10;
+        }
+        &:not(:first-of-type) {
+            margin-top: 2rem;
         }
     }
 

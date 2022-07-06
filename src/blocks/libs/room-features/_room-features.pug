@@ -11,14 +11,14 @@
             description: 'Окно в каждой из спален',
             icon: 'location_city',
         },
-        {
-            item: 'Уют',
-            description: 'Номер оснащён камином',
-            icon: 'whatshot',
-        }
+        //- {
+        //-     item: 'Уют',
+        //-     description: 'Номер оснащён камином',
+        //-     icon: 'whatshot',
+        //- }
     ]
 
-mixin room-features(features = roomFeatures, cls)
+mixin room-features(features = roomFeatures, cls='')
     ul.room-features(class=`${cls}`)
         each feature in features
             li.text.room-features__item(class=feature.icon)= feature.item

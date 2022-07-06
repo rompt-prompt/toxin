@@ -5,6 +5,9 @@
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         color:transparent;
         background-clip: text;
-        margin: 0 1rem;
+        
+        &:not(:first-child) {
+            margin-left: 2.3rem;
+        }
     }
 }

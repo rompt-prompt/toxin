@@ -1,8 +1,22 @@
 .nav {
     vertical-align: middle;
     &__link {
-        margin-left: 2rem;
+        margin-left: 2.1rem;
         color: $dark50;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 0;
+            height: 0.2rem;
+            background-image: $lg-purple;
+            position: absolute;
+            bottom: -0.4rem;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.2s ease-in-out;
+        }
+
 
         &_current {
             font-weight: 700;
@@ -16,4 +30,8 @@
             vertical-align: middle;
         }
     }
+}
+
+.nav__link:not(.nav__link_current):hover::before {
+    width: 100%;
 }

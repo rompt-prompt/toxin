@@ -1,24 +1,29 @@
-mixin footer(cls)
+include ../libs/homepage/_homepage.pug
+include ../libs/subscription/_subscription.pug
+include ../libs/link-group/_link-group.pug
+include ../libs/social-icons/_social-icons.pug
+
+mixin footer(cls='')
     footer.footer(class=`${cls}`)
         .footer__top
             .page-wrapper 
-                .footer__col.footer__col_wide 
-                    h3.col__title 
-                        +homepage('#', 'footer__logo')
+                .footer__col_left 
+                    +homepage('#', 'footer__logo')
                     p.text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-                .footer__col.footer__col_tight 
-                    h3.col__title Навигация
-                    +link-group(wfooterlinks)
-                .footer__col.footer__col_tight 
-                    h3.col__title О нас
-                    +link-group(wfooterlinks)
-                .footer__col.footer__col_tight 
-                    h3.col__title Служба поддержки
-                    +link-group(wfooterlinks)
-                .footer__col.footer__col_wide 
+                .footer__col_center 
+                    .center__column
+                        h3.col__title Навигация
+                        +link-group(wfooterlinks)
+                    .center__column
+                        h3.col__title О нас
+                        +link-group(wfooterlinks)
+                    .center__column
+                        h3.col__title Служба поддержки
+                        +link-group(wfooterlinks)
+                .footer__col_right 
                     h3.col__title Подписка
                     p.text Получайте специальные предложения и новости сервиса
-                    +subscription("w260 footer__subscription")
+                    +subscription('', 'w260 footer__subscription')
         .footer__bottom
             .page-wrapper 
                 +homepage('#', 'footer__logo')

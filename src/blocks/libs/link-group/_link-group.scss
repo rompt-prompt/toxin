@@ -7,8 +7,13 @@
         display: block;
         line-height: 2.4rem;
 
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: $dark50;
+        }
+
         &:not(:first-child) {
-            margin-top: 1.07rem;
+            margin-top: 1.5rem;
         }
     }
 }

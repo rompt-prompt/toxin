@@ -27,7 +27,7 @@
         },
     ]
 
-mixin nav-header(current, items = navHeader, cls) 
+mixin nav-header(current, items = navHeader, cls='') 
     nav.nav(class=`${cls}`)
         each item in items
             if item.name === current

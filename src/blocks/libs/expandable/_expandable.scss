@@ -1,6 +1,7 @@
-.expandable {
+.expandable { // TODO стрелка должна переворачиваться
 
     &__btn {
+        width: 100%;
         min-height: 4.4rem;
         padding-right: 4.4rem;
         text-align: left;

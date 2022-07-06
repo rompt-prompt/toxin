@@ -1,8 +1,12 @@
-mixin header(user='anonim', cls)
+include ../libs/btn/_btn.pug
+include ../libs/homepage/_homepage.pug
+
+mixin header(user='anonim', cls='')
     header(class=`${cls}`)
         .header.page-wrapper
             +homepage('#', 'header__logo')
-            block nav
+            
+            block
             
             if user === 'anonim'
                 +btn('Войти', 'header__btn btn_theme_ligth w87')

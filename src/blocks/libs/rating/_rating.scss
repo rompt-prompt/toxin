@@ -26,14 +26,14 @@
                 content: "star";
             }
 
-            .rating:hover input[type="radio"] ~ &,
-            .rating:hover input[type="radio"] ~ .rating__star ~ & {
+            .active:hover input[type="radio"] ~ &,
+            .active:hover input[type="radio"] ~ .rating__star ~ & {
                 content: "star_border";
             } 
         }
 
-        .rating input[type="radio"] ~ &:hover::before,
-        .rating input[type="radio"] ~ &:hover ~ .rating__star::before {
+        .active input[type="radio"] ~ &:hover::before,
+        .active input[type="radio"] ~ &:hover ~ .rating__star::before {
             content: "star" !important;
             background: gold;
             background-clip: text;

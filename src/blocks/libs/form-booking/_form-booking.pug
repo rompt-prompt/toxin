@@ -1,17 +1,20 @@
 include ../room-id/_room-id.pug
 include ../dropdawn/_dropdawn.pug
+include ../datepicker/_datepicker.pug
 include ../filter-options/_filter-options.pug
 include ../popup-info/_popup-info.pug
 include ../btn/_btn.pug
 
-mixin form-booking(id, category, price)
-    form.form-booking(action="#", method="post")
+mixin form-booking(id, category, price, cls='')
+    form.form-booking(action="#", method="post" class=`${cls}`)
         legend.title-1.form-booking__title 
             +room-id(id, category, price, 'form-booking__room')
-        +dropdawn('dp', 'Прибытие', 'w150 datepicker form-booking__item')
-        +dropdawn('dp', 'Выезд', 'w150 datepicker form-booking__item')
-        +dropdawn('guests', 'Гости', 'w320 form-booking__item')
-            +filter-options('guestsContent', ['Взрослые', 'Дети', 'Младенцы'], 'dropdawn__content', 'c')
+        +dropdawn('bookingDateFrom', 'Прибытие', 'w150 form-booking__item')
+            +datepicker('bookingDatepickerFrom')
+        +dropdawn('bookingDateTo', 'Выезд', 'w150 form-booking__item', 'r')
+            +datepicker('bookingDatepickerTo')
+        +dropdawn('bookingGuests', 'Гости', 'w320 form-booking__item')
+            +filter-options('bookingGuestsContent', ['Взрослые', 'Дети', 'Младенцы'], 'w320', 'c')
         ul.form-booking__calcs.calcs.text 
             li.calcs__service.service 
                 span.service__name= price + ' x 4 суток'
@@ -28,4 +31,4 @@ mixin form-booking(id, category, price)
                 span.total__name Итого
                 span.total__price.rub 38 081
 
-        +btn('Забронировать', 'form-booking__btn btn_theme_purple w320', 'submit')
+        +btn('Забронировать', 'form-booking__btn btn_theme_purple btn__arrow w320', 'submit')

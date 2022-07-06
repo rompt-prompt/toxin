@@ -1,11 +1,8 @@
 @import '../btn/_btn.scss';
 
 .filter-options {
-    width: inherit;
     box-sizing: border-box;
-    padding-left: 1.5rem;
-    padding-right: 0.7rem;
-    padding-top: 0.7rem;
+    padding: 0.5rem 0.7rem 0rem 1.3rem;
     border: 0.1rem solid $dark50;
     border-top: none;
     border-radius: 0 0 .4rem .4rem;
@@ -14,24 +11,26 @@
 
     &__option {
         margin-bottom: 0.7rem;
+    }
+    .option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        &.option {
+        &__settings {
             display: flex;
             justify-content: space-between;
-            &__name {
-                align-self: center;
-            }
-            &__setting {
-                width: 9.2rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+            align-items: center;
+
+            .amount {
+                margin: 0 1rem;
             }
         }
     }
+    
 
     &__controls {
-        margin: 1.2rem 0 1.3rem;
+        margin: 2rem 0 1.2rem;
 
         &.controls {
             display: flex;

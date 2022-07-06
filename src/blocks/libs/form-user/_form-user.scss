@@ -5,20 +5,21 @@
 
 .form-user {
     &__title {
-        margin-bottom: 20px;
+        margin-top: -0.3rem;
+        margin-bottom: 2rem;
     }
     &__item {
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
 
         &.item__title {
-            margin-top: 16px;
+            margin-top: 1.7rem;
         }
         &.item__toggle {
-            margin-bottom: 16px;
+            margin-bottom: 1.6rem;
         }
     }
     &__btn {
-        margin-top: 10px;
+        margin-top: 1rem;
     }
     &__footer {
         margin-top: 3rem;

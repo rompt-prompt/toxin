@@ -1,6 +1,11 @@
-mixin checkbox(type='short', label, content, id, cls, chk)
+mixin checkbox(type='short', label, content, id, cls='', chk, disable)
     .checkbox(class=`${cls}`)
-        input(type="checkbox", name=`${id}`, id=`${id}`, checked= `${chk}` === 'c' ? true : false)
+        input(
+            type="checkbox", 
+            name=`${id}`, 
+            id=`${id}`, 
+            disabled= disable === 'disabled' ? true : false, 
+            checked= `${chk}` === 'c' ? true : false)
         label.text.checkbox__label.checkbox__custom(for=`${id}`, class= `${type}` === 'rich' ? "checkbox__label_rich" : "")= label
             if type === 'rich'
                 p.text.checkbox__content= content

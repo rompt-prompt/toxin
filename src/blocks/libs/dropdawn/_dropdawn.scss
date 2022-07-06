@@ -1,4 +1,6 @@
 .dropdawn {
+    position: relative;
+
     &__title {
         display: block;
         margin-bottom: 0.5rem;
@@ -16,8 +18,9 @@
         display: block;
         position: relative;
 
-        &:hover {
+        &:focus, &:hover {
             border-color: $dark50;
+            outline: none;
         }
 
         &::after {
@@ -30,18 +33,30 @@
             width: 4.4rem;
             text-align: center;
             background-color: inherit;
+            transition: all 0.3s ease-in-out;
         }
 
-        &_opened {
+        &_opened-border {
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
             border-color:  $dark50;
         }
+        &_opened-arrow::after {
+                transform: rotateX(180deg);
+            }
     }
     &__content {
+        width: inherit; // TODO разобрвться с шириной либо позиционированием выпадающего блока справа
         display: none;
         position: absolute;
         z-index: 100;
+
+        &_left{
+            left: 0;
+        }
+        &_right{
+            right: 0;
+        }
     }
     .show {
         display: block;

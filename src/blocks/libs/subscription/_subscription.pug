@@ -1,6 +1,6 @@
-include ../text-field/_text-field_.pug
+include ../text-field/_text-field.pug
 
-mixin subscription(cls)
+mixin subscription(label= '', cls='')
     form.subscription(action="#", method="post", class=`${cls}`) 
-        +text-field('', 'email', 'email', 'Email', 'subscription__text-field')
+        +text-field(label, 'email', 'email', 'Email', 'subscription__text-field')
         button.subscription__btn(type="submit")

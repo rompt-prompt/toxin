@@ -1,4 +1,4 @@
-mixin review(author, avatarSrc, date, content, cls)
+mixin review(author, avatarSrc, date, content, cls='')
     figure.review(class= `${cls}`)
         figcaption.author 
             img.author__avatar(src=require(`../../images/${avatarSrc}`), alt=`${author}`)

@@ -3,9 +3,9 @@ include ../radio/_radio.pug
 include ../toggle/_toggle.pug
 include ../btn/_btn.pug
 
-mixin form-user(type)
+mixin form-user(type, cls='')
     if type === 'n'
-        form.form-user(action="#", method="post")
+        form.form-user(action="#", method="post", class=`${cls}`)
             legend.title-1.form-user__title Регистрация аккаунта
             +text-field('', 'text', 'name', 'Имя', 'form-user__item')
             +text-field('', 'text', 'surname', 'Фамилия', 'form-user__item')
@@ -20,7 +20,7 @@ mixin form-user(type)
             +btn('Войти', 'btn_theme_ligth w99')
 
     else if type === 'l'
-        form.form-user(action="#", method="post")
+        form.form-user(action="#", method="post", class=`${cls}`)
             legend.title-1.form-user__title Войти
             +text-field('', 'email', 'email', 'Email', 'form-user__item')
             +text-field('', 'password', 'password', 'Пароль', 'form-user__item')

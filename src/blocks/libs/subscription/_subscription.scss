@@ -4,16 +4,18 @@
     position: relative;
 
     &__text-field {
-        padding-right: 4.4rem;
-        margin-top: 0;
+        width: 100%;
+        .text-field__input {
+            padding-right: 4.4rem;
+        }
     }
 
     &__btn {
         position: absolute;
-        top: 0;
         bottom: 0;
         right: 0;
         width: 4.4rem;
+        height: 4.4rem;
         background-color: transparent;
 
         &::after {

@@ -1,7 +1,5 @@
-// TODO добавить патерн на дату
-
-mixin text-field(label, type='text', id, placeholder, cls)
-    .text-field(class=`${cls}`,)
+mixin text-field(label, type='text', id, placeholder, cls='', value='') 
+    .text-field(class=`${cls}`)
         if label
             label.text-field__title.title-3(for=`${id}`)= label
         input.text-field__input.text(
@@ -9,4 +7,6 @@ mixin text-field(label, type='text', id, placeholder, cls)
             id=`${id}`, 
             placeholder=`${placeholder}`,  
             type=`${type}`,
+            value=`${value}`
             )
+    //- TODO добавить патерн на дату

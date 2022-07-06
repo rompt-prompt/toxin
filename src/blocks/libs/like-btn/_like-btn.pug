@@ -1,2 +1,2 @@
-mixin like-btn(likes, cls)
+mixin like-btn(likes, cls='')
     button.like-btn(class=(`${likes}`>3 ? "like-btn_purple" : "") + " " + `${cls}`)= likes < 100 ? likes : "99+"

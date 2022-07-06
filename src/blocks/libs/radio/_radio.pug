@@ -11,7 +11,7 @@
         },
     ]
 
-mixin radio(name='sex', radioContent = sexSelect, cls)    
+mixin radio(name='sex', radioContent = sexSelect, cls='')    
     each item in radioContent
         .radio(class=`${cls}`)
             input(type="radio" name=`${name}` id=item.id)

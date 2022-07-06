@@ -1,10 +1,13 @@
+@import '../libs/btn/_btn.scss';
+@import '../libs/homepage/_homepage.scss';
+
 header {
     padding: 1.8rem 0;
     background: #FFFFFF;
     box-shadow: 0 1rem 2rem $dark5;
 
     .header {
-        min-height: 3.4rem;
+        min-height: 4rem;
         display: flex;
         justify-content: space-between;
         align-items: center;

@@ -1,13 +1,13 @@
 include ../btn/_btn.pug
 
-mixin filter-options(id, items, cls, controls= '')
+mixin filter-options(id, items, cls='', controls= '')
     .filter-options(id=`${id}`, class=`${cls}`)
         each item in items
             .filter-options__option.option
-                span.title-3.option__name= item
+                span.title-3= item
                 span.option__settings
                     +btn('-', 'btn_theme_round-gray')
-                    span.title-3 0
+                    span.title-3.amount 0
                     +btn('+', 'btn_theme_round-gray')
         if controls == 'c'
             .filter-options__controls.controls

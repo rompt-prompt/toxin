@@ -6,9 +6,10 @@
     }
     
     &__label {
+        display: block;
         color: $dark50;
         line-height: 2rem;
-        padding-left: 3rem;
+        margin-left: 3rem;
 
         &_rich {
             font-weight: 700;
@@ -17,11 +18,11 @@
     }
 
     &__content {
+        margin-top: 0.5rem;
         display: block;
         font-size: 1.2rem;
         line-height: 1.4rem;
         color: $dark50;
-        padding-left: 3rem;
     }
 
     &__custom {
