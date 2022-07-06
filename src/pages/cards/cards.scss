@@ -1,19 +1,25 @@
 @import '../../styles/_styles.scss';
+@import '../../blocks/libs/card/card';
+@import '../../blocks/libs/form-search/form-search';
+@import '../../blocks/libs/form-booking/form-booking';
+@import '../../blocks/libs/form-user/form-user';
+@import '../../blocks/libs/datepicker/datepicker';
+@import '../../blocks/libs/room-card/room-card';
 
-body {
-    background-color: rgba(244, 244, 246, 1);
-    .header {
-        padding: 3rem;
 
-        img {
-            width: 4.8rem;
-            height: 4.8rem;
+.cards {
+    margin-top: 0.6rem;
+    height: 112rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4rem 4rem;
 
-            a:hover & {
-                stroke: $purple;
-                fill: $purple;
-            }
-
+    &__item {
+        &.item__datepicker {
+            margin-top: 0;
         }
     }
 }

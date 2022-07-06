@@ -1,21 +1,25 @@
-extends ../_layout.pug
+extends ../_layoutpromo.pug
 
 block title 
     title Cards
 
 block content 
-    .header
-        a(href="./index.html") 
-            img(src=require("../../images/logo_toxin_mini.svg"), alt="toxin")
-        main
-            +card('card__search')
-                +form-search()
-            +card('card__booking')
-                +form-booking(888, 'люкс', '9 990')
-            +datepicker('datepicker')
-            +card('card__registration')
-                +form-user('n')
-            +card('card__login')
-                +form-user('l')
-            +room-card(888, 'люкс', '9 990', 5, 145)
-            +room-card(840, '', '9 990', 4, 65)
+    include ../../blocks/libs/card/_card.pug
+    include ../../blocks/libs/form-search/_form-search.pug
+    include ../../blocks/libs/form-user/_form-user.pug
+    include ../../blocks/libs/form-booking/_form-booking.pug
+    include ../../blocks/libs/datepicker/_datepicker.pug
+    include ../../blocks/libs/room-card/_room-card.pug
+
+    main.cards.page-wrapper
+        +card('cards__item')
+            +form-search()
+        +card('cards__item')
+            +form-user('n')
+        +card('cards__item')
+            +form-booking(888, 'люкс', '9 990')
+        +card('cards__item')
+            +form-user('l')
+        +datepicker('datepicker', 'cards__item item__datepicker')
+        +room-card(888, 'люкс', '9 990', 5, 145, 'cards__item')
+        +room-card(840, '', '9 990', 4, 65, 'cards__item')
