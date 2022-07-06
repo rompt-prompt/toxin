@@ -1,0 +1,62 @@
+extends ../_layoutpromo.pug
+
+block title 
+    title Headers & Footers
+
+block content 
+    include ../../blocks/header/_header.pug
+    include ../../blocks/footer/_footer.pug
+    include ../../blocks/libs/nav-header/_nav-header.pug
+
+    +header('anonim', 'hf__item')
+        +nav-header('О нас', navHeader, 'header__nav') 
+    +header('Юлий Цезарь', 'hf__item')
+        +nav-header('О нас', navHeader, 'header__nav') 
+
+    -
+        var footerlinks = [
+            {
+                name: 'О нас',
+                link: '#',
+                expand: '',
+            },
+            {
+                name: 'Услуги',
+                link: '#',
+                expand: 'y',
+            },
+            {
+                name: 'Вакансии',
+                link: '#',
+                expand: '',
+            },
+            {
+                name: 'Новости',
+                link: '#',
+                expand: '',
+            },
+        ]
+    -
+        var toxinSocials = [
+            {
+                network: 'twitter',
+                url: 'https://twitter.com/'
+            },
+            {
+                network: 'facebook-square',
+                url: 'https://facebook.com/'
+            },
+            {
+                network: 'instagram',
+                url: 'https://instagram.com/'
+            }
+        ]
+
+    +footer('hf__item footer_desktop')
+    
+    .mobile.hf__item
+        .footer__bottom
+                .page-wrapper 
+                    +homepage('#', 'footer__logo')
+                    span.text Copyright © 2018 Toxin отель. Все права защищены.
+                    +social-icons(toxinSocials, 'footer__social')
