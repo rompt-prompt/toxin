@@ -12,13 +12,31 @@ console.log('выполняется в ' + mode)
 module.exports = {
     mode: mode,
     entry: {
-        index: './src/pages/index/index.js',
-        sandbox: './src/pages/sandbox/sandbox.js',
+        'index': './src/pages/index/index.js',
+        'sandbox': './src/pages/sandbox/sandbox.js',
         'colors-type': './src/pages/colors-type/colors-type.js',
-        cards: './src/pages/cards/cards.js',
+        'form-elements': './src/pages/form-elements/form-elements.js',
+        'cards': './src/pages/cards/cards.js',
+        'headers-footers': './src/pages/headers-footers/headers-footers.js',
+        'landing': './src/pages/landing/landing.js',
+        'search-filter': './src/pages/search-filter/search-filter.js',
+        'room-details': './src/pages/room-details/room-details.js',
+        'sign-in': './src/pages/sign-in/sign-in.js',
     },
     output: {
+        path: __dirname + '/dist',
         clean: true,
+    },
+    devServer: {
+        open: true,
+        historyApiFallback: true,
+        compress: true,
+        hot: true,
+        port: 8080,
+        // watchFiles: ['./src/**/*.pug', './src/**/*.scss'],
+        client: {
+            progress: true,
+          },
     },
     devtool: 'source-map',
     plugins: [
@@ -41,17 +59,41 @@ module.exports = {
             chunks: ['colors-type'],
         }),
         new HtmlWebpackPlugin({
+            filename: "form-elements.html",
+            template: "./src/pages/form-elements/form-elements.pug",
+            chunks: ['form-elements'],
+        }),
+        new HtmlWebpackPlugin({
             filename: "cards.html",
             template: "./src/pages/cards/cards.pug",
             chunks: ['cards'],
         }),
+        new HtmlWebpackPlugin({
+            filename: "headers-footers.html",
+            template: "./src/pages/headers-footers/headers-footers.pug",
+            chunks: ['headers-footers'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: "landing.html",
+            template: "./src/pages/landing/landing.pug",
+            chunks: ['landing'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: "search-filter.html",
+            template: "./src/pages/search-filter/search-filter.pug",
+            chunks: ['search-filter'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: "/room-details.html",
+            template: "./src/pages//room-details//room-details.pug",
+            chunks: ['/room-details'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: "sign-in.html",
+            template: "./src/pages/sign-in/sign-in.pug",
+            chunks: ['sign-in'],
+        }),
 
-        // new HtmlWebpackPlugin({
-        //     template: "./src/pages/ui-kit/ui-kit.pug"
-        // }),
-        // new HtmlWebpackPlugin({
-        //     template: "./src/pages/cards/cards.pug"
-        // }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
@@ -95,7 +137,7 @@ module.exports = {
                 exclude: /node_modules/,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'images/[contenthash][ext][query]',
+                    filename: 'images/[name][ext][query]',
                 }
             },
             {
@@ -103,7 +145,7 @@ module.exports = {
                 exclude: /node_modules/,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'fonts/[contenthash][ext][query]',
+                    filename: 'fonts/[name][ext][query]',
                 }
             },
             {
