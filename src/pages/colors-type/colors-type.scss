@@ -1,90 +1,73 @@
 @import '../../styles/_styles.scss';
 
-body {
+main {
+    margin: 0.2rem 13.5rem 14.5rem 15rem;
+    display: flex;
+    justify-content: space-between;
 
-    .header {
-        padding: 3rem;
-
-        img {
-            width: 4.8rem;
-            height: 4.8rem;
-
-            a:hover & {
-                stroke: $purple;
-                fill: $purple;
+    .col {
+        flex: 0 1 38.8%;
+    }
+    
+    .colors {
+        max-width: 28.1rem;
+    
+        &__color {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;     
+            align-items: center;
+            margin-bottom: 2rem;
+    
+            .color {
+    
+                &__palette {
+                    display: block;
+                    width: 7rem;
+                    height: 7rem;
+                    border-radius: 6px;
+                    margin-right: 4rem;
+    
+                        &.dark100 {background-color: $dark100;}
+                        &.dark75 {background-color: $dark75;}
+                        &.dark50 {background-color: $dark50;}
+                        &.dark25 {background-color: $dark25;}
+                        &.dark5 {background-color: $dark5;}
+                        &.purple {background-color: $purple;}
+                        &.green {background-color: $green;}
+                }
+    
+                &__name {
+                    line-height: 2.8rem;
+    
+                    span {
+                        display: block;
+                        font-weight: 400;
+                    }
+                }
             }
-
         }
     }
-    main {
-        margin: 3.7rem 15.8rem 14.5rem 15rem;
-        display: flex;
-        justify-content: space-between;
-
-        .col {
-            flex: 0 1 50%;
-        }
-        
-        .colors {
-            max-width: 28.1rem;
-        
-            &__color {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: flex-start;     
-                align-items: center;
-                margin-bottom: 2rem;
-        
-                .color {
-        
-                    &__palette {
-                        display: block;
-                        width: 7rem;
-                        height: 7rem;
-                        border-radius: 6px;
-                        margin-right: 4rem;
-        
-                            &.dark100 {background-color: $dark100;}
-                            &.dark75 {background-color: $dark75;}
-                            &.dark50 {background-color: $dark50;}
-                            &.dark25 {background-color: $dark25;}
-                            &.dark5 {background-color: $dark5;}
-                            &.purple {background-color: $purple;}
-                            &.green {background-color: $green;}
-                    }
-        
-                    &__name {
-                        line-height: 2.8rem;
-        
-                        span {
-                            display: block;
-                            font-weight: 400;
-                        }
-                    }
-                }
+    .type {
+        max-width: 43.6rem;
+    
+        &__item {
+            margin-bottom: 5.1rem;
+            display: flex;
+            justify-content: left;
+    
+            &:last-child {
+                padding-right: 6.8rem;
             }
         }
-        .type {
-            max-width: 43.6rem;
-        
-            &__item {
-                margin-bottom: 5.1rem;
-                display: flex;
-                justify-content: left;
-        
-                &:last-child {
-                    padding-right: 6.8rem;
-                }
-            }
-            &__name {
-                flex: 0 0 3.7rem;
-                text-align: right;
-                font-weight: 400;
-                color: $dark25;
-            }
-            &__example {
-                margin-left: 3rem;
-            }
+        &__name {
+            flex: 0 0 3.7rem;
+            text-align: right;
+            font-weight: 400;
+            color: $dark25;
+        }
+        &__example {
+            margin-left: 3rem;
         }
     }
 }

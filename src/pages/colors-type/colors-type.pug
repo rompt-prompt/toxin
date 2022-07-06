@@ -1,4 +1,4 @@
-extends ../_layout.pug
+extends ../_layoutpromo.pug
 
 block title 
     title Colors and Type
@@ -15,9 +15,6 @@ block content
             {class: 'purple', name: 'Purple', hex: '#BC9CFF'},
             {class: 'green', name: 'Green', hex: '#6FCF97'},
         ]
-    .header
-        a(href="./index.html") 
-            img(src=require("../../images/logo_toxin_mini.svg"), alt="toxin")
     main
         .col    
             ul.colors
