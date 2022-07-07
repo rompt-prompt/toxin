@@ -1,0 +1,60 @@
+@import '../../styles/_styles.scss';
+@import '../../blocks/header/_header.scss';
+@import '../../blocks/footer/_footer.scss';
+@import '../../blocks/libs/nav-header/_nav-header.scss';
+@import '../../blocks/libs/dropdawn/_dropdawn.scss';
+@import '../../blocks/libs/datepicker/_datepicker.scss';
+@import '../../blocks/libs/filter-options/_filter-options.scss';
+@import '../../blocks/libs/range-slider/_range-slider.scss';
+@import '../../blocks/libs/checkbox/_checkbox.scss';
+@import '../../blocks/libs/expandable/_expandable.scss';
+@import '../../blocks/libs/room-card/_room-card.scss';
+@import '../../blocks/libs/pagination/_pagination.scss';
+
+.page-content {
+    padding-top: 3rem;
+    display: flex;
+
+
+    .filters {
+        flex: 0 0 26.6rem;
+        padding-right: 6rem;
+        &__filter {
+            width: 100%;
+            margin-bottom: 3rem;
+    
+            .filter__label {
+                display: block;
+                margin-bottom: 1.6rem;
+            }
+            .checkbox {
+                margin-bottom: 1rem;
+            }
+            .range-slider__note {
+                margin-top: 1.4rem;
+                line-height: 1.4rem;
+                color: $dark50;
+            }
+        }
+
+    }
+    .results{
+        flex: 1 1 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 1.2rem;
+        &__title {
+            flex: 0 0 100%;
+            margin-bottom: 1.8rem;
+        }
+        &__item {
+
+        }
+        &__pagination {
+            margin: 2.8rem 0 6.9rem;
+        }
+}
+}
