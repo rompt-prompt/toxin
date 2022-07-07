@@ -5,10 +5,24 @@ html {
 
 * {
     // outline: 1px dotted red;
+    scrollbar-color: $purple $dark10;
+    scrollbar-width: thin;
 }
 
+*::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: $dark10;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: $purple;
+  }
+
 body {
-    background-color: rgb(196, 212, 164);
+    // background-color: rgb(196, 212, 164);
 }
 
 h1, .title-1 {
@@ -52,6 +66,7 @@ p, .text {
 
 .page-wrapper {
     max-width: 116.0rem;
+    padding: 0 1rem;
     margin: 0 auto;
 }
 
