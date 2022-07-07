@@ -1,0 +1,24 @@
+@import '../../styles/_styles.scss';
+@import '../../blocks/header/_header.scss';
+@import '../../blocks/footer/_footer.scss';
+@import '../../blocks/libs/nav-header/_nav-header.scss';
+@import '../../blocks/libs/card/card';
+@import '../../blocks/libs/form-user/form-user';
+
+.registration {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    @include bg-keyframes('bg-registration', 30s, 5s, '../../images/bg_4.png', '../../images/bg_5.png');
+
+    height: 70.2rem;
+
+        &__container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+}

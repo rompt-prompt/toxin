@@ -21,6 +21,7 @@ module.exports = {
         'landing': './src/pages/landing/landing.js',
         'search-filter': './src/pages/search-filter/search-filter.js',
         'room-details': './src/pages/room-details/room-details.js',
+        'registration': './src/pages/registration/registration.js',
         'sign-in': './src/pages/sign-in/sign-in.js',
     },
     output: {
@@ -33,7 +34,6 @@ module.exports = {
         compress: true,
         hot: true,
         port: 8080,
-        // watchFiles: ['./src/**/*.pug', './src/**/*.scss'],
         client: {
             progress: true,
           },
@@ -87,6 +87,11 @@ module.exports = {
             filename: "/room-details.html",
             template: "./src/pages//room-details//room-details.pug",
             chunks: ['/room-details'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: "registration.html",
+            template: "./src/pages/registration/registration.pug",
+            chunks: ['registration'],
         }),
         new HtmlWebpackPlugin({
             filename: "sign-in.html",
