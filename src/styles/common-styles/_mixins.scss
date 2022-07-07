@@ -7,3 +7,32 @@
     font-weight: $fw;
     line-height: $fz;
 }
+
+@mixin bg-keyframes($name, $imgShow, $imgTransition, $imgs...) {
+    
+    $cycleDuration: ($imgShow + $imgTransition) * length($imgs);
+    $showPercent: calc($imgShow / $cycleDuration * 100%);
+    $transitionPercent: calc($imgTransition / $cycleDuration * 100%);
+    $stopPointsStart: ();
+    $stopPointsEnd: ();
+    @for $imgIndex from 1 through length($imgs) {
+        $start: calc(($showPercent + $transitionPercent) * ($imgIndex - 1));
+        $stopPointsStart: append($stopPointsStart, $start, comma);
+        $end: calc((($showPercent + $transitionPercent) * ($imgIndex - 1)) + $showPercent);
+        $stopPointsEnd: append($stopPointsEnd, $end, comma);
+    }
+    animation-duration: $cycleDuration;
+    animation-name: $name;
+    @keyframes #{$name} {
+    
+        @for $img from 1 through length($imgs) {
+            #{nth($stopPointsStart, $img)},
+            #{nth($stopPointsEnd, $img)} 
+                {background-image: url(nth($imgs, $img));}
+           }
+        100% {
+            background-image: url(nth($imgs, 1))
+        }
+    }
+    
+}
