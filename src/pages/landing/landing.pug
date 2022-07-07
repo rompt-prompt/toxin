@@ -1,0 +1,59 @@
+extends ../_layout.pug 
+
+block title 
+    title Toxin Hotel 
+
+block content 
+    include ../../blocks/header/_header.pug
+    include ../../blocks/footer/_footer.pug
+    include ../../blocks/libs/nav-header/_nav-header.pug
+    include ../../blocks/libs/card/_card.pug
+    include ../../blocks/libs/form-search/_form-search.pug
+    include ../../blocks/libs/form-user/_form-user.pug
+
+    +header('anonim', '')
+        +nav-header('', items = navHeader, cls='') 
+    main.landing
+        .page-wrapper.landing__container
+            +card('search__card')
+                +form-search(cls='')
+            p.text.tagline Лучшие номера для вашей работы, отдыха и просто вдохновения
+    -
+        var footerlinks = [
+            {
+                name: 'О нас',
+                link: '#',
+                expand: '',
+            },
+            {
+                name: 'Услуги',
+                link: '#',
+                expand: 'y',
+            },
+            {
+                name: 'Вакансии',
+                link: '#',
+                expand: '',
+            },
+            {
+                name: 'Новости',
+                link: '#',
+                expand: '',
+            },
+        ]
+    -
+        var toxinSocials = [
+            {
+                network: 'twitter',
+                url: 'https://twitter.com/'
+            },
+            {
+                network: 'facebook-square',
+                url: 'https://facebook.com/'
+            },
+            {
+                network: 'instagram',
+                url: 'https://instagram.com/'
+            }
+        ]
+    +footer('')

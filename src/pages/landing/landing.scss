@@ -1,0 +1,33 @@
+@import '../../styles/_styles.scss';
+@import '../../blocks/header/_header.scss';
+@import '../../blocks/footer/_footer.scss';
+@import '../../blocks/libs/nav-header/_nav-header.scss';
+@import '../../blocks/libs/card/card';
+@import '../../blocks/libs/form-search/form-search';
+@import '../../blocks/libs/form-user/form-user';
+
+.landing {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    @include bg-keyframes('bg-search', 30s, 5s, '../../images/bg_1.png', '../../images/bg_2.png', '../../images/bg_3.png');
+
+    height: 83rem;
+    padding: 7rem 0 1.8rem;
+    box-sizing: border-box;
+
+    &__container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        .tagline {
+            align-self: flex-end;
+            text-align: right;
+            width: 29.7rem;
+        }
+    }
+}
