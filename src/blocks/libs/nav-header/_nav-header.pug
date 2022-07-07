@@ -28,7 +28,7 @@
     ]
 
 mixin nav-header(current, items = navHeader, cls='') 
-    nav.nav(class=`${cls}`)
+    nav.header__nav.nav(class=`${cls}`)
         each item in items
             if item.name === current
                 a.text.nav__link.nav__link_current(href="#")= item.name

@@ -2,14 +2,16 @@ include ../libs/btn/_btn.pug
 include ../libs/homepage/_homepage.pug
 
 mixin header(user='anonim', cls='')
-    header(class=`${cls}`)
-        .header.page-wrapper
-            +homepage('#', 'header__logo')
+    header.header(class=`${cls}`)
+        .page-wrapper
+            +homepage('./landing.html', 'header__logo')
             
             block
             
             if user === 'anonim'
-                +btn('Войти', 'header__btn btn_theme_ligth w87')
-                +btn('Зарегистрироваться', 'header__btn btn_theme_purple w196')
+                a.header__btn(href="./sign-in.html") 
+                    +btn('Войти', ' btn_theme_ligth w87')
+                a.header__btn(href="./registration.html") 
+                    +btn('Зарегистрироваться', 'btn_theme_purple w196')
             else 
                 span.header__user.text= user
