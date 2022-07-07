@@ -8,6 +8,7 @@
 
     &__top {
         padding: 10.2rem 0 9.4rem;
+        border-top: 0.1rem solid $dark25;
         @media (max-device-width: 768px) {
             display: none;
         }
