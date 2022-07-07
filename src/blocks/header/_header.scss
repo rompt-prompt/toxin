@@ -1,38 +1,39 @@
 @import '../libs/btn/_btn.scss';
 @import '../libs/homepage/_homepage.scss';
 
-header {
+.header {
     padding: 1.8rem 0;
     background: #FFFFFF;
     box-shadow: 0 1rem 2rem $dark5;
 
-    .header {
+    .page-wrapper {
         min-height: 4rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
 
-        &__logo{
-            margin-right: auto;
-        }
+    &__logo{
+        margin-right: auto;
+    }
 
-        &__nav{
-            margin-right: 2rem;
-        }
+    &__nav{
+        margin-right: 2rem;
+    }
 
-        &__user{
-            padding-left: 2rem;
-            height: 3rem;
-            line-height: 3rem;
-            border-left: 0.1rem solid $dark10;
-        }
+    &__user{
+        padding-left: 2rem;
+        height: 3rem;
+        line-height: 3rem;
+        border-left: 0.1rem solid $dark10;
+    }
 
-        &__btn {
+    &__btn {
+        .btn {
             height: 3.4rem;
-
-            &:not(:first-of-type) {
-                margin-left: 2rem;
-            }
+        }
+        &:not(:first-of-type) {
+            margin-left: 2rem;
         }
     }
 }
