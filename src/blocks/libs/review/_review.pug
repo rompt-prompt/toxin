@@ -1,9 +1,10 @@
-mixin review(author, avatarSrc, date, content, cls='')
+include ../like-btn/_like-btn.pug
+
+mixin review(author, avatarSrc, date, likes, content, cls='')
     figure.review(class= `${cls}`)
         figcaption.author 
             img.author__avatar(src=require(`../../images/${avatarSrc}`), alt=`${author}`)
             p.text.author__name= author
             time.text.review__date= date
-        .review__likes
-            block likes
+        +like-btn(likes, 'review__likes')
         blockquote.text.review__content= content
