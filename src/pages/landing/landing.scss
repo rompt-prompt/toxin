@@ -12,7 +12,7 @@
     background-size: cover;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
-    @include bg-keyframes('bg-search', 30s, 5s, '../../images/bg_1.png', '../../images/bg_2.png', '../../images/bg_3.png');
+    @include bg-keyframes('bg-search', 30s, 5s, '../../images/bg_1.jpg', '../../images/bg_2.jpg', '../../images/bg_3.jpg');
 
     height: 83rem;
     padding: 7rem 0 1.8rem;

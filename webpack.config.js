@@ -84,9 +84,9 @@ module.exports = {
             chunks: ['search-filter'],
         }),
         new HtmlWebpackPlugin({
-            filename: "/room-details.html",
-            template: "./src/pages//room-details//room-details.pug",
-            chunks: ['/room-details'],
+            filename: "room-details.html",
+            template: "./src/pages/room-details/room-details.pug",
+            chunks: ['room-details'],
         }),
         new HtmlWebpackPlugin({
             filename: "registration.html",

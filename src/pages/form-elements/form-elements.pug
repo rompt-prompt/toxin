@@ -61,7 +61,7 @@ block content
                     +toggle('Получать спецпредложения', 'mailing2', 'cls', '')
                 .elements__item.elements__item_high
                     h3.item__title Like Button
-                    +like-btn(2, 'cls')
+                    +like-btn(2, 'btn-justify')
                     +like-btn(12, 'cls')
                 .elements__item.item__rating
                     h3.item__title rate Button
@@ -93,8 +93,6 @@ block content
                 .elements__item 
                     +dropdawn('facilities1', 'dropdawn', 'w266')
                 .elements__item 
-                    +dropdawn('facilities2', 'dropdawn', 'w266')
-                        +filter-options('roomOptions', ['Спальни','Кровати','Ванные комнаты'], 'cls', '')
 
             .col.col_center
                 .elements__item 
@@ -127,7 +125,8 @@ block content
                     +checkbox('rich', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'disabledHelper', 'cls', '', 'disable')
 
             .col.col_right
-                .elements__item 
+                .elements__item.item__bullet-list 
+                    h3.item__title Bullet list
                     +bullet-list('bullet list', roomRules, 'w266')
 
         section.elements__section.elements__section_4
@@ -138,4 +137,4 @@ block content
 
             .col.col_right
                 .elements__item 
-                    +review('Мурад Сарафанов', 'avatar_user_1.jpg', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+                    +review('Мурад Сарафанов', 'avatar_user_1.jpg', '5 дней назад', 12, 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
