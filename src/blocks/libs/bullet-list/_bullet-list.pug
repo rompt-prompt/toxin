@@ -6,8 +6,6 @@
         ]
 
 mixin bullet-list(title, items = roomRules, cls='')
-    .bullet-list(class=`${cls}`)
-        h3.bullet-list__title= title 
-        ul.bullet-list__container
-            each item in items
-                li.text.container__item= item
+    ul.bullet-list(class=`${cls}`)
+        each item in items
+            li.text.bullet-list__item= item
