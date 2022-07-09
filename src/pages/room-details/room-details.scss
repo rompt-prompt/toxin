@@ -1,0 +1,137 @@
+@import '../../styles/_styles.scss';
+@import '../../blocks/header/_header.scss';
+@import '../../blocks/footer/_footer.scss';
+@import '../../blocks/libs/nav-header/_nav-header.scss';
+@import '../../blocks/libs/card/card';
+@import '../../blocks/libs/form-booking/form-booking';
+@import '../../blocks/libs/bullet-list/_bullet-list.scss';
+@import '../../blocks/libs/room-features/_room-features.scss';
+@import '../../blocks/libs/review/_review.scss';
+
+.room-details {
+    &__imgs {
+        display: grid;
+        grid-template-columns: 68% 32%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas:    "img-main img-1"
+                                "img-main img-2";
+        .imgs__img-main {
+            width: 100%;
+            height: auto;
+            grid-area: img-main;
+        }
+        .imgs__img-1 {
+            width: 100%;
+            height: auto;
+            grid-area: img-1;
+        }
+        .imgs__img-2 {
+            width: 100%;
+            height: auto;
+            grid-area: img-2;
+        }
+    }
+    &__description {
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+        display: grid;
+        grid-template-areas:    "features feelings booking"
+                                "reviews reviews booking"
+                                "rules cancel booking";
+        column-gap: 7rem;
+        row-gap: 3rem;
+        
+        .description__item  {
+            .item__title {
+                margin-bottom: 2rem;
+            }
+        }
+        .features {
+            grid-area: features;
+        }
+        .feelings {
+            grid-area: feelings;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            align-items: flex-end;
+
+            .item__title {
+                flex: 0 0 100%;
+            }
+            .donut {
+                width: 12rem;
+                height: 12rem;
+                border-radius: 50%;
+                background-image:  
+                    radial-gradient(white 5.6rem, transparent 5.6rem),
+            
+                    conic-gradient(white 0deg, white 1.91deg, 
+                                    $purple 1.91deg, $purple-gradient-end 90deg,
+                                    white 90deg, white 91.91deg, 
+                                    $green 91.91deg, $green-gradient-end 180deg,
+                                    white 180deg, white 181.91deg, 
+                                    $orange 181.91deg, $orange-gradient-end 360deg)
+                    ;
+            }
+            &__votes {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-right: 3rem;
+                color: $purple;
+
+                span {
+                    display: block;
+                    color: $purple;
+                }
+            }
+            &__legend {
+                .legend__rating::before {
+                    content: '';
+                    display: inline-block;
+                    width: 1rem;
+                    height: 1rem;
+                    border-radius: 50%;
+                    margin-right: 0.5rem;
+                }
+                .rating {
+                    &_5::before {
+                        background-image: linear-gradient(180deg, $orange-gradient-end 0%, $orange 100%);
+                    }
+                    &_4::before {
+                        background-image: $lg-green;
+                    }
+                    &_3::before {
+                        background-image: $lg-purple
+                    }
+                    &_2::before {
+                        background-image: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+                    }
+                }
+            }
+        }
+        .reviews {
+            grid-area: reviews;
+            &__amount {
+                line-height: 1.4rem;
+                color: $dark50;
+                float: right;
+            }
+            .review:not(:last-of-type) {
+                margin-bottom: 2.2rem;
+            }
+        }
+        .rules {
+            grid-area: rules;
+        }
+        .cancel {
+            grid-area: cancel;
+        }
+        .booking {
+            grid-area: booking;
+            align-self: start;
+        }
+    }
+}
