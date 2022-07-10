@@ -5,20 +5,21 @@ html {
 
 * {
     // outline: 1px dotted red;
-    scrollbar-color: rgba($purple, 0.5) $dark10;
+    scrollbar-color: $purple transparent;
     scrollbar-width: thin;
 }
 
 *::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
   }
   
   *::-webkit-scrollbar-track {
-    background: $dark10;
+    background: transparent;
   }
   
   *::-webkit-scrollbar-thumb {
-    background-color: rgba($purple, 0.5);
+    background-color: $purple;
+    border-radius: 5px;
   }
 
 body {
