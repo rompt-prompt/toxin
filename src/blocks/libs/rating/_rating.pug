@@ -1,10 +1,10 @@
-mixin rating(id, rate, disable= '', cls='')
+mixin rating(id, rate, disabled= '', cls='')
     .rating(class= type != 'disabled' ? cls + ' active' : cls)
         each star in [5, 4, 3, 2, 1]
             input(
                 type="radio", 
                 name= `${id}`, 
                 id=`${id + star}`, 
-                disabled= disable === 'disabled' ? true : false, 
+                disabled= disabled === 'disabled' ? true : false, 
                 checked= star == rate ? true : false)
             label.rating__star(for=`${id + star}`)

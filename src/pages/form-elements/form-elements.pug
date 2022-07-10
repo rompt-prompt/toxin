@@ -49,20 +49,20 @@ block content
             .col.col_center
                 .elements__item.elements__item_high
                     h3.item__title Checkbox Buttons
-                    +checkbox('short', 'Можно курить', '', 'smoke', 'cls', '', 'disabled')
-                    +checkbox('short', 'Можно с питомцами', '', 'pats', 'cls', 'c', '')
-                    +checkbox('short', 'Можно пригласить гостей (до 10 человек)', '', 'party', 'cls', 'c', '')
+                    +checkbox('short', 'Можно курить', '', 'smoke', '', '', 'disabled')
+                    +checkbox('short', 'Можно с питомцами', '', 'pats', '', 'c', '')
+                    +checkbox('short', 'Можно пригласить гостей (до 10 человек)', '', 'party', '', 'c', '')
                 .elements__item.elements__item_high
                     h3.item__title Radio Buttons
                     +radio('sex', data.sexSelect, '')  
                 .elements__item.elements__item_high
                     h3.item__title Toggle
-                    +toggle('Получать спецпредложения', 'mailing1', 'cls', 'c')
-                    +toggle('Получать спецпредложения', 'mailing2', 'cls', '')
+                    +toggle('Получать спецпредложения', 'mailing1', '', 'c')
+                    +toggle('Получать спецпредложения', 'mailing2', '', '')
                 .elements__item.elements__item_high
                     h3.item__title Like Button
                     +like-btn(2, 'btn-justify')
-                    +like-btn(12, 'cls')
+                    +like-btn(12, '')
                 .elements__item.item__rating
                     h3.item__title rate Button
                     +rating('rating1', 4, '', '')
@@ -70,7 +70,7 @@ block content
 
             .col.col_right
                 .elements__item.elements__item_high
-                    +range-slider('Range Slider', 'cls')
+                    +range-slider('Range Slider', '')
                 .elements__item.elements__item_low
                     h3.item__title Buttons
                     +btn('Click me', 'btn_theme_purple w99 item__btn', 'button')
@@ -85,7 +85,7 @@ block content
                     +btn('Перейти к оплате', 'btn_theme_purple btn__arrow w320', 'button')
                 .elements__item
                     h3.item__title pagination
-                    +pagination('cls', 15, [1, 2, 3])
+                    +pagination('', 15, [1, 2, 3])
 
         section.elements__section.elements__section_2
 
@@ -97,12 +97,12 @@ block content
             .col.col_center
                 .elements__item 
                     +dropdawn('guests1', 'dropdawn', 'w320')
-                        +filter-options('guestsOptions1', ['Взрослые','Дети','Младенцы'], 'cls', 'c')
+                        +filter-options('guestsOptions1', ['Взрослые','Дети','Младенцы'], '', 'c')
 
             .col.col_right
                 .elements__item 
                     +dropdawn('guests2', 'dropdawn', 'w320')
-                        +filter-options('guestsOptions2', ['Взрослые','Дети','Младенцы'], 'cls', 'c')
+                        +filter-options('guestsOptions2', ['Взрослые','Дети','Младенцы'], '', 'c')
 
         section.elements__section.elements__section_3
 
@@ -111,18 +111,18 @@ block content
                     +expandable('exp1', 'expandable checkbox list', 'w266')
                 .elements__item 
                     +expandable('exp2', 'expandable checkbox list', 'w266')
-                        +checkbox('short', 'Завтрак', '', 'breakfast', 'cls', '', 'disabled')
-                        +checkbox('short', 'Письменный стол', '', 'table', 'cls', 'c', 'disabled')
-                        +checkbox('short', 'Стул для кормления', '', 'chair', 'cls', 'c', 'disabled')
-                        +checkbox('short', 'Кроватка', '', 'bed', 'cls', 'c', 'disabled')
-                        +checkbox('short', 'Телевизор', '', 'tv', 'cls', '', 'disabled')
-                        +checkbox('short', 'Шампунь', '', 'shampoo', 'cls', '', 'disabled')
+                        +checkbox('short', 'Завтрак', '', 'breakfast', '', '', 'disabled')
+                        +checkbox('short', 'Письменный стол', '', 'table', '', 'c', 'disabled')
+                        +checkbox('short', 'Стул для кормления', '', 'chair', '', 'c', 'disabled')
+                        +checkbox('short', 'Кроватка', '', 'bed', '', 'c', 'disabled')
+                        +checkbox('short', 'Телевизор', '', 'tv', '', '', 'disabled')
+                        +checkbox('short', 'Шампунь', '', 'shampoo', '', '', 'disabled')
 
             .col.col_center
                 .elements__item.item__rich-chk
                     h3.item__title rich Checkbox Buttons
-                    +checkbox('rich', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'wideCorridor', 'cls', '', 'disable')
-                    +checkbox('rich', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'disabledHelper', 'cls', '', 'disable')
+                    +checkbox('rich', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'wideCorridor', '', '', 'disabled')
+                    +checkbox('rich', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'disabledHelper', '', '', 'disabled')
 
             .col.col_right
                 .elements__item.item__bullet-list 
@@ -133,7 +133,7 @@ block content
 
             .col.col_left
                 .elements__item 
-                    +room-features(data.room.id888.features.slice([0], [2]), 'cls')
+                    +room-features(data.room.id888.features.slice([0], [2]), '')
             .col.col_right
                 .elements__item 
                     +review(

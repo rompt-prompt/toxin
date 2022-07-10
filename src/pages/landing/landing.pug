@@ -12,10 +12,10 @@ block content
     include ../../blocks/libs/form-user/_form-user.pug
 
     +header('anonim', '')
-        +nav-header(["aboutUs", "services", "job", "news", "agreements"], cls='') 
+        +nav-header(["aboutUs", "services", "job", "news", "agreements"], '') 
     main.landing
         .page-wrapper.landing__container
             +card('search__card')
-                +form-search(cls='')
+                +form-search('')
             p.text.tagline Лучшие номера для вашей работы, отдыха и просто вдохновения
     +footer('')

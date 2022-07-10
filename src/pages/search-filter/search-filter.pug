@@ -17,7 +17,7 @@ block content
     include ../../blocks/libs/pagination/_pagination.pug
 
     +header('anonim', '')
-        +nav-header(["aboutUs", "services", "job", "news", "agreements"], cls='') 
+        +nav-header(["aboutUs", "services", "job", "news", "agreements"], '') 
     .page-wrapper.search-content
         aside.filters
             +dropdawn('stayDates', 'Даты пребывания в отеле', 'filters__filter')
@@ -28,22 +28,22 @@ block content
                 p.text.range-slider__note Стоимость за сутки пребывания в номере
             .filters__filter
                 label.title-3.filter__label Правила дома
-                +checkbox('short', 'Можно курить', '', 'smoke', 'cls', '', '')
-                +checkbox('short', 'Можно с питомцами', '', 'pats', 'cls', 'c', '')
-                +checkbox('short', 'Можно пригласить гостей (до 10 человек)', '', 'party', 'cls', 'c', '')
+                +checkbox('short', 'Можно курить', '', 'smoke', '', '', '')
+                +checkbox('short', 'Можно с питомцами', '', 'pats', '', 'c', '')
+                +checkbox('short', 'Можно пригласить гостей (до 10 человек)', '', 'party', '', 'c', '')
             .filters__filter
                 label.title-3.filter__label Доступность
-                +checkbox('rich', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'wideCorridor', 'cls', '', '')
-                +checkbox('rich', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'disabledHelper', 'cls', '', '')
+                +checkbox('rich', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'wideCorridor', '', '', '')
+                +checkbox('rich', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'disabledHelper', '', '', '')
             +dropdawn('roomOptions', 'dropdawn', 'filters__filter')
-                +filter-options('roomOptionsFilter', ['Спальни','Кровати','Ванные комнаты'], 'cls', '')
+                +filter-options('roomOptionsFilter', ['Спальни','Кровати','Ванные комнаты'], '', '')
             +expandable('roomOptionsExtra', 'expandable checkbox list', 'filters__filter')
-                +checkbox('short', 'Завтрак', '', 'breakfast', 'cls', '', '')
-                +checkbox('short', 'Письменный стол', '', 'table', 'cls', 'c', '')
-                +checkbox('short', 'Стул для кормления', '', 'chair', 'cls', 'c', '')
-                +checkbox('short', 'Кроватка', '', 'bed', 'cls', 'c', '')
-                +checkbox('short', 'Телевизор', '', 'tv', 'cls', '', '')
-                +checkbox('short', 'Шампунь', '', 'shampoo', 'cls', '', '')
+                +checkbox('short', 'Завтрак', '', 'breakfast', '', '', '')
+                +checkbox('short', 'Письменный стол', '', 'table', '', 'c', '')
+                +checkbox('short', 'Стул для кормления', '', 'chair', '', 'c', '')
+                +checkbox('short', 'Кроватка', '', 'bed', '', 'c', '')
+                +checkbox('short', 'Телевизор', '', 'tv', '', '', '')
+                +checkbox('short', 'Шампунь', '', 'shampoo', '', '', '')
 
         main.results
             h1.results__title Номера, которые мы для вас подобрали

@@ -14,7 +14,7 @@ block content
     include ../../blocks/libs/review/_review.pug
 
     +header('anonim', '')
-        +nav-header(["aboutUs", "services", "job", "news", "agreements"], cls='') 
+        +nav-header(["aboutUs", "services", "job", "news", "agreements"], '') 
     main.room-details 
         .room-details__imgs 
             img.imgs__img-main(src=require('../../images/rooms/888/room_888.jpg'), alt="room 888")
@@ -24,7 +24,7 @@ block content
             .description__item.features 
                 h2.item__title Сведения о номере
 
-                +room-features(data.room.id888.features, 'cls')
+                +room-features(data.room.id888.features, '')
             .description__item.feelings
                 h2.item__title Впечатления от номера
                 .feelings__votes.donut.title-1 260
