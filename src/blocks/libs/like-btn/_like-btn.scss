@@ -17,12 +17,7 @@
         left: 0.4rem;
         top: 0;
         bottom: 0;
-        content: "favorite";
-        font-family: 'Material Icons'; //TODO move
-        text-transform: none;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1rem;
+        @include material-pseudo("favorite", $fz: 1rem);
         line-height: 2rem;
         color: $dark25;
     }

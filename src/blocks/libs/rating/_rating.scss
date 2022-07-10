@@ -11,12 +11,7 @@
     &__star {
 
         &::before {
-            content: "star_border";
-            font-family: 'Material Icons'; //TODO material
-            text-transform: none;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 2.4rem;
+            @include material-pseudo("star_border");
             background: $lg-purple;
             background-clip: text;
             color: transparent;

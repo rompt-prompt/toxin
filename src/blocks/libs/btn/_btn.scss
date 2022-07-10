@@ -11,12 +11,7 @@
     }
 
     &__arrow::after {
-        content:'arrow_forward'; // TODO try to take out in placeholder
-        text-transform: none;
-        font-family: 'Material Icons';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 2.4rem;
+        @include material-pseudo('arrow_forward');
         color: rgba(255, 255, 255, 1);
         position: absolute;
         right: 0;
