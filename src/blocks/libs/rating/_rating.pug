@@ -6,5 +6,5 @@ mixin rating(id, rate, disable= '', cls='')
                 name= `${id}`, 
                 id=`${id + star}`, 
                 disabled= disable === 'disabled' ? true : false, 
-                checked= star === rate ? true : false)
+                checked= star == rate ? true : false)
             label.rating__star(for=`${id + star}`)
