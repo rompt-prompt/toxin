@@ -4,14 +4,26 @@
     justify-content: space-between;
   
     &__link {
-        display: block;
-        line-height: 2.4rem;
+        a {
+            line-height: 2.4rem;
+            position: relative;
 
-        &:hover {
-            text-decoration: underline;
-            text-decoration-color: $dark50;
+            &::before {
+                content: "";
+                width: 0%;
+                height: 0.2rem;
+                background-image: $lg-purple;
+                position: absolute;
+                bottom: -0.2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: width 0.2s ease-in-out;
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
         }
-
         &:not(:first-child) {
             margin-top: 1.5rem;
         }
