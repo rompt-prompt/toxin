@@ -17,9 +17,12 @@ block content
         +card('cards__item')
             +form-user('n')
         +card('cards__item')
-            +form-booking(888, 'люкс', '9 990')
+            +form-booking(
+                888, 
+                data.room.id888.category, 
+                data.room.id888.price)
         +card('cards__item')
             +form-user('l')
         +datepicker('datepicker', 'cards__item item__datepicker')
-        +room-card(888, 'люкс', '9 990', 5, 145, 'cards__item')
-        +room-card(840, '', '9 990', 4, 65, 'cards__item')
+        +room-card(888, data.room.id888.category, data.room.id888.price, data.room.id888.rating, data.room.id888.reviews.total, 'cards__item')
+        +room-card(840, data.room.id840.category, data.room.id840.price, data.room.id840.rating, data.room.id840.reviews.total, 'cards__item')

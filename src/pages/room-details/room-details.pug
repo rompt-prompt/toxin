@@ -14,7 +14,7 @@ block content
     include ../../blocks/libs/review/_review.pug
 
     +header('anonim', '')
-        +nav-header('', items = navHeader, cls='') 
+        +nav-header(["aboutUs", "services", "job", "news", "agreements"], cls='') 
     main.room-details 
         .room-details__imgs 
             img.imgs__img-main(src=require('../../images/rooms/888/room_888.jpg'), alt="room 888")
@@ -23,25 +23,8 @@ block content
         .room-details__description.page-wrapper 
             .description__item.features 
                 h2.item__title Сведения о номере
-                - 
-                    var rooms = [
-                        {
-                            item: 'Комфорт',
-                            description: 'Шумопоглощающие стены ',
-                            icon: 'insert_emoticon',
-                        },
-                        {
-                            item: 'Удобство',
-                            description: 'Окно в каждой из спален',
-                            icon: 'location_city',
-                        },
-                        {
-                            item: 'Уют',
-                            description: 'Номер оснащён камином',
-                            icon: 'whatshot',
-                        }
-                    ]
-                +room-features(rooms, 'cls')
+
+                +room-features(data.room.id888.features, 'cls')
             .description__item.feelings
                 h2.item__title Впечатления от номера
                 .feelings__votes.donut.title-1 260
@@ -54,52 +37,28 @@ block content
             .description__item.reviews 
                 h2.item__title Отзывы посетителей номера
                     span.text.reviews__amount 2 отзыва
-                +review('Мурад Сарафанов', 'avatar_user_1.jpg', '5 дней назад', 12, 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
-                +review('Патрисия Стёклышкова', 'avatar_user_2.jpg', 'Неделю назад', 2, 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+                +review(
+                        data.room.id888.reviews.review.id1.author, 
+                        data.room.id888.reviews.review.id1.avatar, 
+                        data.room.id888.reviews.review.id1.date, 
+                        data.room.id888.reviews.review.id1.likes, 
+                        data.room.id888.reviews.review.id1.content)
+                +review(
+                        data.room.id888.reviews.review.id2.author, 
+                        data.room.id888.reviews.review.id2.avatar, 
+                        data.room.id888.reviews.review.id2.date, 
+                        data.room.id888.reviews.review.id2.likes, 
+                        data.room.id888.reviews.review.id2.content)
             .description__item.rules
                 h2.item__title Правила
-                +bullet-list('bullet list', roomRules, 'w266')
+                +bullet-list('bullet list', data.room.id888.rules, 'w266')
             .description__item.cancel
                 h2.item__title Отмена
-                p.text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+                p.text= data.room.id888.cancelation
             +card('description__item booking')
-                +form-booking(888, 'люкс', '9 990')
-    -
-        var footerlinks = [
-            {
-                name: 'О нас',
-                link: '#',
-                expand: '',
-            },
-            {
-                name: 'Услуги',
-                link: '#',
-                expand: 'y',
-            },
-            {
-                name: 'Вакансии',
-                link: '#',
-                expand: '',
-            },
-            {
-                name: 'Новости',
-                link: '#',
-                expand: '',
-            },
-        ]
-    -
-        var toxinSocials = [
-            {
-                network: 'twitter',
-                url: 'https://twitter.com/'
-            },
-            {
-                network: 'facebook-square',
-                url: 'https://facebook.com/'
-            },
-            {
-                network: 'instagram',
-                url: 'https://instagram.com/'
-            }
-        ]
+                +form-booking(
+                    888, 
+                    data.room.id888.category, 
+                    data.room.id888.price)
+
     +footer('')

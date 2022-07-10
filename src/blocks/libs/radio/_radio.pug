@@ -1,17 +1,4 @@
-// TODO try to take out in vars.pug
--
-    var sexSelect = [
-        {
-            id: 'male',
-            label: 'Мужчина'
-        },
-        {
-            id: 'female',
-            label: 'Женщина'
-        },
-    ]
-
-mixin radio(name='sex', radioContent = sexSelect, cls='')    
+mixin radio(name='sex', radioContent, cls='')    
     each item in radioContent
         .radio(class=`${cls}`)
             input(type="radio" name=`${name}` id=item.id)

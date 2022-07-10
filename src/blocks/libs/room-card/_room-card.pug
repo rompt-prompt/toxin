@@ -1,20 +1,9 @@
-//- - var apartments = [
-//-     {   id: 888;
-//-         type: 'люкс'
-//-         price: 9990;
-//-         rating: 5;
-//-         reviews: 145;
-//-         sketchs: [
-
-//-         ]
-//-     }
-//- ] (888, 'люкс', '9 990', 5, 145, 'cards__item')
 include ../room-id/_room-id.pug
 include ../rating/_rating.pug
 
 mixin room-card(id, category, price, rating, reviews, cls='')
     .room-card(class=`${cls}`)
-        img.room-card__slider(src=require("../../images/rooms/888/sketch_888.jpg"), alt="room")
+        img.room-card__slider(src= require(`../../images/rooms/${id}/sketch_${id}.jpg`), alt="room")
         .room-card__content
             +room-id(id, category, price, 'room-card__room')
             .room-card__testimonials

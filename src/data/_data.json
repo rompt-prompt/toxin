@@ -1,0 +1,283 @@
+{
+    "colors" : [
+        {
+            "class": "dark100", 
+            "name": "Dark Shade 100%", 
+            "hex": "#1F2041"},
+        {
+            "class": "dark75", 
+            "name": "Dark Shade 75%", 
+            "hex": "#1F2041"},
+        {
+            "class": "dark50", 
+            "name": "Dark Shade 50%", 
+            "hex": "#1F2041"},
+        {
+            "class": "dark25", 
+            "name": "Dark Shade 25%", 
+            "hex": "#1F2041"},
+        {
+            "class": "dark5", 
+            "name": "Dark Shade 5%", 
+            "hex": "#1F2041"},
+        {
+            "class": "purple", 
+            "name": "Purple", 
+            "hex": "#BC9CFF"},
+        {
+            "class": "green", 
+            "name": "Green", 
+            "hex": "#6FCF97"}
+    ],
+    "sexSelect" : [
+        {
+            "id": "male",
+            "label": "Мужчина"
+        },
+        {
+            "id": "female",
+            "label": "Женщина"
+        }
+    ],
+    "toxinLinks" : {
+        "internal" : {
+            "ColorsAndType" : {
+                "name" : "Colors and type",
+                "url" : "./colors-type.html"
+            },
+            "FormElements" : {
+                "name" : "Form Elements",
+                "url" : "./form-elements.html"
+            },
+            "Cards" : {
+                "name" : "Cards",
+                "url" : "./cards.html"
+            },
+            "HeadersAndFooters" : {
+                "name" : "Headers and Footers",
+                "url" :"./headers-footers.html"
+            },
+            "LandingPage" : {
+                "name" : "Landing Page",
+                "url" :"./landing.html"
+            },
+            "SearchRoomFilter" : {
+                "name" : "Search room. Filter",
+                "url" :"./search-filter.html"
+            },
+            "RoomDetails" : {
+                "name" : "Room details",
+                "url" :"./room-details.html"
+            },
+            "Registration" : {
+                "name" : "Registration",
+                "url" :"./registration.html"
+            },
+            "SignIn" : {
+                "name" : "Sign in",
+                "url" :"./sign-in.html"
+            },
+
+            "aboutUs" : {
+                "name" : "О нас",
+                "url" :"./index.html"
+            },
+            "news" : {
+                "name" : "Новости",
+                "url" :"./404.html"
+            },
+            "support" : {
+                "name" : "Служба поддержки",
+                "url" :"./sandbox.html"
+            },
+            "services" : {
+                "name" : "Услуги",
+                "url" :"./404.html",
+                "expand": "y"
+            },
+            "aboutService" : {
+                "name" : "О сервисе",
+                "url" :"./404.html"
+            },
+            "team" : {
+                "name" : "Наша команда",
+                "url" :"./404.html"
+            },
+            "job" : {
+                "name" : "Вакансии",
+                "url" :"./404.html"
+            },
+            "investors" : {
+                "name" : "Инвесторы",
+                "url" :"./404.html"
+            },
+            "agreements" : {
+                "name" : "Соглашения",
+                "url" :"./404.html",
+                "expand": "y"
+            },
+            "community" : {
+                "name" : "Сообщества",
+                "url" :"./404.html"
+            },
+            "contactUs" : {
+                "name" : "Связь с нами",
+                "url" :"./404.html"
+            }
+        },
+
+        "socials" : [
+            {
+                "network": "twitter",
+                "url": "https://twitter.com/"
+            },
+            {
+                "network": "facebook-square",
+                "url": "https://facebook.com/"
+            },
+            {
+                "network": "instagram",
+                "url": "https://instagram.com/"
+            }
+        ]
+    },
+    "room" : {
+        "id888" : {
+            "category" : "люкс",
+            "price" : "9 990",
+            "features" : [
+                {
+                    "item": "Комфорт",
+                    "description": "Шумопоглощающие стены ",
+                    "icon": "insert_emoticon"
+                },
+                {
+                    "item": "Удобство",
+                    "description": "Окно в каждой из спален",
+                    "icon": "location_city"
+                },
+                {
+                    "item": "Уют",
+                    "description": "Номер оснащён камином",
+                    "icon": "whatshot"
+                }
+            ],
+            "rules" : [
+                "Нельзя с питомцами", 
+                "Без вечеринок и мероприятий", 
+                "Время прибытия — после 13:00, а выезд до 12:00"
+                ],
+            "cancelation" : "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.",
+            "rating" : "5",
+            "reviews" : {
+                "total" : "145",
+                "review" : {
+                    "id1" : {
+                        "author" : "Мурад Сарафанов",
+                        "avatar" : "avatar_user_1.jpg",
+                        "date" : "5 дней назад",
+                        "likes" : "12",
+                        "content" : "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+                    },
+                    "id2" : {
+                        "author" : "Патрисия Стёклышкова",
+                        "avatar" : "avatar_user_2.jpg",
+                        "date" : "Неделю назад",
+                        "likes" : "2",
+                        "content" : "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
+                    }
+                }
+            }
+        },
+
+        "id840" : {
+            "category" : "",
+            "price" : "9 990",
+            "rating" : "4",
+            "reviews" : {
+                "total" : "65"
+            }
+        },
+        "id980" : {
+            "category" : "люкс",
+            "price" : "8 500",
+            "rating" : "3",
+            "reviews" : {
+                "total" : "35"
+            }
+        },
+        "id856" : {
+            "category" : "",
+            "price" : "7 300",
+            "rating" : "5",
+            "reviews" : {
+                "total" : "19"
+            }
+        },
+        "id740" : {
+            "category" : "",
+            "price" : "6 000",
+            "rating" : "4",
+            "reviews" : {
+                "total" : "44"
+            }
+        },
+        "id982" : {
+            "category" : "",
+            "price" : "5 800",
+            "rating" : "3",
+            "reviews" : {
+                "total" : "56"
+            }
+        },
+        "id678" : {
+            "category" : "",
+            "price" : "5 500",
+            "rating" : "5",
+            "reviews" : {
+                "total" : "45"
+            }
+        },
+        "id450" : {
+            "category" : "",
+            "price" : "5 300",
+            "rating" : "4",
+            "reviews" : {
+                "total" : "39"
+            }
+        },
+        "id350" : {
+            "category" : "",
+            "price" : "5 000",
+            "rating" : "3",
+            "reviews" : {
+                "total" : "77"
+            }
+        },
+        "id666" : {
+            "category" : "",
+            "price" : "5 000",
+            "rating" : "5",
+            "reviews" : {
+                "total" : "25"
+            }
+        },
+        "id444" : {
+            "category" : "",
+            "price" : "5 000",
+            "rating" : "4",
+            "reviews" : {
+                "total" : "15"
+            }
+        },
+        "id352" : {
+            "category" : "",
+            "price" : "5 000",
+            "rating" : "3",
+            "reviews" : {
+                "total" : "55"
+            }
+        }
+
+    }
+}

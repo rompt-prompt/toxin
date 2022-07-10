@@ -12,48 +12,10 @@ block content
     include ../../blocks/libs/form-user/_form-user.pug
 
     +header('anonim', '')
-        +nav-header('', items = navHeader, cls='') 
+        +nav-header(["aboutUs", "services", "job", "news", "agreements"], cls='') 
     main.landing
         .page-wrapper.landing__container
             +card('search__card')
                 +form-search(cls='')
             p.text.tagline Лучшие номера для вашей работы, отдыха и просто вдохновения
-    -
-        var footerlinks = [
-            {
-                name: 'О нас',
-                link: '#',
-                expand: '',
-            },
-            {
-                name: 'Услуги',
-                link: '#',
-                expand: 'y',
-            },
-            {
-                name: 'Вакансии',
-                link: '#',
-                expand: '',
-            },
-            {
-                name: 'Новости',
-                link: '#',
-                expand: '',
-            },
-        ]
-    -
-        var toxinSocials = [
-            {
-                network: 'twitter',
-                url: 'https://twitter.com/'
-            },
-            {
-                network: 'facebook-square',
-                url: 'https://facebook.com/'
-            },
-            {
-                network: 'instagram',
-                url: 'https://instagram.com/'
-            }
-        ]
     +footer('')

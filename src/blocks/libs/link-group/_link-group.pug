@@ -1,4 +1,5 @@
-mixin link-group(links = footerlinks, cls='')
+mixin link-group(linkIds, cls='')
     .link-group(class=`${cls}`)
-        each link in links
-            a.text.link-group__link(href=link.link)= link.name
+        each linkId in linkIds
+            .link-group__link
+                a.text(href= data.toxinLinks.internal[linkId].url)= data.toxinLinks.internal[linkId].name

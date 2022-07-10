@@ -8,17 +8,12 @@ block content
         .navigation__section
             .col
                 h2.title-1 Ui kit
-                a.navigation__link.title-3(href="./colors-type.html") Colors and type
-                a.navigation__link.title-3(href="./form-elements.html") Form Elements
-                a.navigation__link.title-3(href="./cards.html") Cards 
-                a.navigation__link.title-3(href="./headers-footers.html") Headers and Footers
+                each linkId in ["ColorsAndType", "FormElements", "Cards", "HeadersAndFooters"]
+                    a.navigation__link.title-3(href= data.toxinLinks.internal[linkId].url)= data.toxinLinks.internal[linkId].name
         .navigation__section
             .col
                 h2.title-1 Website pages
-                a.navigation__link.title-3(href="./landing.html") Landing Page
-                a.navigation__link.title-3(href="./search-filter.html") Search room/Filter
-                a.navigation__link.title-3(href="./room-details.html") Room details
-                a.navigation__link.title-3(href="./registration.html") Registration
-                a.navigation__link.title-3(href="./sign-in.html") Sign in
+                each linkId in ["LandingPage", "SearchRoomFilter", "RoomDetails", "Registration", "SignIn"]
+                    a.navigation__link.title-3(href= data.toxinLinks.internal[linkId].url)= data.toxinLinks.internal[linkId].name
         a.sandbox-link(href="./sandbox.html") 
         

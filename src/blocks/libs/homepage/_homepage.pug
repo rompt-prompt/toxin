@@ -1,3 +1,3 @@
-mixin homepage(link, cls='')
-    a.homepage(href=`${link}`, class=`${cls}`) 
+mixin homepage(cls='')
+    a.homepage(href= data.toxinLinks.internal.LandingPage.url, class=`${cls}`) 
         img.homepage__logo(src=require('../../images/logo_toxin.png'), alt="logo")

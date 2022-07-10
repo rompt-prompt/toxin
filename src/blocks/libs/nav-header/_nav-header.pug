@@ -1,39 +1,11 @@
-- 
-    var navHeader = [
-        {
-            name: 'О нас',
-            link: '#',
-            expand: '',
-        },
-        {
-            name: 'Услуги',
-            link: '#',
-            expand: 'y',
-        },
-        {
-            name: 'Вакансии',
-            link: '#',
-            expand: '',
-        },
-        {
-            name: 'Новости',
-            link: '#',
-            expand: '',
-        },
-        {
-            name: 'Соглашение',
-            link: '#',
-            expand: 'y',
-        },
-    ]
-
-mixin nav-header(current, items = navHeader, cls='') 
+mixin nav-header(linkIds= ["about-us", "services", "job", "news", "agreements"], cls='') 
     nav.header__nav.nav(class=`${cls}`)
-        each item in items
-            if item.name === current
-                a.text.nav__link.nav__link_current(href="#")= item.name
+        each linkId in linkIds
+            - var name = data.toxinLinks.internal[linkId].name
+            - var url = data.toxinLinks.internal[linkId].url
+            - var expand = data.toxinLinks.internal[linkId].expand
+            
+            if expand === 'y'
+                a.text.nav__link.nav__link_expand(href= url, label= name)= name
             else 
-                if item.expand === 'y'
-                    a.text.nav__link.nav__link_expand(href="#")= item.name
-                else 
-                     a.text.nav__link(href="#")= item.name
+                a.text.nav__link(href= url, label= name)= name

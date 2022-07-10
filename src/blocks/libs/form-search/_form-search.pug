@@ -4,7 +4,7 @@ include ../filter-options/_filter-options.pug
 include ../btn/_btn.pug
 
 mixin form-search(cls='')
-    form.form-search(action="#", method="post" class=`${cls}`)
+    form.form-search(action= data.toxinLinks.internal.SearchRoomFilter.url, class=`${cls}`)
         legend.title-1.form-search__title Найдём номера под ваши пожелания
         +dropdawn('searchDateFrom', 'Прибытие', 'w150 form-search__item')
             +datepicker('searchDatepickerFrom')

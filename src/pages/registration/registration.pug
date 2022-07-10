@@ -11,48 +11,10 @@ block content
     include ../../blocks/libs/form-user/_form-user.pug
 
     +header('anonim', '')
-        +nav-header('', items = navHeader, cls='') 
+        +nav-header(["aboutUs", "services", "job", "news", "agreements"], cls='') 
     main.registration
         .page-wrapper.registration__container
             +card('registration__registration-card')
                 +form-user('n', '')
 
-    -
-        var footerlinks = [
-            {
-                name: 'О нас',
-                link: '#',
-                expand: '',
-            },
-            {
-                name: 'Услуги',
-                link: '#',
-                expand: 'y',
-            },
-            {
-                name: 'Вакансии',
-                link: '#',
-                expand: '',
-            },
-            {
-                name: 'Новости',
-                link: '#',
-                expand: '',
-            },
-        ]
-    -
-        var toxinSocials = [
-            {
-                network: 'twitter',
-                url: 'https://twitter.com/'
-            },
-            {
-                network: 'facebook-square',
-                url: 'https://facebook.com/'
-            },
-            {
-                network: 'instagram',
-                url: 'https://instagram.com/'
-            }
-        ]
     +footer('')

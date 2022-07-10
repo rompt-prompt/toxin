@@ -1,24 +1,4 @@
-// TODO in vars.pug
-- 
-    var roomFeatures = [
-        {
-            item: 'Комфорт',
-            description: 'Шумопоглощающие стены ',
-            icon: 'insert_emoticon',
-        },
-        {
-            item: 'Удобство',
-            description: 'Окно в каждой из спален',
-            icon: 'location_city',
-        },
-        //- {
-        //-     item: 'Уют',
-        //-     description: 'Номер оснащён камином',
-        //-     icon: 'whatshot',
-        //- }
-    ]
-
-mixin room-features(features = roomFeatures, cls='')
+mixin room-features(features, cls='')
     ul.room-features(class=`${cls}`)
         each feature in features
             li.text.room-features__item(class=feature.icon)= feature.item

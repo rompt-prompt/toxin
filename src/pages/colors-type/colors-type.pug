@@ -5,20 +5,10 @@ block title
 
 block content 
 
-    -
-        var colors = [
-            {class: 'dark100', name: 'Dark Shade 100%', hex: '#1F2041'},
-            {class: 'dark75', name: 'Dark Shade 75%', hex: '#1F2041'},
-            {class: 'dark50', name: 'Dark Shade 50%', hex: '#1F2041'},
-            {class: 'dark25', name: 'Dark Shade 25%', hex: '#1F2041'},
-            {class: 'dark5', name: 'Dark Shade 5%', hex: '#1F2041'},
-            {class: 'purple', name: 'Purple', hex: '#BC9CFF'},
-            {class: 'green', name: 'Green', hex: '#6FCF97'},
-        ]
     main
         .col    
             ul.colors
-                each color in colors
+                each color in data.colors
                     li.colors__color.color
                         span.color__palette(class=`${color.class}`)
                         h2.color__name= color.name 
