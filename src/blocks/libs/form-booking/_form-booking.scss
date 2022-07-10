@@ -64,12 +64,12 @@
     justify-content: space-between;
     &__name {
         transform: translateY(0.6rem);
-        background-color: #ffffff;
+        background-color: $white;
         padding-right: 0.4rem
     }
     &__price {
         transform: translateY(0.6rem);
-        background-color: #ffffff;
+        background-color: $white;
         padding-left: 0.4rem
     }
 }

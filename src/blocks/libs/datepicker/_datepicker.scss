@@ -7,7 +7,7 @@
         box-sizing: border-box;
         width: 32.0rem;
         padding: 1.5rem 2rem 2rem 2rem;
-        background: #FFFFFF;
+        background: $white;
         border: 0.1rem solid $dark25;
         box-shadow: 0px 0.1rem 0.2rem $dark5;
         border-radius: 0.4rem;
@@ -108,16 +108,16 @@
                                 background: $lg-purple;
                                 font-weight: 700;
                                 font-size: 1.2rem;
-                                color: #ffffff;
+                                color: $white;
                             }
                             &.-focus- {
                                 border-radius: 50%;
                                 background: $lg-green;
                                 font-weight: 700;
                                 font-size: 1.2rem;
-                                color: #ffffff;
+                                color: $white;
                                 &.-other-month- {
-                                    color: #ffffff;
+                                    color: $white;
                                 }
                             }
                         }

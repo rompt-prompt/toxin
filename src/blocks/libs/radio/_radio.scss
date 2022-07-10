@@ -33,7 +33,7 @@ $radioSize: 2rem;
             box-sizing: border-box;
             border: 0.1rem solid $dark25;
             border-radius: 50%;
-            background: #FFFFFF;
+            background: $white;
 
             .radio input[type="radio"]:focus + & {
                 border: 0.1rem solid $dark50;

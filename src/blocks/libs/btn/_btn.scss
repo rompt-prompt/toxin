@@ -4,7 +4,7 @@
     text-align: center;
     position: relative;
     text-transform: uppercase;
-    background-color: #ffffff;
+    background-color: $white;
 
     &:focus {
         outline: 0.1rem solid $dark25;
@@ -12,7 +12,7 @@
 
     &__arrow::after {
         @include material-pseudo('arrow_forward');
-        color: rgba(255, 255, 255, 1);
+        color: $white;
         position: absolute;
         right: 0;
         top: 50%;
@@ -22,7 +22,7 @@
 
     &_theme_purple {
         background: $lg-purple;
-        color: rgba(255, 255, 255, 1);
+        color: $white;
   
         &:hover {
             opacity: 0.5;

@@ -2,10 +2,10 @@
     box-sizing: border-box;
     width: 38.2rem;
     padding: 4rem 3rem 3rem 3rem;
-    background: #FFFFFF;
+    background: $white;
     border-radius: 0.4rem;
-    border: 0.1rem solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0 0 2.5rem 0 rgba(0, 0, 0, 0.2);
+    border: 0.1rem solid $black12;
+    box-shadow: 0 0 2.5rem 0 $black20;
 
     &__footer {
         margin-top: 3rem;

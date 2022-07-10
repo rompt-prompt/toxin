@@ -6,6 +6,9 @@
 @import '../../blocks/libs/datepicker/datepicker';
 @import '../../blocks/libs/room-card/room-card';
 
+body {
+    background-color: $litegray;
+}
 
 .cards {
     margin-top: 0.6rem;

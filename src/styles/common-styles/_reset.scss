@@ -1,5 +1,5 @@
 body {
-    background-color: #fff;
+    background-color: $white;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, button, li, ul, figure, blockquote {
@@ -13,7 +13,7 @@ li {
 
 button {
     border: none;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: $white;
 }
 
 input, button {

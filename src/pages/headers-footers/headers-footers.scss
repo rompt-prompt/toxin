@@ -4,7 +4,7 @@
 @import '../../blocks/libs/nav-header/_nav-header.scss';
 
 body {
-    background-color: #F4F4F6;
+    background-color: $litegray;
 }
 
 .hf__item {
@@ -14,17 +14,17 @@ body {
 
 .footer_desktop {
     margin-top: 3.9rem;
-    box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
+    box-shadow: 0 1rem 2rem $dark5;
 }
 
 .mobile {
-    background: #FFFFFF;
+    background: $white;
     max-width: 76.8rem;
     margin-top: 0;
     margin-bottom: 14rem;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 1rem 2rem rgba(31, 32, 65, 0.05);
+    box-shadow: 0 1rem 2rem $dark5;
 
     .footer__bottom {
         border-top: 0.1rem solid $dark10;

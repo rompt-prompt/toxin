@@ -107,7 +107,7 @@
                         background-image: $lg-purple
                     }
                     &_2::before {
-                        background-image: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+                        background-image: linear-gradient(180deg, $midgray 0%, $grayblue 100%);
                     }
                 }
             }
