@@ -20,11 +20,11 @@ block content
         +nav-header(["aboutUs", "services", "job", "news", "agreements"], '') 
     .page-wrapper.search-content
         aside.filters
-            +dropdawn('stayDates', 'Даты пребывания в отеле', 'filters__filter')
+            +dropdawn('stayDates', 'Даты пребывания в отеле', 'filters__filter filter_lower')
                 +datepicker('datepicker')
             +dropdawn('guests', 'Гости', 'filters__filter')
                 +filter-options('guestsFilter', ['Взрослые','Дети','Младенцы'], '', 'c')
-            +range-slider('Диапазон цен', 'filters__filter')
+            +range-slider('Диапазон цены', 'filters__filter')
                 p.text.range-slider__note Стоимость за сутки пребывания в номере
             .filters__filter
                 label.title-3.filter__label Правила дома
@@ -35,9 +35,9 @@ block content
                 label.title-3.filter__label Доступность
                 +checkbox('rich', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'wideCorridor', '', '', '')
                 +checkbox('rich', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'disabledHelper', '', '', '')
-            +dropdawn('roomOptions', 'dropdawn', 'filters__filter')
+            +dropdawn('roomOptions', 'Удобства номера', 'filters__filter filter_lowest')
                 +filter-options('roomOptionsFilter', ['Спальни','Кровати','Ванные комнаты'], '', '')
-            +expandable('roomOptionsExtra', 'expandable checkbox list', 'filters__filter')
+            +expandable('roomOptionsExtra', 'Дополнительные удобства', 'filters__filter')
                 +checkbox('short', 'Завтрак', '', 'breakfast', '', '', '')
                 +checkbox('short', 'Письменный стол', '', 'table', '', 'c', '')
                 +checkbox('short', 'Стул для кормления', '', 'chair', '', 'c', '')

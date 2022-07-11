@@ -8,6 +8,7 @@ $radioSize: 2rem;
     input[type="radio"] {
         position: relative ;
         z-index: -1;
+        opacity: 0;
 
     }
     &__label {
@@ -15,7 +16,6 @@ $radioSize: 2rem;
         line-height: 2rem;
         color: $dark50;
 
-        .radio input[type="radio"]:focus + &,
         .radio input[type="radio"]:checked + & {
             color: $dark75;
         }
@@ -36,7 +36,7 @@ $radioSize: 2rem;
             background: $white;
 
             .radio input[type="radio"]:focus + & {
-                border: 0.1rem solid $dark50;
+                box-shadow: 0 0 0.3rem 0.2rem $dark25;
             } 
 
             .radio input[type="radio"]:checked + & {
@@ -49,8 +49,8 @@ $radioSize: 2rem;
             width: $radioSize;
             height: $radioSize;
             position: absolute;
-            top: 0px;
-            left: 0px;
+            top: 0;
+            left: 0;
             box-sizing: border-box;
             border-radius: 50%;
             border: calc($radioSize*0.2) solid transparent;

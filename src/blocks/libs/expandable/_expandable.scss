@@ -1,8 +1,8 @@
-.expandable { // TODO стрелка должна переворачиваться
+.expandable {
 
     &__btn {
         width: 100%;
-        min-height: 4.4rem;
+        min-height: 4.9rem;
         padding-right: 4.4rem;
         text-align: left;
         display: block;
@@ -14,10 +14,11 @@
             right: 0;
             top: 0;
             bottom: 0;
-            line-height: 4.4rem;
+            line-height: 4.9rem;
             width: 4.4rem;
             text-align: center;
             background-color: inherit;
+            transition: all 0.2s ease-in-out;
         } 
     }
 

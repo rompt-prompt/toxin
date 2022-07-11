@@ -8,12 +8,17 @@ body {
 }
 
 .hf__item {
-    margin-top: -0.5rem;
-    margin-bottom: 3.6rem;
+    margin-bottom: 4rem;
+
+    &:first-of-type {
+        margin-top: -0.3rem;
+    }
+    .page-wrapper {
+        padding-left: 1.7rem;
+    }
 }
 
 .footer_desktop {
-    margin-top: 3.9rem;
     box-shadow: 0 1rem 2rem $dark5;
 }
 
@@ -29,26 +34,26 @@ body {
     .footer__bottom {
         border-top: 0.1rem solid $dark10;
         padding: 2.3rem 0;
+        
+        /* @media (max-device-width: 768px) */
+            padding: 11.9rem 0;
+            height: 36.7rem;
+            box-sizing: border-box;
 
         .page-wrapper {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             /* @media (max-device-width: 768px) */
-                height: 32.2rem;
                 flex-direction: column;
-                justify-content: center;
+                height: 100%;
 
             .footer {
                 &__logo {
                     display: none;
                     /* @media (max-device-width: 768px) */
                         display: block;
-                        margin-bottom: 1.8rem;
-                }
-                &__social {
-                    /* @media (max-device-width: 768px) */
-                    margin-top: 2rem;
                 }
             }
         }

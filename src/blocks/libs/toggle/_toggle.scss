@@ -29,7 +29,9 @@
             border-radius: 1rem;
             transition: all 0.15s ease-in;
 
-            .toggle input[type="checkbox"]:focus + &,
+            .toggle input[type="checkbox"]:focus + & {
+                box-shadow: 0 0 0.3rem 0.2rem $dark25;
+            }
             .toggle input[type="checkbox"]:checked + & {
                 border: 0.1rem solid $purple;
             }

@@ -49,7 +49,7 @@ block content
             .col.col_center
                 .elements__item.elements__item_high
                     h3.item__title Checkbox Buttons
-                    +checkbox('short', 'Можно курить', '', 'smoke', '', '', 'disabled')
+                    +checkbox('short', 'Можно курить', '', 'smoke', '', '', '')
                     +checkbox('short', 'Можно с питомцами', '', 'pats', '', 'c', '')
                     +checkbox('short', 'Можно пригласить гостей (до 10 человек)', '', 'party', '', 'c', '')
                 .elements__item.elements__item_high
@@ -93,7 +93,8 @@ block content
                 .elements__item 
                     +dropdawn('facilities1', 'dropdawn', 'w266')
                 .elements__item 
-
+                    +dropdawn('facilities2', 'dropdawn', 'w266')
+                        +filter-options('facilitiesOptions2', ['Спальни','Кровати','Ванные комнаты'], '', '')
             .col.col_center
                 .elements__item 
                     +dropdawn('guests1', 'dropdawn', 'w320')
@@ -107,22 +108,22 @@ block content
         section.elements__section.elements__section_3
 
             .col.col_left
-                .elements__item 
+                .elements__item.item__expandable
                     +expandable('exp1', 'expandable checkbox list', 'w266')
-                .elements__item 
+                .elements__item.item__expandable
                     +expandable('exp2', 'expandable checkbox list', 'w266')
-                        +checkbox('short', 'Завтрак', '', 'breakfast', '', '', 'disabled')
-                        +checkbox('short', 'Письменный стол', '', 'table', '', 'c', 'disabled')
-                        +checkbox('short', 'Стул для кормления', '', 'chair', '', 'c', 'disabled')
-                        +checkbox('short', 'Кроватка', '', 'bed', '', 'c', 'disabled')
-                        +checkbox('short', 'Телевизор', '', 'tv', '', '', 'disabled')
-                        +checkbox('short', 'Шампунь', '', 'shampoo', '', '', 'disabled')
+                        +checkbox('short', 'Завтрак', '', 'breakfast', '', '', '')
+                        +checkbox('short', 'Письменный стол', '', 'table', '', 'c', '')
+                        +checkbox('short', 'Стул для кормления', '', 'chair', '', 'c', '')
+                        +checkbox('short', 'Кроватка', '', 'bed', '', 'c', '')
+                        +checkbox('short', 'Телевизор', '', 'tv', '', '', '')
+                        +checkbox('short', 'Шампунь', '', 'shampoo', '', '', '')
 
             .col.col_center
                 .elements__item.item__rich-chk
                     h3.item__title rich Checkbox Buttons
-                    +checkbox('rich', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'wideCorridor', '', '', 'disabled')
-                    +checkbox('rich', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'disabledHelper', '', '', 'disabled')
+                    +checkbox('rich', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'wideCorridor', '', '', '')
+                    +checkbox('rich', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'disabledHelper', '', '', '')
 
             .col.col_right
                 .elements__item.item__bullet-list 

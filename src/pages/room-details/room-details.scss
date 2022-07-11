@@ -32,18 +32,18 @@
         }
     }
     &__description {
-        margin-top: 7rem;
-        margin-bottom: 7rem;
+        margin-top: 7.3rem;
+        margin-bottom: 5.8rem;
         display: grid;
         grid-template-areas:    "features feelings booking"
                                 "reviews reviews booking"
                                 "rules cancel booking";
-        column-gap: 7rem;
-        row-gap: 3rem;
+        grid-column-gap: 2.3rem;
+        grid-row-gap: 3rem;
         
         .description__item  {
             .item__title {
-                margin-bottom: 2rem;
+                margin-bottom: 2.1rem;
             }
         }
         .features {
@@ -114,6 +114,13 @@
         }
         .reviews {
             grid-area: reviews;
+            .item__title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 4.4rem;
+                box-sizing: border-box;
+            }
             &__amount {
                 line-height: 1.4rem;
                 color: $dark50;
@@ -125,9 +132,14 @@
         }
         .rules {
             grid-area: rules;
+
+            .item__title {
+                padding-left: 2.2rem;
+            }
         }
         .cancel {
             grid-area: cancel;
+            padding-right: 5rem;
         }
         .booking {
             grid-area: booking;

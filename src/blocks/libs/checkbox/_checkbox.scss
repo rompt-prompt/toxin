@@ -2,7 +2,9 @@
     position: relative;
     
     input[type="checkbox"] {
-        display: none;
+        position: absolute ;
+        z-index: -1;
+        opacity: 0;
     }
     
     &__label {
@@ -39,6 +41,10 @@
 
             .checkbox > input[type="checkbox"]:checked ~ & {
                 border: 0.1rem solid $purple;
+            }
+
+            .checkbox > input[type="checkbox"]:focus ~ & {
+                box-shadow: 0 0 0.3rem 0.2rem $dark25;
             }
 
         }

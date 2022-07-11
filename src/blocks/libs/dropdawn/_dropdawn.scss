@@ -33,7 +33,7 @@
             width: 4.4rem;
             text-align: center;
             background-color: inherit;
-            transition: all 0.3s ease-in-out;
+            transition: all 0.2s ease-in-out;
         }
 
         &_opened-border {
@@ -46,7 +46,7 @@
             }
     }
     &__content {
-        width: inherit; // TODO разобрвться с шириной либо позиционированием выпадающего блока справа
+        min-width: 100%;
         display: none;
         position: absolute;
         z-index: 100;

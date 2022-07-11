@@ -2,7 +2,7 @@
 @import '../libs/homepage/_homepage.scss';
 
 .header {
-    padding: 1.8rem 0;
+    padding: 1.5rem 0;
     background: $white;
     box-shadow: 0 1rem 2rem $dark5;
 
@@ -18,7 +18,7 @@
     }
 
     &__nav{
-        margin-right: 2rem;
+        margin-right: 2.2rem;
     }
 
     &__user{
@@ -29,11 +29,14 @@
     }
 
     &__btn {
-        .btn {
-            height: 3.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:last-of-type {
+            margin-left: 1.8rem;
         }
-        &:not(:first-of-type) {
-            margin-left: 2rem;
+        &.btn {
+            height: 3.4rem;
         }
     }
 }

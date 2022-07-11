@@ -1,16 +1,15 @@
 .room-features {
 
     &__item {
-        box-sizing: border-box;
-        padding-bottom: 2rem;
         padding-left: 5.8rem;
-        min-height: 6.8rem;
+        min-height: 5rem;
         width: 28rem;
         vertical-align: middle;
         font-weight: 700;
         position: relative;
 
         &:not(:last-of-type) {
+            padding-bottom: 2rem;
             border-bottom: 0.1rem solid $dark10;
         }
         &:not(:first-of-type) {

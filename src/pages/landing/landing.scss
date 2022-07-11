@@ -14,8 +14,8 @@
     animation-timing-function: ease;
     @include bg-keyframes('bg-search', 30s, 5s, '../../images/bg_1.jpg', '../../images/bg_2.jpg', '../../images/bg_3.jpg');
 
-    height: 83rem;
-    padding: 7rem 0 1.8rem;
+    height: 82.7rem;
+    padding: 6.8rem 0 2.2rem;
     box-sizing: border-box;
 
     &__container {

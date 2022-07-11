@@ -20,6 +20,7 @@
 .elements {
     display: flex;
     flex-direction: column;
+    padding-left: 1.9rem;
 
     &__section {
         display: flex;
@@ -57,7 +58,7 @@
             margin-bottom: 13.1rem;
 
             .col.col_right {
-                flex: 0 0 71.1rem;
+                flex: 0 0 71.4rem;
             }
         }
         .elements__item {
@@ -84,6 +85,9 @@
             }
             & .btn-justify {
                 margin-right: 1rem;
+            }
+            &.item__expandable {
+                margin-bottom: 1rem;
             }
             &.item__rating {
                 display: flex;

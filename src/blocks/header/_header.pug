@@ -9,9 +9,10 @@ mixin header(user='anonim', cls='')
             block
             
             if user === 'anonim'
-                a.header__btn(href="./sign-in.html") 
-                    +btn('Войти', ' btn_theme_ligth w87')
-                a.header__btn(href="./registration.html") 
-                    +btn('Зарегистрироваться', 'btn_theme_purple w196')
+                a.header__btn.title-3(href="./sign-in.html", class='btn btn_theme_ligth w87') Войти
+                    //- +btn('Войти', ' btn_theme_ligth w87')
+                a.header__btn.title-3(href="./registration.html", class='btn btn_theme_purple w196') Зарегистрироваться
+                //- a.header__btn(href="./registration.html") 
+                    //- +btn('Зарегистрироваться', 'btn_theme_purple w196')
             else 
                 span.header__user.text= user
