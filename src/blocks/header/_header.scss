@@ -2,12 +2,12 @@
 @import '../libs/homepage/_homepage.scss';
 
 .header {
-    padding: 1.5rem 0;
+    padding: 15.0px 0;
     background: $white;
-    box-shadow: 0 1rem 2rem $dark5;
+    box-shadow: 0 10.0px 20.0px $dark5;
 
     .page-wrapper {
-        min-height: 4rem;
+        min-height: 40.0px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -18,14 +18,14 @@
     }
 
     &__nav{
-        margin-right: 2.2rem;
+        margin-right: 22.0px;
     }
 
     &__user{
-        padding-left: 2rem;
-        height: 3rem;
-        line-height: 3rem;
-        border-left: 0.1rem solid $dark10;
+        padding-left: 20.0px;
+        height: 30.0px;
+        line-height: 30.0px;
+        border-left: 1.0px solid $dark10;
     }
 
     &__btn {
@@ -33,10 +33,10 @@
         align-items: center;
         justify-content: center;
         &:last-of-type {
-            margin-left: 1.8rem;
+            margin-left: 18.0px;
         }
         &.btn {
-            height: 3.4rem;
+            height: 34.0px;
         }
     }
 }

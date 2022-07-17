@@ -1,13 +1,13 @@
 .social {
     
     &__link {
-        font-size: 2.4rem;
+        font-size: 24.0px;
         background: $lg-purple;
         color:transparent;
         background-clip: text;
         
         &:not(:first-child) {
-            margin-left: 2.3rem;
+            margin-left: 23.0px;
         }
     }
 }

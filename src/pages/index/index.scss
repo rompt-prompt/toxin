@@ -1,8 +1,8 @@
 @import '../../styles/_styles.scss';
 
 .navigation {
-    width: 76rem;
-    margin: 5rem auto;
+    width: 760.0px;
+    margin: 50.0px auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -17,21 +17,21 @@
     }
     &__link {
         display: block;
-        padding-top: 2rem;
-        padding-left: 2rem;
+        padding-top: 20.0px;
+        padding-left: 20.0px;
 
         &:hover {
             color: $purple;
         }
     }
     .sandbox-link {
-        flex-basis: 4rem;
-        margin-top: 3rem;
+        flex-basis: 40.0px;
+        margin-top: 30.0px;
         
         &::after {
-            @include material-pseudo("toys_fan", 4rem, 400);
+            @include material-pseudo("toys_fan", 40.0px, 400);
             display: block;
-            width: 4rem;
+            width: 40.0px;
             color: $green;
         }
     }

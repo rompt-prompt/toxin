@@ -1,6 +1,6 @@
 .btn {
-    height: 4.4rem;
-    border-radius: 2.2rem;
+    height: 44.0px;
+    border-radius: 22.0px;
     text-align: center;
     position: relative;
     text-transform: uppercase;
@@ -8,7 +8,7 @@
     box-sizing: border-box;
 
     &:focus {
-        outline: 0.1rem solid $dark25;
+        outline: 1.0px solid $dark25;
     }
 
     &__arrow::after {
@@ -18,7 +18,7 @@
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        width: 4rem;
+        width: 40.0px;
     }
 
     &_theme_purple {
@@ -33,7 +33,7 @@
     &_theme_ligth{
         color: $purple;
         background-clip: padding-box;
-        border: 0.2rem solid transparent;
+        border: 2.0px solid transparent;
         transform-style: preserve-3d;
         
         &:hover::before {
@@ -47,22 +47,22 @@
             left: 0;
             bottom: 0;
             right: 0;
-            margin: -0.2rem;
+            margin: -2.0px;
             border-radius: inherit;
             background-image: $lg-purple;
-            transform: translateZ(-0.1rem);
+            transform: translateZ(-1.0px);
         }
     }
 
     &_theme_round-green {
-        height: 4rem;
-        width: 4rem;
+        height: 40.0px;
+        width: 40.0px;
         border-radius: 50%;
         background: $lg-green;
     }
 
     &_theme_icon-link {
-        height: 1.5rem;
+        height: 15.0px;
         border-radius: 0;
         color: $purple;
     
@@ -72,12 +72,12 @@
     }
 
     &_theme_round-gray {
-        width: 3rem;
-        height: 3rem;
+        width: 30.0px;
+        height: 30.0px;
         border-radius: 50%;
-        border: 0.1rem solid $dark50;
+        border: 1.0px solid $dark50;
         font-weight: 400;
-        font-size: 1.8rem;
+        font-size: 18.0px;
         color: $dark50;
 
         &:active {

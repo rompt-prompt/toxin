@@ -11,8 +11,8 @@
     }
 
     &__label {
-        line-height: 2rem;        
-        margin: 0 0 0 3rem;
+        line-height: 20.0px;        
+        margin: 0 0 0 30.0px;
     }
 
     &__custom {
@@ -23,35 +23,35 @@
             left: 0;
             top: 0;
             box-sizing: border-box;    
-            width: 4rem;
-            height: 2rem;
-            border: 0.1rem solid $dark25;
-            border-radius: 1rem;
+            width: 40.0px;
+            height: 20.0px;
+            border: 1.0px solid $dark25;
+            border-radius: 10.0px;
             transition: all 0.15s ease-in;
 
             .toggle input[type="checkbox"]:focus + & {
-                box-shadow: 0 0 0.3rem 0.2rem $dark25;
+                box-shadow: 0 0 3.0px 2.0px $dark25;
             }
             .toggle input[type="checkbox"]:checked + & {
-                border: 0.1rem solid $purple;
+                border: 1.0px solid $purple;
             }
         }
 
         &::after {
             content: "";
             position: absolute;
-            left: 0.4rem;
-            top: 0.4rem;
+            left: 4.0px;
+            top: 4.0px;
             box-sizing: border-box;
-            width: 1.2rem;
-            height: 1.2rem;
+            width: 12.0px;
+            height: 12.0px;
             background: $dark25;
             border-radius: 50%;
             transition: all 0.15s ease-in;
 
             .toggle input[type="checkbox"]:checked + & {
                 background: $lg-purple;
-                transform: translateX(2rem);
+                transform: translateX(20.0px);
 
             }
         }

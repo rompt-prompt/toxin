@@ -2,10 +2,10 @@
 @import '../rating/_rating.scss';
 
 .room-card {
-    width: 27rem;
+    width: 270.0px;
     background: $white;
-    box-shadow: 0 1rem 2rem $dark5;
-    border-radius: 0.4rem;
+    box-shadow: 0 10.0px 20.0px $dark5;
+    border-radius: 4.0px;
 
     &__slider {
         display: block;
@@ -17,25 +17,25 @@
 
     &__content  {
         box-sizing: border-box;
-        height: 10.6rem;
-        padding: 2rem 1.7rem 2rem 2rem;
+        height: 106.0px;
+        padding: 20.0px 17.0px 20.0px 20.0px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
 
     &__testimonials{
-        border-top: 0.1rem solid $dark10;
-        padding-top: 0.8rem;
-        margin-top: 0.9rem;
+        border-top: 1.0px solid $dark10;
+        padding-top: 8.0px;
+        margin-top: 9.0px;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         .testimonials__reviews {
-            padding-right: 0.3rem;
+            padding-right: 3.0px;
             font-weight: 700;
-            font-size: 1.4rem;
+            font-size: 14.0px;
             color: $dark50;
 
             &::after {

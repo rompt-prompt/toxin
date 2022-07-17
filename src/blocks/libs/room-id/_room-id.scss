@@ -7,21 +7,21 @@
 
         &::before {
             content: '№ ';
-            font-size: 1.4rem;
+            font-size: 14.0px;
         }
     }
     &__category {
-        margin-left: 0.8rem;
+        margin-left: 8.0px;
         color: $purple;
     }
     &__price {
         font-weight: 700;
-        font-size: 1.4rem;
+        font-size: 14.0px;
         color: $dark50;
 
         .period {
             font-weight: 400;
-            font-size: 1.2rem;
+            font-size: 12.0px;
         }
     }
 }

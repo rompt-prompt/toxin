@@ -1,6 +1,6 @@
 .nav {
     &__link {
-        margin-left: 1.7rem;
+        margin-left: 17.0px;
         color: $dark50;
         display: inline-block;
         text-align: center;
@@ -20,11 +20,11 @@
         
         &_expand {
             position: relative;
-            padding-right: 2.4rem;
+            padding-right: 24.0px;
             &::after {
                 position: absolute;
                 right: 0;
-                @include material-pseudo('expand_more', 2.4rem, 400);
+                @include material-pseudo('expand_more', 24.0px, 400);
                 color: $dark50;
             }
         }

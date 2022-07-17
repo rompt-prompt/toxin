@@ -5,24 +5,24 @@
 
 .form-user {
     &__title {
-        margin-top: -0.3rem;
-        margin-bottom: 2rem;
+        margin-top: -3.0px;
+        margin-bottom: 20.0px;
     }
     &__item {
-        margin-bottom: 1rem;
+        margin-bottom: 10.0px;
 
         &.item__title {
-            margin-top: 1.7rem;
+            margin-top: 17.0px;
         }
         &.item__toggle {
-            margin-bottom: 1.6rem;
+            margin-bottom: 16.0px;
         }
     }
     &__btn {
-        margin-top: 1rem;
+        margin-top: 10.0px;
     }
     &__footer {
-        margin-top: 3rem;
+        margin-top: 30.0px;
         display: flex;
         justify-content: space-between;
         align-items: center;

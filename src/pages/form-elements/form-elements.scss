@@ -20,74 +20,74 @@
 .elements {
     display: flex;
     flex-direction: column;
-    padding-left: 1.9rem;
+    padding-left: 19.0px;
 
     &__section {
         display: flex;
         justify-content: space-between;
         .col {
-            flex: 0 0 32rem;
+            flex: 0 0 320.0px;
             &_left {
                 
             }
             &_center {
-                margin-left: 12.6rem;
-                margin-right: 7.2rem;
+                margin-left: 126.0px;
+                margin-right: 72.0px;
             }
             &_right {
                 
             }
             & .item__title:not(:first-of-type) {
-                margin-top: 4rem;
+                margin-top: 40.0px;
             }
         }
         &_1 {
-            height: 63.6rem;
-            margin-bottom: 9.7rem;
+            height: 636.0px;
+            margin-bottom: 97.0px;
         }
         &_2 {
-            height: 26.6rem;
-            margin-bottom: 4rem;
+            height: 266.0px;
+            margin-bottom: 40.0px;
         }
         &_3 {
-            height: 28.1rem;
-            margin-bottom: 10rem;
+            height: 281.0px;
+            margin-bottom: 100.0px;
         }
         &_4 {
-            height: 15.8rem;
-            margin-bottom: 13.1rem;
+            height: 158.0px;
+            margin-bottom: 131.0px;
 
             .col.col_right {
-                flex: 0 0 71.4rem;
+                flex: 0 0 714.0px;
             }
         }
         .elements__item {
-            margin-bottom: 2.1rem;
+            margin-bottom: 21.0px;
             &_inline {
                 display: flex;
                 justify-content: space-between;
             }
             &_high {
-                margin-bottom: 4rem;
+                margin-bottom: 40.0px;
             }
             &_low {
-                margin-bottom: 1.1rem;
+                margin-bottom: 11.0px;
             }
             .item__title {
-                margin-bottom: 1.6rem;
+                margin-bottom: 16.0px;
             }
             & .checkbox {
-                width: 22.2rem;
-                margin-bottom: 1.1rem;
+                width: 222.0px;
+                margin-bottom: 11.0px;
             }
             & .toggle {
-                margin-bottom: 1.5rem;
+                margin-bottom: 15.0px;
             }
             & .btn-justify {
-                margin-right: 1rem;
+                margin-right: 10.0px;
             }
             &.item__expandable {
-                margin-bottom: 1rem;
+                margin-bottom: 10.0px;
             }
             &.item__rating {
                 display: flex;
@@ -98,28 +98,28 @@
                 }
 
                 .rating:first-of-type {
-                    margin-right: 2rem;
+                    margin-right: 20.0px;
                 }
 
             }
             .item__btn {
-                margin-bottom: 2rem;
-                margin-right: 2rem;
+                margin-bottom: 20.0px;
+                margin-right: 20.0px;
                 &.btn_theme_purple.btn__arrow {
-                    margin-bottom: 2.8rem;
+                    margin-bottom: 28.0px;
                 }
             }
             &.item__rich-chk {
-                margin-top: 1.4rem;
+                margin-top: 14.0px;
                 .checkbox {
-                    width: 26rem;
+                    width: 260.0px;
                 }
             }
             &.item__bullet-list {
-                padding-top: 1.4rem;
+                padding-top: 14.0px;
             }
             & .review {
-                margin-top: 1rem;
+                margin-top: 10.0px;
             }
             
         }

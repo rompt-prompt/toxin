@@ -8,36 +8,36 @@ body {
 }
 
 .hf__item {
-    margin-bottom: 4rem;
+    margin-bottom: 40.0px;
 
     &:first-of-type {
-        margin-top: -0.3rem;
+        margin-top: -3.0px;
     }
     .page-wrapper {
-        padding-left: 1.7rem;
+        padding-left: 17.0px;
     }
 }
 
 .footer_desktop {
-    box-shadow: 0 1rem 2rem $dark5;
+    box-shadow: 0 10.0px 20.0px $dark5;
 }
 
 .mobile {
     background: $white;
-    max-width: 76.8rem;
+    max-width: 768.0px;
     margin-top: 0;
-    margin-bottom: 14rem;
+    margin-bottom: 140.0px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 1rem 2rem $dark5;
+    box-shadow: 0 10.0px 20.0px $dark5;
 
     .footer__bottom {
-        border-top: 0.1rem solid $dark10;
-        padding: 2.3rem 0;
+        border-top: 1.0px solid $dark10;
+        padding: 23.0px 0;
         
         /* @media (max-device-width: 768px) */
-            padding: 11.9rem 0;
-            height: 36.7rem;
+            padding: 119.0px 0;
+            height: 367.0px;
             box-sizing: border-box;
 
         .page-wrapper {

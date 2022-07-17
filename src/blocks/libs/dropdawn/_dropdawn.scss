@@ -3,15 +3,15 @@
 
     &__title {
         display: block;
-        margin-bottom: 0.5rem;
+        margin-bottom: 5.0px;
     }
     &__btn {
         width: inherit;
-        height: 4.4rem;
-        border: 0.1rem solid $dark25;
-        border-radius: 0.4rem;
-        padding-left: 1.5rem;
-        padding-right: 4.4rem;
+        height: 44.0px;
+        border: 1.0px solid $dark25;
+        border-radius: 4.0px;
+        padding-left: 15.0px;
+        padding-right: 44.0px;
         text-align: left;
         white-space: nowrap;
         overflow: hidden;
@@ -24,13 +24,13 @@
         }
 
         &::after {
-            @include material-pseudo('expand_more', $fz: 2.4rem);
+            @include material-pseudo('expand_more', $fz: 24.0px);
             position: absolute;
             right: 0;
             top: 0;
             bottom: 0;
-            line-height: 4.4rem;
-            width: 4.4rem;
+            line-height: 44.0px;
+            width: 44.0px;
             text-align: center;
             background-color: inherit;
             transition: all 0.2s ease-in-out;

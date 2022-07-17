@@ -1,19 +1,19 @@
 .room-features {
 
     &__item {
-        padding-left: 5.8rem;
-        min-height: 5rem;
-        width: 28rem;
+        padding-left: 58.0px;
+        min-height: 50.0px;
+        width: 280.0px;
         vertical-align: middle;
         font-weight: 700;
         position: relative;
 
         &:not(:last-of-type) {
-            padding-bottom: 2rem;
-            border-bottom: 0.1rem solid $dark10;
+            padding-bottom: 20.0px;
+            border-bottom: 1.0px solid $dark10;
         }
         &:not(:first-of-type) {
-            margin-top: 2rem;
+            margin-top: 20.0px;
         }
     }
 
@@ -23,7 +23,7 @@
 
     .insert_emoticon {
         &::before {
-            @include material-pseudo('insert_emoticon', 4.8rem);
+            @include material-pseudo('insert_emoticon', 48.0px);
             background-image: $lg-purple;
             background-clip: text;
             color: transparent;
@@ -35,7 +35,7 @@
 
     .location_city {
         &::before {
-            @include material-pseudo('location_city', 4.8rem);
+            @include material-pseudo('location_city', 48.0px);
             background-image: $lg-purple;
             background-clip: text;
             color: transparent;
@@ -47,7 +47,7 @@
 
     .whatshot {
         &::before {
-            @include material-pseudo('whatshot', 4.8rem);
+            @include material-pseudo('whatshot', 48.0px);
             background-image: $lg-purple;
             background-clip: text;
             color: transparent;

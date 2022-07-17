@@ -1,7 +1,7 @@
 @import '../../styles/_styles.scss';
 
 main {
-    margin: 0.2rem 13.5rem 14.5rem 15rem;
+    margin: 2.0px 135.0px 145.0px 150.0px;
     display: flex;
     justify-content: space-between;
 
@@ -10,23 +10,23 @@ main {
     }
     
     .colors {
-        max-width: 28.1rem;
+        max-width: 281.0px;
     
         &__color {
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;     
             align-items: center;
-            margin-bottom: 2rem;
+            margin-bottom: 20.0px;
     
             .color {
     
                 &__palette {
                     display: block;
-                    width: 7rem;
-                    height: 7rem;
-                    border-radius: 0.6rem;
-                    margin-right: 4rem;
+                    width: 70.0px;
+                    height: 70.0px;
+                    border-radius: 6.0px;
+                    margin-right: 40.0px;
     
                         &.dark100 {background-color: $dark100;}
                         &.dark75 {background-color: $dark75;}
@@ -38,7 +38,7 @@ main {
                 }
     
                 &__name {
-                    line-height: 2.8rem;
+                    line-height: 28.0px;
     
                     span {
                         display: block;
@@ -49,25 +49,25 @@ main {
         }
     }
     .type {
-        max-width: 43.6rem;
+        max-width: 436.0px;
     
         &__item {
-            margin-bottom: 5.1rem;
+            margin-bottom: 51.0px;
             display: flex;
             justify-content: left;
     
             &:last-child {
-                padding-right: 6.8rem;
+                padding-right: 68.0px;
             }
         }
         &__name {
-            flex: 0 0 3.7rem;
+            flex: 0 0 37.0px;
             text-align: right;
             font-weight: 400;
             color: $dark25;
         }
         &__example {
-            margin-left: 3rem;
+            margin-left: 30.0px;
         }
     }
 }

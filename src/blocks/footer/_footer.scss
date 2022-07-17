@@ -7,8 +7,8 @@
     background: $white;
 
     &__top {
-        padding: 10.7rem 0 9.8rem;
-        border-top: 0.1rem solid $dark25;
+        padding: 107.0px 0 98.0px;
+        border-top: 1.0px solid $dark25;
         @media (max-device-width: 768px) {
             display: none;
         }
@@ -18,16 +18,16 @@
             justify-content: space-between;
 
             .col__title {
-                min-height: 3.4rem;
+                min-height: 34.0px;
             }
             .footer {
                 &__logo {
                     display: block;
-                    margin-bottom: 1.7rem;
+                    margin-bottom: 17.0px;
                 }
                 &__col_left {
                     flex: 0 0 22%;
-                    margin-top: -0.4rem;
+                    margin-top: -4.0px;
                 }
                 &__col_right {
                     flex: 0 0 22%;
@@ -38,23 +38,23 @@
                     justify-content: space-between;
 
                     .center__column:last-child {
-                        margin-left: 3.9rem;
+                        margin-left: 39.0px;
                     }
                 }
                 &__subscription {
-                    margin-top: 2.3rem;
+                    margin-top: 23.0px;
                 }
             }  
         }
     }
 
     &__bottom {
-        border-top: 0.1rem solid $dark10;
-        padding: 2.3rem 0;
+        border-top: 1.0px solid $dark10;
+        padding: 23.0px 0;
         
         @media (max-device-width: 768px) {
-            padding: 11.9rem 0;
-            height: 36.7rem;
+            padding: 119.0px 0;
+            height: 367.0px;
             box-sizing: border-box;
         }
 

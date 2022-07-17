@@ -2,20 +2,20 @@
 
     &__btn {
         width: 100%;
-        min-height: 4.9rem;
-        padding-right: 4.4rem;
+        min-height: 49.0px;
+        padding-right: 44.0px;
         text-align: left;
         display: block;
         position: relative;
 
         &::after {
-            @include material-pseudo('expand_more', $fz: 2.4rem);
+            @include material-pseudo('expand_more', $fz: 24.0px);
             position: absolute;
             right: 0;
             top: 0;
             bottom: 0;
-            line-height: 4.9rem;
-            width: 4.4rem;
+            line-height: 49.0px;
+            width: 44.0px;
             text-align: center;
             background-color: inherit;
             transition: all 0.2s ease-in-out;

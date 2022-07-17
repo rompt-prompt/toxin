@@ -1,5 +1,4 @@
 html {
-    font-size: 10px;
     font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
@@ -29,24 +28,24 @@ body {
 h1, .title-1 {
     font-style: normal;
     font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 2.9rem;
+    font-size: 24.0px;
+    line-height: 29.0px;
     color: $dark100;
 }
 
 h2, .title-2 {
     font-style: normal;
     font-weight: 700;
-    font-size: 1.9rem;
-    line-height: 2.3rem;
+    font-size: 19.0px;
+    line-height: 23.0px;
     color: $dark100;
 }
 
 h3, .title-3 {
     font-style: normal;
     font-weight: 700;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: 12.0px;
+    line-height: 15.0px;
     text-transform: uppercase;
     color: $dark100;
 }
@@ -54,8 +53,8 @@ h3, .title-3 {
 p, .text {
     font-style: normal;
     font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
+    font-size: 14.0px;
+    line-height: 24.0px;
     color: $dark75;
 }
 
@@ -66,15 +65,15 @@ p, .text {
 }
 
 .page-wrapper {
-    max-width: 116.0rem;
-    padding: 0 1rem;
+    max-width: 1160.0px;
+    padding: 0 10.0px;
     margin: 0 auto;
 }
 
-.w320 {width: 32.0rem;}
-.w266 {width: 26.6rem;}
-.w260 {width: 26.0rem;}
-.w196 {width: 19.6rem;}
-.w150 {width: 15rem;}
-.w99 {width: 9.9rem;}
-.w87 {width: 8.7rem;}
+.w320 {width: 320.0px;}
+.w266 {width: 266.0px;}
+.w260 {width: 260.0px;}
+.w196 {width: 196.0px;}
+.w150 {width: 150.0px;}
+.w99 {width: 99.0px;}
+.w87 {width: 87.0px;}

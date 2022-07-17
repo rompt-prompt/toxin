@@ -5,16 +5,16 @@
   
     &__link {
         a {
-            line-height: 2.4rem;
+            line-height: 24.0px;
             position: relative;
 
             &::before {
                 content: "";
                 width: 0%;
-                height: 0.2rem;
+                height: 2.0px;
                 background-image: $lg-purple;
                 position: absolute;
-                bottom: -0.2rem;
+                bottom: -2.0px;
                 left: 50%;
                 transform: translateX(-50%);
                 transition: width 0.2s ease-in-out;
@@ -25,7 +25,7 @@
             }
         }
         &:not(:first-child) {
-            margin-top: 1.3rem;
+            margin-top: 13.0px;
         }
     }
 }

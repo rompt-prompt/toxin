@@ -11,14 +11,14 @@ body {
 }
 
 .cards {
-    margin-top: 0.6rem;
-    height: 112rem;
+    margin-top: 6.0px;
+    height: 1120.0px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 4rem 4rem;
+    gap: 40.0px 40.0px;
 
     &__item {
         &.item__datepicker {

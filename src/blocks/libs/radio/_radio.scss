@@ -1,4 +1,4 @@
-$radioSize: 2rem;
+$radioSize: 20.0px;
 
 .radio {
     display: inline-flex;
@@ -12,8 +12,8 @@ $radioSize: 2rem;
 
     }
     &__label {
-        margin: 0 2rem 0 1rem;
-        line-height: 2rem;
+        margin: 0 20.0px 0 10.0px;
+        line-height: 20.0px;
         color: $dark50;
 
         .radio input[type="radio"]:checked + & {
@@ -31,16 +31,16 @@ $radioSize: 2rem;
             top: 0;
             left: 0;
             box-sizing: border-box;
-            border: 0.1rem solid $dark25;
+            border: 1.0px solid $dark25;
             border-radius: 50%;
             background: $white;
 
             .radio input[type="radio"]:focus + & {
-                box-shadow: 0 0 0.3rem 0.2rem $dark25;
+                box-shadow: 0 0 3.0px 2.0px $dark25;
             } 
 
             .radio input[type="radio"]:checked + & {
-                border: 0.1rem solid $purple;
+                border: 1.0px solid $purple;
             }
         }
 

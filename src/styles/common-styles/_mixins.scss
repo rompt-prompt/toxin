@@ -1,4 +1,4 @@
-@mixin material-pseudo($cont: "", $fz: 2.4rem, $fw: 400) {
+@mixin material-pseudo($cont: "", $fz: 24px, $fw: 400) {
     content: $cont;
     font-family: 'Material Icons';
     text-transform: none;

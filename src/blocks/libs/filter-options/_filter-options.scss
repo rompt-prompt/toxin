@@ -2,15 +2,15 @@
 
 .filter-options {
     box-sizing: border-box;
-    padding: 0.5rem 0.7rem 0rem 1.3rem;
-    border: 0.1rem solid $dark50;
+    padding: 5.0px 7.0px 0.0px 13.0px;
+    border: 1.0px solid $dark50;
     border-top: none;
-    border-radius: 0 0 .4rem .4rem;
+    border-radius: 0 0 4.0px 4.0px;
     background: $white;
-    box-shadow: 0 1rem 2rem $dark5;
+    box-shadow: 0 10.0px 20.0px $dark5;
 
     &__option {
-        margin-bottom: 0.7rem;
+        margin-bottom: 7.0px;
     }
     .option {
         display: flex;
@@ -23,14 +23,14 @@
             align-items: center;
 
             .amount {
-                margin: 0 1rem;
+                margin: 0 10.0px;
             }
         }
     }
     
 
     &__controls {
-        margin: 2rem 0 1.2rem;
+        margin: 20.0px 0 12.0px;
 
         &.controls {
             display: flex;

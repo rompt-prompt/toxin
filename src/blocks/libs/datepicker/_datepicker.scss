@@ -2,21 +2,21 @@
 @import '../btn/btn';
 
 .datepicker {
-    margin-top:  0.5rem;
+    margin-top:  5.0px;
     .air-datepicker {
         box-sizing: border-box;
-        width: 32.0rem;
-        padding: 1.5rem 2rem 2rem 2rem;
+        width: 320.0px;
+        padding: 15.0px 20.0px 20.0px 20.0px;
         background: $white;
-        border: 0.1rem solid $dark25;
-        box-shadow: 0rem 0.1rem 0.2rem $dark5;
-        border-radius: 0.4rem;
+        border: 1.0px solid $dark25;
+        box-shadow: 0.0px 1.0px 2.0px $dark5;
+        border-radius: 4.0px;
         font-family: Montserrat, Arial, Helvetica, sans-serif;
         font-style: normal;
     
         &--navigation {
             border: none;
-            padding-bottom: 2.6rem;
+            padding-bottom: 26.0px;
     
             .air-datepicker-nav {
                 border: none;
@@ -25,7 +25,7 @@
                 &--title {
                     font-style: normal;
                     font-weight: 700;
-                    font-size: 1.9rem;
+                    font-size: 19.0px;
                     color: $dark100;
                 }
         
@@ -33,7 +33,7 @@
                     font-family: 'Material Icons';
                     font-style: normal;
                     font-weight: 400;
-                    font-size: 2.4rem;
+                    font-size: 24.0px;
                     color: $purple;
                     width: auto;
                 }
@@ -41,17 +41,17 @@
         }
         &--content {
             padding: 0;
-            margin-bottom: 2rem;
+            margin-bottom: 20.0px;
             box-sizing: border-box;
     
             .air-datepicker-body {
                 &--day {
                     &-names {
                         margin: 0;
-                        height: 4rem;
+                        height: 40.0px;
                     }
                     &-name {
-                        font-size: 1.2rem;
+                        font-size: 12.0px;
                         font-weight: 700;
                         color: $purple;
                         text-transform: capitalize;
@@ -59,14 +59,14 @@
                 }
                 &--cells {
                     &.-days- {
-                        grid-auto-rows: 4rem;
+                        grid-auto-rows: 40.0px;
     
                         .air-datepicker-cell {
                             &.-day- {
                                 font-style: normal;
                                 font-weight: 400;
-                                font-size: 1.2rem;
-                                line-height: 1.5rem;
+                                font-size: 12.0px;
+                                line-height: 15.0px;
                                 color: $dark50;
             
                                 &.-other-month- {
@@ -107,14 +107,14 @@
                                 border-radius: 50%;
                                 background: $lg-purple;
                                 font-weight: 700;
-                                font-size: 1.2rem;
+                                font-size: 12.0px;
                                 color: $white;
                             }
                             &.-focus- {
                                 border-radius: 50%;
                                 background: $lg-green;
                                 font-weight: 700;
-                                font-size: 1.2rem;
+                                font-size: 12.0px;
                                 color: $white;
                                 &.-other-month- {
                                     color: $white;

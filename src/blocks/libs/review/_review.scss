@@ -1,7 +1,7 @@
 @import '../like-btn/_like-btn.scss';
 
 .review {
-    max-width: 70.8rem;
+    max-width: 708.0px;
     display: flex;
     flex-wrap: wrap;
     
@@ -11,17 +11,17 @@
         grid-template-areas:    "avatar name"
                                 "avatar date";
         justify-content: flex-start;
-        column-gap: 1rem;
-        margin-bottom: 1rem;
+        column-gap: 10.0px;
+        margin-bottom: 10.0px;
 
         &__avatar {
             grid-area: avatar;
             box-sizing: border-box;
-            width: 4.8rem;
-            height: 4.8rem;
-            border: 0.2rem solid $white;
+            width: 48.0px;
+            height: 48.0px;
+            border: 2.0px solid $white;
             border-radius: 50%;
-            box-shadow: 0 1rem 2rem $dark10;
+            box-shadow: 0 10.0px 20.0px $dark10;
         }
 
         &__name {
@@ -35,11 +35,11 @@
     }
 
     &__likes {
-        margin-top: 0.2rem
+        margin-top: 2.0px
     }
 
     &__content {
-        flex: 1 1 calc(100% - 4rem - 1.4rem);
-        padding-left: 1.4rem;
+        flex: 1 1 calc(100% - 40.0px - 14.0px);
+        padding-left: 14.0px;
     }
 }

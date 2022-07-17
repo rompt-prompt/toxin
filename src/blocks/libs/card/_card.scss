@@ -1,14 +1,14 @@
 .card {
     box-sizing: border-box;
-    width: 38.2rem;
-    padding: 4rem 3rem 3rem 3rem;
+    width: 382.0px;
+    padding: 40.0px 30.0px 30.0px 30.0px;
     background: $white;
-    border-radius: 0.4rem;
-    border: 0.1rem solid $black12;
-    box-shadow: 0 0 2.5rem 0 $black20;
+    border-radius: 4.0px;
+    border: 1.0px solid $black12;
+    box-shadow: 0 0 25.0px 0 $black20;
 
     &__footer {
-        margin-top: 3rem;
+        margin-top: 30.0px;
         display: flex;
         justify-content: space-between;
         align-items: center;

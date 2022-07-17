@@ -1,24 +1,24 @@
 .like-btn {
-    width: 4rem;
-    height: 2rem;
-    border: 0.1rem solid $dark25;
-    border-radius: 1rem;
+    width: 40.0px;
+    height: 20.0px;
+    border: 1.0px solid $dark25;
+    border-radius: 10.0px;
     background-color: $white;
-    padding-left: 1.7rem;
-    padding-right: 0.7rem;
+    padding-left: 17.0px;
+    padding-right: 7.0px;
     text-align: center;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 10.0px;
     color: $dark25;
     position: relative;
 
     &::before {
         position: absolute;
-        left: 0.4rem;
+        left: 4.0px;
         top: 0;
         bottom: 0;
-        @include material-pseudo("favorite", $fz: 1rem);
-        line-height: 2rem;
+        @include material-pseudo("favorite", $fz: 10.0px);
+        line-height: 20.0px;
         color: $dark25;
     }
 

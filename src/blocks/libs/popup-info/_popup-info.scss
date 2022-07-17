@@ -1,12 +1,12 @@
 .popup-info {
     text-transform: lowercase;
     color: $dark25;
-    line-height: 2rem;
+    line-height: 20.0px;
     text-align: center;
-    border: 0.1rem solid $dark25;
+    border: 1.0px solid $dark25;
     border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
+    width: 20.0px;
+    height: 20.0px;
     position: relative;
 
     &:hover &__content {
@@ -15,16 +15,16 @@
     }
     
     &__content {
-        width: 19rem;
+        width: 190.0px;
         background-color: $white;
-        border: 0.1rem solid $dark25;
-        border-radius: 0.4rem;
-        box-shadow: 0 0 2.5rem $black20;
-        padding: 1.2rem 2.4rem;
+        border: 1.0px solid $dark25;
+        border-radius: 4.0px;
+        box-shadow: 0 0 25.0px $black20;
+        padding: 12.0px 24.0px;
         text-align: left;
-        line-height: 2rem;
+        line-height: 20.0px;
         position: absolute;
-        left: 4rem;
+        left: 40.0px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 100;
@@ -32,14 +32,14 @@
 
         &::before {
             content: '';
-            width: 2rem;
-            height: 2rem;
-            border: 0.1rem solid $dark25;
+            width: 20.0px;
+            height: 20.0px;
+            border: 1.0px solid $dark25;
             border-top: none;
             border-right: none;
             background-color: $white;
             position: absolute;
-            left: -1.1rem;
+            left: -11.0px;
             top: 50%;
             transform: translateY(-50%) rotate(45deg);
 

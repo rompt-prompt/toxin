@@ -1,7 +1,7 @@
 @import '../btn/_btn.scss';
 
 .pagination {
-    width: 24rem;
+    width: 240.0px;
     display: flex;
     flex-direction: column;
     
@@ -12,9 +12,9 @@
     
         .pages__page {
             box-sizing: border-box;
-            width: 4rem;
-            height: 4rem;
-            line-height: 4rem;
+            width: 40.0px;
+            height: 40.0px;
+            line-height: 40.0px;
             border-radius: 50%;
             text-align: center;
             color: $dark50;
@@ -29,6 +29,6 @@
 
     &__summury {
         text-align: center;
-        margin-top: 1rem;
+        margin-top: 10.0px;
     }
 }
