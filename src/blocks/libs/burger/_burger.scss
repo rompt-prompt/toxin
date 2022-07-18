@@ -1,0 +1,88 @@
+@use "sass:math";
+
+$buger-width: 30px;
+$buger-height: $buger-width;
+$bar-height: 4px;
+$bar-radius: calc($bar-height / 2);
+$hypotenuse: math.hypot($buger-width, $buger-height) - $bar-radius;
+
+body.hidden-overflow {
+    overflow: hidden;
+    padding-right: 5px;
+}
+
+.burger {
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked ~ .burger__btn span {
+        height: 0;
+
+        &::before {
+            top: 0;
+            transform-origin: $bar-radius;
+            transform: rotateZ(45deg);
+            width: $hypotenuse;
+        }
+        &::after {
+            bottom: 0;
+            transform-origin: $bar-radius;
+            transform: rotateZ(-45deg);
+            width: $hypotenuse;
+        }
+    }
+
+    &__btn {
+        cursor: pointer;
+        width: $buger-width;
+        height: $buger-height;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+
+        span {
+            background-color: $purple;
+            height: $bar-height;
+            width: 100%;
+            display: block;
+            border-radius: $bar-radius;
+            transition: 0.2s ease-in-out;
+
+            &::before, &::after {
+                content: "";
+                background-color: $purple;
+                height: $bar-height;
+                width: 80%;
+                border-radius: $bar-radius;
+                position: absolute;
+                left: 0;
+                transition: 0.2s ease-in-out;
+            }
+            &::before {
+                top: 4px;
+            }
+            &::after {
+                bottom: 4px;
+            }
+        }
+    }
+}
+.burger-overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: $dark75;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.2s linear;
+
+    &_active {
+        opacity: 1;
+        z-index: 5;
+    }
+}
