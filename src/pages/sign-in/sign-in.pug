@@ -6,12 +6,10 @@ block title
 block content 
     include ../../blocks/header/_header.pug
     include ../../blocks/footer/_footer.pug
-    include ../../blocks/libs/nav-header/_nav-header.pug
     include ../../blocks/libs/card/_card.pug
     include ../../blocks/libs/form-user/_form-user.pug
 
     +header('anonim', '')
-        +nav-header(["aboutUs", "services", "job", "news", "agreements"], '') 
     main.sign-in
         .page-wrapper.sign-in__container
             +card('sign-in__sign-in-card')

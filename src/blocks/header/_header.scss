@@ -1,42 +1,141 @@
 @import '../libs/btn/_btn.scss';
 @import '../libs/homepage/_homepage.scss';
+@import '../libs/burger/_burger.scss';
+
+$header-height: 70px;
 
 .header {
-    padding: 15.0px 0;
     background: $white;
     box-shadow: 0 10.0px 20.0px $dark5;
 
     .page-wrapper {
-        min-height: 40.0px;
+        height: $header-height;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        @media (max-device-width: 930px){
+            padding: 0 20px;
+        }
     }
-
     &__logo{
-        margin-right: auto;
+        flex: 0 0 fit-content;
     }
-
-    &__nav{
-        margin-right: 22.0px;
+    &__burger {
+        display: none;
+        @media (max-device-width: 930px){
+            display: block;
+            z-index: 100;
+        }
     }
-
-    &__user{
-        padding-left: 20.0px;
-        height: 30.0px;
-        line-height: 30.0px;
-        border-left: 1.0px solid $dark10;
-    }
-
-    &__btn {
+    .burger-container {
         display: flex;
         align-items: center;
-        justify-content: center;
-        &:last-of-type {
-            margin-left: 18.0px;
+        
+        @media (max-device-width: 930px){
+            position: fixed;
+            top: $header-height;
+            right: 0;
+            z-index: -1;
+            opacity: 0;
+            height: calc(100vh - $header-height);
+            width: 0;
+            background-color: $white;
+            flex-direction: column;
+            align-items: stretch;
+            padding: 0 30px;
+            overflow-y: scroll;
+            box-sizing: border-box;
+            transition: all 0.2s linear;
+
+            &::before {
+                content: '';
+                width: inherit;
+                height: $header-height;
+                background-color: $white;
+                position: fixed;
+                right: 0;
+                top: 0;
+                z-index: 50;
+
+            }
+
+            &_active {
+                opacity: 1;
+                z-index: 10;
+                width: 320px;
+            }
         }
-        &.btn {
-            height: 34.0px;
+        &__item {
+            margin-left: 19px;
+            @media (max-device-width: 930px) {
+                margin: 15px;
+            }
+        }
+        .nav{
+            @media (max-device-width: 930px) {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            &__link {
+                color: $dark50;
+                display: inline-block;
+                text-align: center;
+                
+                &::before {
+                    content: attr(label);
+                    font-weight: 700;
+                    display: block;
+                    height: 0;
+                    visibility: hidden;
+                }
+        
+                &:hover {
+                    color: $dark75;
+                    font-weight: 700;
+                }
+                
+                &_expand {
+                    position: relative;
+                    padding-right: 24.0px;
+                    &::after {
+                        position: absolute;
+                        right: 0;
+                        @include material-pseudo('expand_more', 24.0px, 400);
+                        color: $dark50;
+                    }
+                }
+            }
+        }
+        .btn-style {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            &.btn {
+                min-height: 34.0px;
+                max-height: 34.0px;
+            }
+            &.login {
+                min-width: 87px;
+            }
+            &.registration {
+                min-width: 196px;
+            }
+        }
+        .user{
+            padding-left: 20.0px;
+            height: 30.0px;
+            line-height: 30.0px;
+            border-left: 1.0px solid $dark10;
+
+            @media (max-device-width: 930px) {
+                order: -1;
+                padding-left: 0;
+                border-left: none;
+                border-bottom: 1.0px solid $dark10;
+            }
         }
     }
 }

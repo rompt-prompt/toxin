@@ -1,18 +1,29 @@
 include ../libs/btn/_btn.pug
 include ../libs/homepage/_homepage.pug
+include ../libs/burger/_burger.pug
 
 mixin header(user='anonim', cls='')
     header.header(class=`${cls}`)
         .page-wrapper
             +homepage('header__logo')
-            
-            block
-            
-            if user === 'anonim'
-                a.header__btn.title-3(href="./sign-in.html", class='btn btn_theme_ligth w87') Войти
-                    //- +btn('Войти', ' btn_theme_ligth w87')
-                a.header__btn.title-3(href="./registration.html", class='btn btn_theme_purple w196') Зарегистрироваться
-                //- a.header__btn(href="./registration.html") 
-                    //- +btn('Зарегистрироваться', 'btn_theme_purple w196')
-            else 
-                span.header__user.text= user
+            +burger('header__burger')
+            .header__burger-container.burger-container
+                
+                //- header navigation links
+                nav.nav
+                    each linkId in ["aboutUs", "services", "job", "news", "agreements"]
+                        - var name = data.toxinLinks.internal[linkId].name
+                        - var url = data.toxinLinks.internal[linkId].url
+                        - var expand = data.toxinLinks.internal[linkId].expand
+                        
+                        if expand === 'y'
+                            a.burger-container__item.text.nav__link.nav__link_expand(href= url, label= name)= name
+                        else 
+                            a.burger-container__item.text.nav__link(href= url, label= name)= name
+                
+                //- user & buttons
+                if user === 'anonim'
+                    a.burger-container__item.btn-style.title-3(href="./sign-in.html", class='btn btn_theme_ligth login') Войти
+                    a.burger-container__item.btn-style.title-3(href="./registration.html", class='btn btn_theme_purple registration') Зарегистрироваться
+                else 
+                    span.burger-container__item.user.text= user

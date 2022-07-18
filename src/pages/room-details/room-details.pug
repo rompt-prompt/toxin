@@ -6,7 +6,6 @@ block title
 block content 
     include ../../blocks/header/_header.pug
     include ../../blocks/footer/_footer.pug
-    include ../../blocks/libs/nav-header/_nav-header.pug
     include ../../blocks/libs/card/_card.pug
     include ../../blocks/libs/form-booking/_form-booking.pug
     include ../../blocks/libs/bullet-list/_bullet-list.pug
@@ -14,7 +13,6 @@ block content
     include ../../blocks/libs/review/_review.pug
 
     +header('anonim', '')
-        +nav-header(["aboutUs", "services", "job", "news", "agreements"], '') 
     main.room-details 
         .room-details__imgs 
             img.imgs__img-main(src=require('../../images/rooms/888/room_888.jpg'), alt="room 888")

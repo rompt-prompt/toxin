@@ -6,7 +6,6 @@ block title
 block content 
     include ../../blocks/header/_header.pug
     include ../../blocks/footer/_footer.pug
-    include ../../blocks/libs/nav-header/_nav-header.pug
     include ../../blocks/libs/dropdawn/_dropdawn.pug
     include ../../blocks/libs/datepicker/_datepicker.pug
     include ../../blocks/libs/filter-options/_filter-options.pug
@@ -17,7 +16,6 @@ block content
     include ../../blocks/libs/pagination/_pagination.pug
 
     +header('anonim', '')
-        +nav-header(["aboutUs", "services", "job", "news", "agreements"], '') 
     .page-wrapper.search-content
         aside.filters
             +dropdawn('stayDates', 'Даты пребывания в отеле', 'filters__filter filter_lower')

@@ -1,1 +1,2 @@
-import './sign-in.scss'
+import './sign-in.scss';
+import '../../blocks/header/_header.js';

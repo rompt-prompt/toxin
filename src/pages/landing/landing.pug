@@ -6,13 +6,11 @@ block title
 block content 
     include ../../blocks/header/_header.pug
     include ../../blocks/footer/_footer.pug
-    include ../../blocks/libs/nav-header/_nav-header.pug
     include ../../blocks/libs/card/_card.pug
     include ../../blocks/libs/form-search/_form-search.pug
     include ../../blocks/libs/form-user/_form-user.pug
 
-    +header('anonim', '')
-        +nav-header(["aboutUs", "services", "job", "news", "agreements"], '') 
+    +header('Roman', '')
     main.landing
         .page-wrapper.landing__container
             +card('search__card')
