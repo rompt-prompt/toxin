@@ -28,14 +28,20 @@
                 &__col_left {
                     flex: 0 0 22%;
                     margin-top: -4.0px;
+                    margin-right: 10px;
                 }
                 &__col_right {
                     flex: 0 0 22%;
+                    margin-left: 10px;
                 }
                 &__col_center {
                     flex: 0 0 47.4%;
                     display: flex;
                     justify-content: space-between;
+
+                    .center__column:nth-child(2) {
+                        padding: 0 10px;
+                    }
 
                     .center__column:last-child {
                         margin-left: 39.0px;

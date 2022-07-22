@@ -5,7 +5,7 @@
   
     &__link {
         a {
-            line-height: 24.0px;
+            line-height: 18.0px;
             position: relative;
 
             &::before {
@@ -25,7 +25,7 @@
             }
         }
         &:not(:first-child) {
-            margin-top: 13.0px;
+            margin-top: 19.0px;
         }
     }
 }
