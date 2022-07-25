@@ -30,3 +30,18 @@
         }
     }
 }
+
+@media (max-device-width: 572px) {
+    .landing {
+        padding: 0;
+        height: calc(100vh - $header-height);
+        &__container {
+            justify-content: center;
+            align-items: center;
+        }
+        .tagline {
+            display: none;
+        }
+    }
+    
+}
