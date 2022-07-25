@@ -1,67 +1,47 @@
 @import '../../styles/_styles.scss';
 @import '../../blocks/header/_header.scss';
 @import '../../blocks/footer/_footer.scss';
-@import '../../blocks/libs/dropdawn/_dropdawn.scss';
-@import '../../blocks/libs/datepicker/_datepicker.scss';
-@import '../../blocks/libs/filter-options/_filter-options.scss';
-@import '../../blocks/libs/range-slider/_range-slider.scss';
-@import '../../blocks/libs/checkbox/_checkbox.scss';
-@import '../../blocks/libs/expandable/_expandable.scss';
 @import '../../blocks/libs/room-card/_room-card.scss';
 @import '../../blocks/libs/pagination/_pagination.scss';
+@import '../../blocks/libs/filters/_filters.scss';
 
 .search-content {
     padding-top: 30.0px;
-    display: flex;
+        display: flex;
 
+    @media (max-device-width: 930px) {
+        flex-direction: column;
+    }
 
-    .filters {
-        flex: 0 0 266.0px;
+    &__filters {
         padding-right: 60.0px;
-        &__filter {
-            width: 100%;
-            margin-bottom: 30.0px;
-    
-            .filter__label {
-                display: block;
-                margin-bottom: 16.0px;
-            }
-            .checkbox {
-                margin-bottom: 10.0px;
-            }
-            .range-slider__note {
-                font-size: 12.0px;
-                margin-top: 14.0px;
-                line-height: 14.0px;
-                color: $dark50;
-            }
-        }
-        .filter_lower {
-            margin-bottom: 20.0px;
-        }
-        .filter_lowest {
-            margin-bottom: 10.0px;
-        }
 
+        @media (max-device-width: 930px) {
+            padding-right: 0;
+        }
     }
     .results{
-        flex: 1 1 auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        align-content: flex-start;
-        column-gap: 12.0px;
-        row-gap: 21.0px;
+        @media (max-device-width: 930px) {
+            margin-top: 50px;
+        }
 
         &__title {
-            flex: 0 0 100%;
+            margin-bottom: 20px;
+            @media (max-device-width: 930px) {
+                text-align: center;
+            }
         }
-        &__item {
-
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            align-content: flex-start;
+            column-gap: 12.0px;
+            row-gap: 21.0px;
         }
         &__pagination {
-            margin: 17.0px 0 69.0px;
+            margin: 40px auto 69.0px;
         }
-}
+    }
 }

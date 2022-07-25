@@ -1,0 +1,24 @@
+.show-filters-btn {
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid $purple;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+
+    &::after {
+        @include material-pseudo($cont: "expand_more", $fz: 24px, $fw: 400);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid $purple;
+        background-color: $white;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+    }
+    &_opened::after {
+        content: 'expand_less';
+    }
+}

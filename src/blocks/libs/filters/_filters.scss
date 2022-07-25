@@ -1,0 +1,76 @@
+@import '../dropdawn/_dropdawn.scss';
+@import '../datepicker/_datepicker.scss';
+@import '../filter-options/_filter-options.scss';
+@import '../range-slider/_range-slider.scss';
+@import '../checkbox/_checkbox.scss';
+@import '../expandable/_expandable.scss';
+@import '__btn/_filters__btn.scss';
+
+.filters {
+    &__show-filters-btn {
+        display: none;
+    }
+    &__container {
+        background-color: $white;
+    }
+    &__filter {
+        width: 266px;
+
+        &:not(:last-of-type) {
+            margin-bottom: 30.0px;
+        }
+        &.filter__datepicker {
+            margin-bottom: 20px;
+        }
+        &.filter__room-options {
+            margin-bottom: 10px;
+        }
+        .filter__label {
+            display: block;
+            margin-bottom: 16.0px;
+        }
+        .checkbox {
+            margin-bottom: 10.0px;
+        }
+        .range-slider__note {
+            font-size: 12.0px;
+            margin-top: 14.0px;
+            line-height: 14.0px;
+            color: $dark50;
+        }
+    }
+}
+
+@media (max-device-width: 930px) {
+    .filters {
+        position: relative;
+        &__show-filters-btn {
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index: 200;
+        }
+        &__container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            position: relative;
+            max-height: 0;
+            z-index: -1;
+            opacity: 0;
+            transition: max-height 0.2s ease-in-out;
+            
+
+            &_active {
+                max-height: 9999px;
+                z-index: 210;
+                opacity: 1;
+                padding: 19px 0;
+            }
+            .filters__filter {
+                margin-left: 20px;
+                margin-right: 20px;
+                }
+        }
+    }
+}

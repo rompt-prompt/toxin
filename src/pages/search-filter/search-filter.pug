@@ -6,56 +6,27 @@ block title
 block content 
     include ../../blocks/header/_header.pug
     include ../../blocks/footer/_footer.pug
-    include ../../blocks/libs/dropdawn/_dropdawn.pug
-    include ../../blocks/libs/datepicker/_datepicker.pug
-    include ../../blocks/libs/filter-options/_filter-options.pug
-    include ../../blocks/libs/range-slider/_range-slider.pug
-    include ../../blocks/libs/checkbox/_checkbox.pug
-    include ../../blocks/libs/expandable/_expandable.pug
+    include ../../blocks/libs/filters/_filters.pug
     include ../../blocks/libs/room-card/_room-card.pug
     include ../../blocks/libs/pagination/_pagination.pug
 
     +header('anonim', '')
     .page-wrapper.search-content
-        aside.filters
-            +dropdawn('stayDates', 'Даты пребывания в отеле', 'filters__filter filter_lower')
-                +datepicker('datepicker')
-            +dropdawn('guests', 'Гости', 'filters__filter')
-                +filter-options('guestsFilter', ['Взрослые','Дети','Младенцы'], '', 'c')
-            +range-slider('Диапазон цены', 'filters__filter')
-                p.text.range-slider__note Стоимость за сутки пребывания в номере
-            .filters__filter
-                label.title-3.filter__label Правила дома
-                +checkbox('short', 'Можно курить', '', 'smoke', '', '', '')
-                +checkbox('short', 'Можно с питомцами', '', 'pats', '', 'c', '')
-                +checkbox('short', 'Можно пригласить гостей (до 10 человек)', '', 'party', '', 'c', '')
-            .filters__filter
-                label.title-3.filter__label Доступность
-                +checkbox('rich', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'wideCorridor', '', '', '')
-                +checkbox('rich', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'disabledHelper', '', '', '')
-            +dropdawn('roomOptions', 'Удобства номера', 'filters__filter filter_lowest')
-                +filter-options('roomOptionsFilter', ['Спальни','Кровати','Ванные комнаты'], '', '')
-            +expandable('roomOptionsExtra', 'Дополнительные удобства', 'filters__filter')
-                +checkbox('short', 'Завтрак', '', 'breakfast', '', '', '')
-                +checkbox('short', 'Письменный стол', '', 'table', '', 'c', '')
-                +checkbox('short', 'Стул для кормления', '', 'chair', '', 'c', '')
-                +checkbox('short', 'Кроватка', '', 'bed', '', 'c', '')
-                +checkbox('short', 'Телевизор', '', 'tv', '', '', '')
-                +checkbox('short', 'Шампунь', '', 'shampoo', '', '', '')
-
+        
+        +filters('search-content__filters')
         main.results
             h1.results__title Номера, которые мы для вас подобрали
-
-            each room in [888, 840, 980, 856, 740, 982, 678, 450, 350, 666, 444, 352]
-                - var roomId = 'id' + room
-                a(href= data.toxinLinks.internal.RoomDetails.url) 
-                    +room-card(
-                        room, 
-                        data.room[roomId].category, 
-                        data.room[roomId].price, 
-                        data.room[roomId].rating, 
-                        data.room[roomId].reviews.total, 
-                        'results__item')
+            .results__content
+                each room in [888, 840, 980, 856, 740, 982, 678, 450, 350, 666, 444, 352]
+                    - var roomId = 'id' + room
+                    a(href= data.toxinLinks.internal.RoomDetails.url) 
+                        +room-card(
+                            room, 
+                            data.room[roomId].category, 
+                            data.room[roomId].price, 
+                            data.room[roomId].rating, 
+                            data.room[roomId].reviews.total, 
+                            'results__item')
             +pagination('results__pagination', 15, [1, 2, 3])
 
     +footer('')

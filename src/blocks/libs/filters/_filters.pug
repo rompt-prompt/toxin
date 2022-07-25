@@ -1,0 +1,36 @@
+include ../dropdawn/_dropdawn.pug
+include ../datepicker/_datepicker.pug
+include ../filter-options/_filter-options.pug
+include ../range-slider/_range-slider.pug
+include ../checkbox/_checkbox.pug
+include ../expandable/_expandable.pug
+include __btn/_filters__btn.pug
+
+mixin filters(cls='')
+    aside.filters(class=`${cls}`)
+        .filters__container
+            +dropdawn('stayDates', 'Даты пребывания в отеле', 'filters__filter filter__datepicker')
+                +datepicker('datepicker')
+            +dropdawn('guests', 'Гости', 'filters__filter')
+                +filter-options('guestsFilter', ['Взрослые','Дети','Младенцы'], '', 'c')
+            +range-slider('Диапазон цены', 'filters__filter')
+                p.text.range-slider__note Стоимость за сутки пребывания в номере
+            .filters__filter
+                label.title-3.filter__label Правила дома
+                +checkbox('short', 'Можно курить', '', 'smoke', '', '', '')
+                +checkbox('short', 'Можно с питомцами', '', 'pats', '', 'c', '')
+                +checkbox('short', 'Можно пригласить гостей (до 10 человек)', '', 'party', '', 'c', '')
+            .filters__filter
+                label.title-3.filter__label Доступность
+                +checkbox('rich', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'wideCorridor', '', '', '')
+                +checkbox('rich', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'disabledHelper', '', '', '')
+            +dropdawn('roomOptions', 'Удобства номера', 'filters__filter filter__room-options')
+                +filter-options('roomOptionsFilter', ['Спальни','Кровати','Ванные комнаты'], '', '')
+            +expandable('roomOptionsExtra', 'Дополнительные удобства', 'filters__filter')
+                +checkbox('short', 'Завтрак', '', 'breakfast', '', '', '')
+                +checkbox('short', 'Письменный стол', '', 'table', '', 'c', '')
+                +checkbox('short', 'Стул для кормления', '', 'chair', '', 'c', '')
+                +checkbox('short', 'Кроватка', '', 'bed', '', 'c', '')
+                +checkbox('short', 'Телевизор', '', 'tv', '', '', '')
+                +checkbox('short', 'Шампунь', '', 'shampoo', '', '', '')
+        +filters-btn
