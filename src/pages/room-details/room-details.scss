@@ -37,8 +37,29 @@
         grid-template-areas:    "features feelings booking"
                                 "reviews reviews booking"
                                 "rules cancel booking";
-        grid-column-gap: 23.0px;
-        grid-row-gap: 30.0px;
+        grid-template-columns: 290px minmax(auto, 30.17%) 380px;
+        grid-column-gap: 25px;
+        grid-row-gap: 30px;
+        justify-content: space-between;
+
+        @media (max-device-width: 993px) {
+            grid-template-areas:
+                                "features feelings"
+                                "reviews reviews"
+                                "rules cancel"
+                                "booking booking";
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 7%;
+        }
+        @media (max-device-width: 556px) {
+            grid-template-areas:    "features"
+                                    "feelings"
+                                    "rules"
+                                    "cancel"
+                                    "reviews"
+                                    "booking";
+            grid-template-columns: 100%;
+        }
         
         .description__item  {
             .item__title {
@@ -47,13 +68,28 @@
         }
         .features {
             grid-area: features;
+            max-width: 290.0px;
+            @media (max-device-width: 993px) {
+                max-width: none;
+            }
         }
         .feelings {
             grid-area: feelings;
+            max-width: 311px;
             display: flex;
             flex-wrap: wrap;
             align-content: flex-start;
             align-items: flex-end;
+            justify-content: space-between;
+            column-gap: 10px;
+
+            @media (min-device-width: 994px) and (max-device-width: 1035px) {
+                justify-content: center;
+            }
+            @media (max-device-width: 993px) {
+                justify-content: space-evenly;
+                max-width: none;
+            }
 
             .item__title {
                 flex: 0 0 100%;
@@ -78,7 +114,6 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                margin-right: 30.0px;
                 color: $purple;
 
                 span {
@@ -87,6 +122,7 @@
                 }
             }
             &__legend {
+                margin-top: 20px;
                 .legend__rating::before {
                     content: '';
                     display: inline-block;
@@ -113,17 +149,28 @@
         }
         .reviews {
             grid-area: reviews;
+            max-width: 708px;
+            @media (max-device-width: 993px) {
+                max-width: none;
+            }
             .item__title {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding-right: 44.0px;
                 box-sizing: border-box;
+
+                @media (max-device-width: 556px) {
+                    padding-right: 0;
+                }
             }
             &__amount {
                 line-height: 14.0px;
                 color: $dark50;
                 float: right;
+                @media (max-device-width: 556px) {
+                    padding-left: 10px;
+                }
             }
             .review:not(:last-of-type) {
                 margin-bottom: 22.0px;
@@ -131,18 +178,28 @@
         }
         .rules {
             grid-area: rules;
-
+            max-width: 266px;
+            @media (max-device-width: 993px) {
+                max-width: none;
+            }
             .item__title {
                 padding-left: 22.0px;
+                @media (max-device-width: 556px) {
+                    padding-left: 0;
+                }
             }
         }
         .cancel {
             grid-area: cancel;
-            padding-right: 50.0px;
+            max-width: 345px;
+            @media (max-device-width: 993px) {
+                max-width: none;
+            }
         }
         .booking {
             grid-area: booking;
             align-self: start;
+            justify-self: center;
         }
     }
 }
