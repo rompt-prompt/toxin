@@ -1,15 +1,11 @@
 @use "sass:math";
+@import '../overlay/overlay.scss';
 
 $buger-width: 30px;
 $buger-height: $buger-width;
 $bar-height: 4px;
 $bar-radius: calc($bar-height / 2);
 $hypotenuse: math.hypot($buger-width, $buger-height) - $bar-radius;
-
-body.hidden-overflow {
-    overflow: hidden;
-    padding-right: 5px;
-}
 
 .burger {
 
@@ -68,21 +64,5 @@ body.hidden-overflow {
                 bottom: 4px;
             }
         }
-    }
-}
-.burger-overlay {
-    width: 100vw;
-    height: 100vh;
-    background-color: $dark75;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    opacity: 0;
-    transition: all 0.2s linear;
-
-    &_active {
-        opacity: 1;
-        z-index: 5;
     }
 }

@@ -23,7 +23,7 @@ mixin header(user='anonim', cls='')
                 
                 //- user & buttons
                 if user === 'anonim'
-                    a.burger-container__item.btn-style.title-3(href="./sign-in.html", class='btn btn_theme_ligth login') Войти
-                    a.burger-container__item.btn-style.title-3(href="./registration.html", class='btn btn_theme_purple registration') Зарегистрироваться
+                    a.burger-container__item.btn-style.title-3(href="./sign-in.html", class='btn btn_theme_ligth btn_login') Войти
+                    a.burger-container__item.btn-style.title-3(href="./registration.html", class='btn btn_theme_purple btn_registration') Зарегистрироваться
                 else 
                     span.burger-container__item.user.text= user

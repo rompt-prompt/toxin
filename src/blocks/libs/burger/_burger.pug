@@ -1,6 +1,8 @@
+include ../overlay/_overlay.pug
+
 mixin burger(cls='')
     .burger(class=`${cls}`)
         input(type="checkbox", name="burgerToggle", id="burgerToggle")
         label.burger__btn(for="burgerToggle")
             span
-    .burger-overlay
+    +overlay
