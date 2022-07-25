@@ -13,7 +13,6 @@ module.exports = {
     mode: mode,
     entry: {
         'index': './src/pages/index/index.js',
-        'sandbox': './src/pages/sandbox/sandbox.js',
         'colors-type': './src/pages/colors-type/colors-type.js',
         'form-elements': './src/pages/form-elements/form-elements.js',
         'cards': './src/pages/cards/cards.js',
@@ -47,11 +46,6 @@ module.exports = {
             filename: "index.html",
             template: "./src/pages/index/index.pug",
             chunks: ['index'],
-        }),
-        new HtmlWebpackPlugin({
-            filename: "sandbox.html",
-            template: "./src/pages/sandbox/sandbox.pug",
-            chunks: ['sandbox'],
         }),
         new HtmlWebpackPlugin({
             filename: "colors-type.html",
