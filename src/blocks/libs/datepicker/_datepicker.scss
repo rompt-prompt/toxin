@@ -4,6 +4,7 @@
 .datepicker {
     margin-top:  5.0px;
     .air-datepicker {
+        margin: 0 auto;
         box-sizing: border-box;
         width: 320.0px;
         padding: 15.0px 20.0px 20.0px 20.0px;
@@ -13,6 +14,10 @@
         border-radius: 4.0px;
         font-family: Montserrat, Arial, Helvetica, sans-serif;
         font-style: normal;
+
+        @media (max-device-width: 327px) {
+            width: auto;
+        }
     
         &--navigation {
             border: none;

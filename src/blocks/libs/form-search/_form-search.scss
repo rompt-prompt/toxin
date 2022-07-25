@@ -10,11 +10,25 @@
 
     &__title {
         margin-bottom: 24.0px;
+        @media (max-device-width: 341px) {
+            font-size: 20px;
+            margin-bottom: 10.0px;
+        }
     }
-    &__item {
+    &__date {
         margin-bottom: 20.0px;
+        flex: 0 0 46.875%;
+
+        @media (max-device-width: 380px) {
+            flex: 0 0 100%
+        }
+    }
+    &__guests {
+        margin-bottom: 20.0px;
+        flex: 0 0 100%;
     }
     &__btn {
         margin-top: 10.0px;
+        flex: 0 0 100%;
     }
 }

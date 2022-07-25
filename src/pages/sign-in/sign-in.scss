@@ -14,9 +14,10 @@
 
     height: 700.0px;
 
-    .test {
-        
+    @media (max-device-width: 420px) {
+        height: calc(100vh - $header-height);
     }
+
         &__container {
             height: 100%;
             display: flex;

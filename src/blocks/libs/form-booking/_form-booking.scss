@@ -14,19 +14,33 @@
         flex-basis: 100%;
         padding-top: 3.0px;
         margin-bottom: 17.0px;
+        @media (max-device-width: 341px) {
+            font-size: 20px;
+            margin-bottom: 10.0px;
+        }
     }
     &__room {
         .room__id {
             font-size: 24.0px;
         }
     }
-    &__item {
+    &__date {
         margin-bottom: 21.0px;
+        flex: 0 0 46.875%;
+
+        @media (max-device-width: 380px) {
+            flex: 0 0 100%
+        }
+    }
+    &__guests {
+        margin-bottom: 21.0px;
+        flex: 0 0 100%;
     }
     &__calcs {
         margin-bottom: 6.0px;
     }
     &__btn {
+        width: 100%;
         margin-top: 20.0px;
     }
 }

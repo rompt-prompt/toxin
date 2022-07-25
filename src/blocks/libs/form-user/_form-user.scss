@@ -4,21 +4,30 @@
 @import '../btn/_btn.scss';
 
 .form-user {
+    display: flex;
+    flex-wrap: wrap;
     &__title {
         margin-top: -3.0px;
         margin-bottom: 20.0px;
+        @media (max-device-width: 341px) {
+            font-size: 20px;
+            margin-bottom: 10.0px;
+        }
     }
     &__item {
-        margin-bottom: 10.0px;
+        flex: 0 0 100%;
+        margin-bottom: 11.0px;
 
         &.item__title {
-            margin-top: 17.0px;
+            flex: 0 0 100%;
+            margin-top: 9.0px;
         }
         &.item__toggle {
             margin-bottom: 16.0px;
         }
     }
     &__btn {
+        width: 100%;
         margin-top: 10.0px;
     }
     &__footer {
@@ -26,5 +35,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        span {
+            margin-right: 10px;
+        }
     }
 }

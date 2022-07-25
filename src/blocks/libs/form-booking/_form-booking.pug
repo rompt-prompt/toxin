@@ -9,12 +9,12 @@ mixin form-booking(id, category, price, cls='')
     form.form-booking(action="#", method="post" class=`${cls}`)
         legend.title-1.form-booking__title 
             +room-id(id, category, price, 'form-booking__room')
-        +dropdawn('bookingDateFrom', 'Прибытие', 'w150 form-booking__item')
+        +dropdawn('bookingDateFrom', 'Прибытие', 'form-booking__date')
             +datepicker('bookingDatepickerFrom')
-        +dropdawn('bookingDateTo', 'Выезд', 'w150 form-booking__item', 'r')
+        +dropdawn('bookingDateTo', 'Выезд', 'form-booking__date', 'r')
             +datepicker('bookingDatepickerTo')
-        +dropdawn('bookingGuests', 'Гости', 'w320 form-booking__item')
-            +filter-options('bookingGuestsContent', ['Взрослые', 'Дети', 'Младенцы'], 'w320', 'c')
+        +dropdawn('bookingGuests', 'Гости', 'form-booking__guests')
+            +filter-options('bookingGuestsContent', ['Взрослые', 'Дети', 'Младенцы'], '', 'c')
         ul.form-booking__calcs.calcs.text 
             li.calcs__service.service 
                 span.service__name= price + ' x 4 суток'
@@ -31,4 +31,4 @@ mixin form-booking(id, category, price, cls='')
                 span.total__name Итого
                 span.total__price.rub 38 081
 
-        +btn('Забронировать', 'form-booking__btn btn_theme_purple btn__arrow w320', 'submit')
+        +btn('Забронировать', 'form-booking__btn btn_theme_purple btn__arrow', 'submit')
