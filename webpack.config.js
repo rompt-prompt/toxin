@@ -24,7 +24,7 @@ module.exports = {
         'sign-in': './src/pages/sign-in/sign-in.js',
     },
     output: {
-        path: __dirname + '/dist',
+        path: __dirname + '/docs',
         clean: true,
     },
     devServer: {
