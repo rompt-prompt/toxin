@@ -7,26 +7,26 @@ include ../btn/_btn.pug
 
 mixin form-booking(id, category, price, cls='')
     form.form-booking(action="#", method="post" class=`${cls}`)
-        legend.title-1.form-booking__title 
+        .title-1.form-booking__title 
             +room-id(id, category, price, 'form-booking__room')
         +dropdawn('bookingDateFrom', 'Прибытие', 'form-booking__date')
             +datepicker('bookingDatepickerFrom')
         +dropdawn('bookingDateTo', 'Выезд', 'form-booking__date', 'r')
             +datepicker('bookingDatepickerTo')
         +dropdawn('bookingGuests', 'Гости', 'form-booking__guests')
-            +filter-options('bookingGuestsContent', ['Взрослые', 'Дети', 'Младенцы'], '', 'c')
+            +filter-options('bookingGuestsFilter', ['Взрослые', 'Дети', 'Младенцы'], '', 'c')
         ul.form-booking__calcs.calcs.text 
             li.calcs__service.service 
-                span.service__name= price + ' x 4 суток'
-                span.service__price.rub 39 960
+                .service__name= price + ' x 4 суток'
+                .service__price.rub 39 960
             li.calcs__service.service
-                span.service__name Сбор за услуги: скидка 2 179₽
+                .service__name Сбор за услуги: скидка 2 179₽
                     +popup-info('Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fugiat eveniet similique', '')
-                span.service__price.rub 0
+                .service__price.rub 0
             li.calcs__service.service
-                span.service__name Сбор за дополнительные услуги
+                .service__name Сбор за дополнительные услуги
                     +popup-info('Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis fugiat eveniet similique', '')
-                span.service__price.rub 300
+                .service__price.rub 300
             li.calcs__total.total.title-2 
                 span.total__name Итого
                 span.total__price.rub 38 081

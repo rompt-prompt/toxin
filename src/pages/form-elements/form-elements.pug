@@ -24,7 +24,7 @@ block content
     
     main.elements.page-wrapper
 
-        section.elements__section.elements__section_1
+        .elements__section.elements__section_1
 
             .col.col_left
                 .elements__item
@@ -87,25 +87,25 @@ block content
                     h3.item__title pagination
                     +pagination('', 15, [1, 2, 3])
 
-        section.elements__section.elements__section_2
+        .elements__section.elements__section_2
 
             .col.col_left
                 .elements__item 
                     +dropdawn('facilities1', 'dropdawn', 'w266')
                 .elements__item 
                     +dropdawn('facilities2', 'dropdawn', 'w266')
-                        +filter-options('facilitiesOptions2', ['Спальни','Кровати','Ванные комнаты'], '', '')
+                        +filter-options('facilitiesFilter2', ['Спальни','Кровати','Ванные комнаты'], '', '')
             .col.col_center
                 .elements__item 
                     +dropdawn('guests1', 'dropdawn', 'w320')
-                        +filter-options('guestsOptions1', ['Взрослые','Дети','Младенцы'], '', 'c')
+                        +filter-options('guestsFilter1', ['Взрослые','Дети','Младенцы'], '', 'c')
 
             .col.col_right
                 .elements__item 
                     +dropdawn('guests2', 'dropdawn', 'w320')
-                        +filter-options('guestsOptions2', ['Взрослые','Дети','Младенцы'], '', 'c')
+                        +filter-options('guestsfilter2', ['Взрослые','Дети','Младенцы'], '', 'c')
 
-        section.elements__section.elements__section_3
+        .elements__section.elements__section_3
 
             .col.col_left
                 .elements__item.item__expandable
@@ -130,7 +130,7 @@ block content
                     h3.item__title Bullet list
                     +bullet-list('bullet list', data.room.id888.rules, 'w266')
 
-        section.elements__section.elements__section_4
+        .elements__section.elements__section_4
 
             .col.col_left
                 .elements__item 

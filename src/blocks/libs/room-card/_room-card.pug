@@ -1,11 +1,13 @@
 include ../room-id/_room-id.pug
 include ../rating/_rating.pug
 
-mixin room-card(id, category, price, rating, reviews, cls='')
+mixin room-card(roomId, category, price, rating, reviews, cls='')
     .room-card(class=`${cls}`)
-        img.room-card__slider(src= require(`../../images/rooms/${id}/sketch_${id}.jpg`), alt="room")
+        a(href= data.toxinLinks.internal.RoomDetails.url) 
+            img.room-card__slider(src= require(`../../images/rooms/${roomId}/sketch_${roomId}.jpg`), alt="room")
         .room-card__content
-            +room-id(id, category, price, 'room-card__room')
+            a(href= data.toxinLinks.internal.RoomDetails.url) 
+                +room-id(roomId, category, price, 'room-card__room')
             .room-card__testimonials
-                +rating('room' + id + '_rating_', rating, 'disabled', 'testimonials__rating')
+                +rating('room' + roomId + '_rating_', rating, 'disabled', 'testimonials__rating')
                 span.testimonials__reviews= reviews

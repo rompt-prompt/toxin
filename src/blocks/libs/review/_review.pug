@@ -5,6 +5,6 @@ mixin review(author, avatarSrc, date, likes, content, cls='')
         figcaption.author 
             img.author__avatar(src=require(`../../images/${avatarSrc}`), alt=`${author}`)
             p.text.author__name= author
-            time.text.review__date= date
+            p.text.review__date= date
         +like-btn(likes, 'review__likes')
         blockquote.text.review__content= content

@@ -1,2 +1,6 @@
-mixin btn(content='', cls='', type='button', id='')
-    button.title-3.btn(type=`${type}`, class=`${cls}`, id=`${id}`)= content
+mixin btn(content='', cls='', type='button', btnId='')
+    button.title-3.btn(
+        type=`${type}`, 
+        class=`${cls}`, 
+        id= btnId != '' ? btnId : false
+        )= content

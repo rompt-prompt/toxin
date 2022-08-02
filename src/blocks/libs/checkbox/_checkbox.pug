@@ -8,4 +8,4 @@ mixin checkbox(type='short', label, content, id, cls='', chk, disabled)
             checked= `${chk}` === 'c' ? true : false)
         label.text.checkbox__label.checkbox__custom(for=`${id}`, class= `${type}` === 'rich' ? "checkbox__label_rich" : "")= label
             if type === 'rich'
-                p.text.checkbox__content= content
+                span.text.checkbox__content= content

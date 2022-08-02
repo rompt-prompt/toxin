@@ -17,9 +17,9 @@ mixin header(user='anonim', cls='')
                         - var expand = data.toxinLinks.internal[linkId].expand
                         
                         if expand === 'y'
-                            a.burger-container__item.text.nav__link.nav__link_expand(href= url, label= name)= name
+                            a.burger-container__item.text.nav__link.nav__link_expand(href= url, data-content= name)= name
                         else 
-                            a.burger-container__item.text.nav__link(href= url, label= name)= name
+                            a.burger-container__item.text.nav__link(href= url, data-content= name)= name
                 
                 //- user & buttons
                 if user === 'anonim'

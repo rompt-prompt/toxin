@@ -1,6 +1,6 @@
-mixin room-id(id, category, price, cls='')
+mixin room-id(roomId, category, price, cls='')
     .room(class= `${cls}`)
-        h2.room__id= id 
+        h2.room__id= roomId 
             if category
                 span.room__category.title-3= category
         .room__price
