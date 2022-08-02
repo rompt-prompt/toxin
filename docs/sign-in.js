@@ -1,2 +1,0 @@
-(()=>{var e={969:()=>{showOverlay=function(){document.querySelector("#overlay").classList.toggle("overlay_active"),document.querySelector("body").classList.toggle("hidden-overflow")}}},r={};function t(o){var c=r[o];if(void 0!==c)return c.exports;var n=r[o]={exports:{}};return e[o](n,n.exports,t),n.exports}(()=>{"use strict";t(969),document.querySelector("#burgerToggle").addEventListener("click",(function(){document.querySelector(".burger-container").classList.toggle("burger-container_active"),showOverlay()}))})()})();
-//# sourceMappingURL=sign-in.js.map
